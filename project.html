@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Miei Progetti - Luca Alberti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header identico alla home page -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Luca Alberti</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <!-- Nota: aggiungi class="active" al link della pagina corrente -->
+                <li><a href="project.html" class="active">Projects</a></li>
+                <li><a href="#contacts">Contatti</a></li>
+                <!-- <li><a href="#">CV</a></li> -->
+                <!--  -->
+                <div class="language-selector">
+                    <button id="lang-it">IT</button>
+                    <span>|</span>
+                    <button id="lang-en">EN</button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenuto principale della pagina Progetti -->
+    <main class="projects-page">
+        <h1 data-key="hero_title_p4">I Miei Lavori</h1>
+
+        <!-- Questa è la griglia che conterrà tutti i tuoi progetti -->
+        <div class="project-grid">
+
+            <!-- PROGETTO 1: La tua Game Jam -->
+            <!-- Questo intero blocco <a> è un singolo quadrato cliccabile -->
+            <a href="project-jam.html" class="project-card">
+                <!-- Immagine di anteprima del progetto -->
+                <!-- Sostituisci 'img/jam-thumb.jpg' con una tua immagine vera -->
+                <div class="card-image" style="background-image: url('img/ScrubNSmear.PNG');"></div>
+                <div class="card-info">
+                    <h3>Scrub N' Smear</h3>
+                    <p>Game Jam - BigRock Master Game 40</p>
+                </div>
+            </a>
+
+            <!-- PROGETTO 2 (Esempio futuro, per ora puoi lasciarlo o toglierlo) -->
+            <a href="project-sthil.html" class="project-card">
+                <!-- Immagine di anteprima del progetto -->
+                <div class="card-image" style="        background-image: url('img/STHIL-Cover.png');background-position: top;"></div> <!-- Placeholder grigio -->
+                <div class="card-info">
+                    <h3>STHIL Timbersports Games</h3>
+                    <p>Progetto - Bigrock Master Game 40</p>
+                </div>
+            </a>
+
+            <!-- PROGETTO 3 (Esempio futuro, per ora puoi lasciarlo o toglierlo) -->
+            <a href="project-lecronachedidebian.html" class="project-card">
+                <!-- Immagine di anteprima del progetto -->
+                <div class="card-image" style="  background-image: url('img/Font_Le Cronache di Debian_Ver 2.png'); background-position: top;"></div> <!-- Placeholder grigio -->
+                <div class="card-info">
+                    <h3>Le Cronache di Debian</h3>
+                    <p>Progetto - Università</p>
+                </div>
+            </a>
+
+            <!-- PROGETTO 4 (Esempio futuro, per ora puoi lasciarlo o toglierlo) -->
+            <a href="#" class="project-card">
+                <div class="card-image" style="background-color: #333;"></div> <!-- Placeholder grigio -->
+                <div class="card-info">
+                    <h3>Progetto Futuro</h3>
+                    <p>Work in Progress</p>
+                </div>
+            </a>
+
+            <!-- Puoi aggiungere altri blocchi <a> qui per altri progetti -->
+
+        </div>
+    </main>
+
+    <script src="js/translator.js"></script>
+
+</body>
+</html>

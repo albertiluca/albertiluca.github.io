@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome Gioco - Dettagli</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Inizializza Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <!-- Solito header -->
+        <nav>
+            <a href="index.html" class="logo">Luca Alberti</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Chi Sono</a></li>
+                <li><a href="project.html" class="active">Progetti</a></li>
+                <li><a href="#">Contatti</a></li>
+                <li><a href="#">CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail">
+        <div class="container">
+            <!-- Titolo e Info principali -->
+            <h1>Crimsonlands</h1>
+            <p class="subtitle">Project - Work in progress... | Ruolo: Game Designer & Developer</p>
+
+            <!-- Video di Gameplay (da YouTube è più facile) -->
+            <div class="video-container">
+                <!-- Esempio di embed YouTube. Sostituisci l'ID del video dopo 'embed/' -->
+                <video controls loop autoplay muted>
+                    <source src="video/Crimsonland_Video3.mp4" type="video/mp4">
+                    Il tuo browser non supporta il tag video.
+                </video>
+            </div>
+
+            <!-- Carosello Immagini -->
+            <div class="project-description">
+                <h2>Galleria</h2>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/Crimsonland_Snap_1.PNG" alt="Screenshot1"></div>
+
+                </div>
+                <!-- Aggiungi i pulsanti di navigazione -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <!-- Descrizione del progetto -->
+            <div class="project-description">
+                <h2>Il Progetto</h2>
+                <p>
+                    Work in progress...
+                </p>
+
+                <h2>Il Mio Contributo</h2>
+                <p>
+                    Work in progress...
+                </p>
+
+                <h2>Tecnologie Usate</h2>
+                <ul>
+                    <li>Unreal Engine 5</li>
+                    <li>Blueprint</li>
+                    <li>C++</li>
+                    <li>Autodesk Maya</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+            <!-- Link per giocare -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="LINK_A_ITCH_IO" class="btn" target="_blank">Gioca su Itch.io</a>
+            </div>
+            <!-- Inizializza Swiper -->
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            </script>
+        </div>
+    </main>
+
+</body>
+</html>

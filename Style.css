@@ -1,0 +1,599 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Impostazioni di base per tutto il sito */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #121212; /* Sfondo nero scuro */
+    color: white; /* Testo bianco */
+}
+
+/* Stile della barra di navigazione */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem 5%;
+    position: fixed; /* La fissa in alto */
+    width: 90%;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    nav .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav a {
+        color: #ccc;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        nav a:hover, nav a.active {
+            color: white;
+        }
+
+/* Stile della sezione principale */
+.hero-section {
+    height: 100vh; /* Alto come tutto lo schermo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+.hero-content hr {
+    width: 80px;
+    border-color: white;
+    margin: 1.5rem auto;
+}
+
+/* Stile dei pulsanti */
+.btn {
+    border: 1px solid white;
+    padding: 0.7rem 1.8rem;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease; /* Aggiunge un effetto di transizione */
+}
+
+    .btn:hover {
+        background-color: white;
+        color: black; /* Quando passi il mouse, il pulsante diventa bianco e il testo nero */
+    }
+
+/* --- Stile per la Pagina Progetti --- */
+.projects-page {
+    padding: 8rem 10% 5rem; /* Spazio sopra per non finire sotto l'header fisso */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+    .projects-page h1 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+/* La Griglia Magica */
+.project-grid {
+    display: grid;
+    /* Questo crea colonne che si adattano automaticamente allo schermo.
+       Ogni colonna sarà larga almeno 300px, ma si allargherà per riempire lo spazio. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; /* Spazio tra i quadrati */
+}
+
+/* Lo stile del singolo quadrato (Card) */
+.project-card {
+    background-color: #1e1e1e; /* Colore di sfondo della card */
+    border-radius: 12px;
+    overflow: hidden; /* Assicura che l'immagine non esca dai bordi arrotondati */
+    text-decoration: none; /* Toglie la sottolineatura del link */
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+    /* Effetto hover quando passi sopra col mouse */
+    .project-card:hover {
+        transform: translateY(-10px); /* Si alza leggermente */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Aggiunge un'ombra */
+    }
+
+/* L'area dell'immagine */
+.card-image {
+    height: 200px; /* Altezza fissa per l'immagine */
+    background-size: cover;
+    background-position: center;
+    background-color: #333; /* Colore di fallback se l'immagine non c'è */
+}
+
+/* L'area del testo sotto l'immagine */
+.card-info {
+    padding: 1.5rem;
+}
+
+    .card-info h3 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.5rem;
+    }
+
+    .card-info p {
+        margin: 0;
+        color: #aaa; /* Testo grigio chiaro */
+    }
+
+/* --- Stile per la Pagina di Dettaglio --- */
+.project-detail {
+    padding: 8rem 5% 5rem;
+    color: #ddd;
+}
+
+.container {
+    max-width: 800px; /* Limita la larghezza del testo per renderlo leggibile */
+    margin: 0 auto; /* Centra il tutto */
+}
+
+.project-detail h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 2rem;
+}
+
+/* Per rendere il video responsive */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Rapporto 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+.project-description h2 {
+    color: white;
+    margin-top: 2rem;
+}
+
+.project-description p, .project-description li {
+    line-height: 1.6; /* Rende il testo più facile da leggere */
+    font-size: 1.1rem;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Stile per la Pagina Skills --- */
+.skills-page {
+    padding: 8rem 5% 5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+    .skills-page h1 {
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .skills-page .subtitle {
+        text-align: center;
+        color: #aaa;
+        margin-bottom: 3rem;
+        font-size: 1.2rem;
+    }
+
+/* Stile per l'Accordion (menu a tendina) */
+.accordion-button {
+    background-color: #1e1e1e;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: background-color 0.4s ease;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+    .accordion-button:hover, .accordion-button.active {
+        background-color: #333;
+    }
+
+.accordion-panel {
+    padding: 0 18px;
+    background-color: transparent;
+    max-height: 0; /* Nascosto di default */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; /* Animazione fluida */
+}
+
+/* Stile per le barre delle skill */
+.skills-container {
+    padding: 2rem 0;
+}
+
+.skill-bar {
+    margin-bottom: 1.5rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.skill-progress-bar {
+    width: 100%;
+    background-color: #333;
+    height: 10px;
+    border-radius: 5px;
+}
+
+    .skill-progress-bar div {
+        height: 100%;
+        background-color: #007bff; /* Un blu acceso, puoi cambiarlo */
+        border-radius: 5px;
+        transition: width 0.5s ease-in-out;
+    }
+
+/* --- Stile per la Sezione "Chi Sono" (About) --- */
+.about-section {
+    background-color: #1a1a1a; /* Un colore leggermente diverso per staccare */
+    padding: 5rem 5%;
+    color: #ddd;
+}
+
+/* Riusiamo la classe .container che abbiamo già definito, ma se non c'è, aggiungila: */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+/* Layout a due colonne: immagine e testo */
+.about-content {
+    display: flex;
+    align-items: center; /* Allinea verticalmente immagine e testo */
+    gap: 3rem; /* Spazio tra immagine e testo */
+}
+
+.about-image {
+    flex-basis: 35%; /* L'immagine occupa circa 1/3 dello spazio */
+}
+
+    .about-image img {
+        width: 100%;
+        border-radius: 50%; /* Rende l'immagine circolare, molto moderno */
+        box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    }
+
+.about-text {
+    flex-basis: 65%; /* Il testo occupa i restanti 2/3 */
+}
+
+    .about-text p {
+        font-size: 1.1rem;
+        line-height: 1.7; /* Aumenta la leggibilità */
+        margin-bottom: 1rem;
+    }
+
+/* --- Media Query per rendere la sezione responsive sui cellulari --- */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Le colonne si impilano una sopra l'altra */
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 250px; /* Limita la dimensione dell'immagine su mobile */
+        margin-bottom: 2rem;
+    }
+}
+
+/* --- Stile per la Pagina Indice del Blog (rimane uguale) --- */
+.blog-page {
+    padding: 8rem 5% 5rem;
+}
+
+    .blog-page h1, .blog-page .subtitle {
+        text-align: center;
+    }
+
+.post-list {
+    margin-top: 4rem;
+}
+
+.post-preview {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #333;
+}
+
+    .post-preview a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .post-preview h2 {
+        font-size: 2rem;
+        margin: 0 0 0.5rem 0;
+        transition: color 0.3s ease;
+    }
+
+    .post-preview a:hover h2 {
+        color: #007bff;
+    }
+
+.post-meta {
+    color: #aaa;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.post-excerpt {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* ================================================= */
+/* --- NUOVO Stile per la Pagina del Singolo Post --- */
+/* ================================================= */
+
+/* 1. SOLUZIONE ALL'OVERLAP */
+/* Aggiungiamo un padding-top per evitare che il contenuto finisca sotto il menu fisso */
+.post-page-revamped {
+    padding-top: 5rem; /* Altezza del tuo header, aggiustala se necessario */
+}
+
+/* 2. HERO SECTION (La copertina dell'articolo) */
+.post-hero {
+    position: relative;
+    width: 100%;
+    min-height: 25vh; /* Alto almeno il 40% dello schermo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Overlay scuro per leggibilità */
+}
+
+.post-hero .hero-content {
+    position: relative; /* Per stare sopra l'overlay */
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.post-hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.post-hero .post-meta {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+/* 3. CORPO DELL'ARTICOLO (colonna di testo stretta) */
+.post-body {
+    max-width: 750px; /* Larghezza ottimale per la lettura */
+    margin: 4rem auto; /* Centra la colonna e dà spazio sopra/sotto */
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+    .post-body p {
+        margin-bottom: 1.5rem;
+    }
+
+    .post-body h2 {
+        font-size: 2rem;
+        margin: 2.5rem 0 1.5rem 0;
+        color: white;
+    }
+
+    .post-body h3 {
+        font-size: 1.6rem;
+        margin: 2rem 0 1rem 0;
+        color: #e0e0e0;
+    }
+
+    .post-body img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        margin: 2rem 0;
+    }
+
+.video-container-blog {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 2rem 0;
+    border-radius: 12px;
+}
+
+    .video-container-blog video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+/* --- Stile per la Sezione "Contatti" --- */
+.contacts-section {
+    background-color: #121212; /* Stesso colore dello sfondo base per continuità */
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+    .contacts-section h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: white;
+    }
+
+    .contacts-section p {
+        font-size: 1.2rem;
+        color: #aaa;
+        max-width: 600px;
+        margin: 0 auto 3rem auto; /* Centra il paragrafo */
+    }
+
+/* Contenitore per le icone */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Spazio tra le icone */
+}
+
+    /* Stile della singola icona */
+    .social-links a {
+        color: #aaa;
+        font-size: 2.5rem; /* Dimensione delle icone */
+        text-decoration: none;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+        /* Effetto al passaggio del mouse */
+        .social-links a:hover {
+            color: white; /* L'icona diventa bianca */
+            transform: scale(1.2) translateY(-5px); /* Si ingrandisce e si alza un po' */
+        }
+
+        /* --- Stile per il Selettore Lingua --- */
+        .language-selector-item {
+         display: flex;
+         align-items: center;
+         margin-left: 2rem; /* Aggiunge spazio tra l'ultimo link e il selettore */
+        }
+
+    .language-selector-item button {
+        background: none;
+        border: none;
+        color: #ccc;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 500; /* Stesso peso degli altri link del menu */
+        padding: 0 0.5rem; /* Riduciamo il padding per renderlo più compatto */
+        transition: color 0.3s ease;
+    }
+
+    .language-selector-item button:hover {
+            color: white;
+    }
+
+    .language-selector-item span {
+        color: #555; /* Colore della barra verticale */
+    }
+    /* Stile per il pulsante della lingua attiva */
+    .language-selector-item button.active {
+        color: white;
+        text-decoration: underline;
+        text-underline-offset: 4px; /* Sposta un po' in basso la sottolineatura */
+    }

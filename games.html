@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CAMBIA IL TITOLO -->
+    <title>I Miei Giochi - Luca Alberti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MODIFICA IL MENU DI NAVIGAZIONE -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Luca Alberti</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- Aggiungi qui le altre voci quando le creerai (es. Skills, Blog) -->
+                <li><a href="games.html" class="active">Games</a></li> <!-- NUOVA VOCE ATTIVA -->
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="#">Contatti</a></li>
+                <!-- <li><a href="#">CV</a></li> -->
+                <div class="language-selector">
+                    <button id="lang-it">IT</button>
+                    <span>|</span>
+                    <button id="lang-en">EN</button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MODIFICA IL CONTENUTO DELLA PAGINA -->
+    <main class="projects-page">
+        <!-- Possiamo riusare lo stesso stile -->
+        <h1 data-key="hero_title_p3">I Miei Giochi</h1>
+        <!-- <p class="subtitle">Spazio dedicato ai progetti in via di sviluppo e già pubblicati.</p> -->
+
+        <div class="project-grid">
+
+            <!-- Inserisci qui le "Card" solo per i tuoi giochi completi e giocabili -->
+            <!-- PROGETTO 1 -->
+            <a href="games-carnacki.html" class="project-card">
+                <div class="card-image" style="background-image: url('img/CarnackiLOGO_3.PNG');"></div>
+                <div class="card-info">
+                    <h3>Carnacki: Occult Detective</h3>
+                    <p>Game - Work in progress...</p>
+                </div>
+            </a>
+
+            <!-- PROGETTO 2 -->
+            <a href="games-crimsonlands.html" class="project-card">
+                <div class="card-image" style="background-image: url('img/Crimsonland_Snap_2.png');"></div>
+                <div class="card-info">
+                    <h3>Crimsonlands</h3>
+                    <p>Game - Work in progress...</p>
+                </div>
+            </a>
+
+            <!-- PROGETTO 3 (Esempio futuro, per ora puoi lasciarlo o toglierlo) -->
+            <a href="#" class="project-card">
+                <div class="card-image" style="background-color: #333;"></div> <!-- Placeholder grigio -->
+                <div class="card-info">
+                    <h3>Progetto Futuro</h3>
+                    <p>Work in Progress</p>
+                </div>
+            </a>
+
+            <!-- Aggiungi altre card per altri giochi qui -->
+
+        </div>
+    </main>
+
+    <script src="js/translator.js"></script>
+
+</body>
+</html>

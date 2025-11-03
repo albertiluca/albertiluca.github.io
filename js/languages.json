@@ -1,0 +1,33 @@
+{
+  "it": {
+    "hero_title": "Ciao, sono Luca",
+    "hero_subtitle": "Sono un Game Designer & Developer",
+    "about_title": "Chi Sono",
+    "about_title_p2": "I miei Contatti",
+    "about_p1": "La mia passione per i videogiochi e' nata fin da bambino, ma e' stata la curiosita' di capire \"come funzionano\" a spingermi verso la laurea in Informatica.",
+    "about_p2": "Junior 3D Artist con un profilo unico che unisce una solida base tecnica a una specializzazione creativa ottenuta con un Master in Videogames. Questa doppia competenza mi permette di approcciare la modellazione 3D e la creazione di asset non solo con un occhio artistico, ma anche con una profonda comprensione delle performance, dell'ottimizzazione e delle pipeline di produzione. Sono fortemente motivato a tradurre la mia passione per la grafica computerizzata in asset di alta qualita', funzionali e pronti per l'integrazione in game engine.",
+    "about_p3": "Sono sempre aperto a nuove opportunita' di collaborazione e a discutere di progetti interessanti. Puoi trovarmi qui:",
+    "hero_title_p2": "Le mie Competenze",
+    "about_p5": "Una valutazione delle mie competenze nelle tecnologie che uso regolarmente.",
+    "about_p6": "Linguaggi di Programmazione",
+    "about_p7": "Motori e Software",
+    "hero_title_p3": "I Miei Giochi",
+    "hero_title_p4": "I Miei Lavori"
+  },
+  "en": {
+    "hero_title": "Hi, I'm Luca",
+    "hero_subtitle": "I'm a Game Designer & Developer",
+    "about_title": "About Me",
+    "about_title_p2": "My Contacts",
+    "about_p1": "My passion for video games was born as a child, but it was the curiosity to understand \"how they work\" that pushed me towards a degree in Computer Science.",
+    "about_p2": "Junior 3D Artist with a unique profile that combines a solid technical foundation with a creative specialization obtained with a Master's in Video Games. This dual skill set allows me to approach 3D modeling and asset creation not only with an artistic eye, but also with a deep understanding of performance, optimization, and production pipelines. I am highly motivated to translate my passion for computer graphics into high-quality, functional assets ready for game engine integration.",
+    "about_p3": "I'm always open to new collaboration opportunities and to discussing interesting projects. You can find me here:",
+    "hero_title_p2": "My Skills",
+    "about_p5": "An assessment of my skills in the technologies i use regularly.",
+    "about_p6": "Programming Languages",
+    "about_p7": "Engines and Software",
+    "hero_title_p3": "My Games",
+    "hero_title_p4": "My Works"
+
+  }
+}

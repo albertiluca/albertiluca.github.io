@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="about_p4">Le Mie Competenze - Luca Alberti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Alberti Luca</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <!-- Aggiungi la classe "active" qui -->
+                <li><a href="skills.html" class="active">Skills</a></li>
+                <!-- Aggiungi le altre voci del menu (Blog, Contatti, etc.) -->
+                <!-- NUOVA SEZIONE PER LA LINGUA -->
+                <div class="language-selector">
+                    <button id="lang-it">IT</button>
+                    <span>|</span>
+                    <button id="lang-en">EN</button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- NUOVO CONTENUTO PER LA PAGINA SKILLS -->
+    <main class="skills-page">
+        <h1 data-key=hero_title_p2>Le Mie Competenze</h1>
+        <p data-key="about_p5" class="subtitle">Una valutazione delle mie competenze nelle tecnologie che uso regolarmente.</p>
+
+        <!-- Sezione 1: Linguaggi di Programmazione -->
+        <button class="accordion-button" data-key="about_p6">Linguaggi di Programmazione</button>
+        <div class="accordion-panel">
+            <div class="skills-container">
+                <!-- Singola Skill Bar -->
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>C++</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-progress-bar"><div style="width: 75%;"></div></div>
+                </div>
+                <!-- Altra Skill Bar -->
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>C# (Unity)</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-progress-bar"><div style="width: 80%;"></div></div>
+                </div>
+                <!-- Altra Skill Bar -->
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Blueprint (Unreal Engine)</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-progress-bar"><div style="width: 90%;"></div></div>
+                </div>
+                <!-- Altra Skill Bar -->
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Python (Maya)</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-progress-bar"><div style="width: 90%;"></div></div>
+                </div>
+                <!-- Altra Skill Bar -->
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Java</span>
+                        <span>65%</span>
+                    </div>
+                    <div class="skill-progress-bar"><div style="width: 65%;"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>JavaScript</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-progress-bar"><div style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>HTML</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-progress-bar"><div style="width: 90%;"></div></div>
+                </div>
+                <!-- Aggiungi altre skill qui... -->
+            </div>
+        </div>
+
+        <!-- Sezione 2: Motori e Software -->
+        <button class="accordion-button" data-key="about_p7">Motori e Software</button>
+        <div class="accordion-panel">
+            <div class="skills-container">
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Unity</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-progress-bar"><div style="width: 75%;"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Unreal Engine</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-progress-bar"><div style="width: 90%;"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Autodesk Maya</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-progress-bar"><div style="width: 90%;"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Substance Painter</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill-progress-bar"><div style="width: 70%;"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>ZBrush</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="skill-progress-bar"><div style="width: 60%;"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Autodesk Sketchbook</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-progress-bar"><div style="width: 85%;"></div></div>
+                </div>
+                <!-- Aggiungi altri software qui... -->
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Includeremo lo script per l'accordion qui -->
+    <!-- Script per l'Accordion -->
+    <script>
+        var acc = document.getElementsByClassName("accordion-button");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                // Chiude tutti gli altri pannelli tranne quello corrente
+                for (var j = 0; j < acc.length; j++) {
+                    if (this !== acc[j]) {
+                        acc[j].classList.remove("active");
+                        acc[j].nextElementSibling.style.maxHeight = null;
+                    }
+                }
+
+                // Apre o chiude il pannello corrente
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+    <script src="js/translator.js"></script>
+
+</body>
+</html>

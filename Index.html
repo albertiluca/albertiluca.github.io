@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luca Alberti - Game Designer</title>
+
+    <!-- Questa riga collega il file CSS per dare lo stile -->
+    <link rel="stylesheet" href="style.css">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Il Tuo Nome - Game Designer</title>
+        <link rel="stylesheet" href="style.css">
+
+        <!-- AGGIUNGI QUESTA RIGA PER LE ICONE -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+
+</head>
+<body>
+
+    <!-- Questa è la barra di navigazione in alto -->
+    <header>
+        <nav>
+            <a href="#" class="logo">Luca Alberti</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#about">Chi Sono</a></li>
+                <!-- <li><a href="#">Progetti</a></li> -->
+                <li><a href="#contacts">Contatti</a></li>
+                <li><a href="#">CV</a></li>
+                <!-- NUOVA SEZIONE PER LA LINGUA -->
+                <div class="language-selector">
+                    <button id="lang-it">IT</button>
+                    <span>|</span>
+                    <button id="lang-en">EN</button>
+                </div>
+            </ul>
+
+
+        </nav>
+    </header>
+
+    <!-- Questa è la sezione principale con il contenuto -->
+    <main class="hero-section">
+
+        <!-- Video temporaneamente disattivato -->
+
+        <div class="hero-content">
+            <h1 data-key="hero_title">Ciao, sono Luca</h1>
+            <p data-key="hero_subtitle">Game Designer & Developer</p>
+            <hr>
+            <!-- I tuoi 4 pulsanti -->
+            <div class="cta-buttons">
+                <a href="games.html" class="btn">Games</a>
+                <a href="project.html" class="btn">Projects</a>
+                <a href="skills.html" class="btn">Skills</a>
+                <a href="devlog.html" class="btn">DevLog</a>
+            </div>
+        </div>
+    </main>
+
+    </main> <!-- Fine della sezione Hero -->
+    <!-- ================================= -->
+    <!-- NUOVA SEZIONE "CHI SONO" (ABOUT ME) -->
+    <!-- ================================= -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 data-key="about_title">Chi Sono</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <!-- Sostituisci con una tua foto professionale -->
+                    <img src="img/tua-foto.jpg" alt="Una foto di [Il Tuo Nome]">
+                </div>
+                <div class="about-text">
+                    <p data-key="about_p1">
+                        La mia passione per i videogiochi è nata fin da bambino, ma è stata la curiosità di capire "come funzionano" a spingermi verso la laurea in Informatica e poi al Master in Videogames conseguito a Bigrock.
+                    </p>
+                    <p data-key="about_p2">
+                        Junior 3D Artist con un profilo unico che unisce una solida base tecnica,
+                        derivante da una Laurea in Informatica, a una specializzazione
+                        creativa ottenuta con un Master in Videogames. Questa doppia
+                        competenza mi permette di approcciare la modellazione 3D e la
+                        creazione di asset non solo con un occhio artistico, ma anche con una
+                        profonda comprensione delle performance, dell'ottimizzazione e
+                        delle pipeline di produzione. Sono fortemente motivato a tradurre la mia
+                        passione per la grafica computerizzata in asset di alta
+                        qualità, funzionali e pronti per l'integrazione in game engine.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section> <!-- Fine della sezione "Chi Sono" -->
+    <!-- ================================= -->
+    <!-- NUOVA SEZIONE "CONTATTI"          -->
+    <!-- ================================= -->
+    <section id="contacts" class="contacts-section">
+        <div class="container">
+            <h2 data-key="about_title_p2">Mettiamoci in Contatto</h2>
+            <p data-key="about_p3">
+                Sono sempre aperto a nuove opportunità di collaborazione e a discutere di progetti interessanti. Puoi trovarmi qui:
+            </p>
+            <div class="social-links">
+                <!-- Sostituisci '#' con i link ai tuoi profili! -->
+                <a href="mailto:squall.nero@gmail.com" target="_blank" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/lucaalberti96/" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" target="_blank" title="Itch.io">
+                    <i class="fab fa-itch-io"></i>
+                </a>
+                <a href="https://www.artstation.com/debian_965" traget="_blank" title="ArtStation">
+                    <i class="fab fa-artstation"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/translator.js"></script>
+
+<!-- Il resto del tuo sito, se ci fosse altro, andrebbe qui -->
+</body>
+</html>
