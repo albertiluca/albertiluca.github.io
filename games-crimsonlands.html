@@ -26,10 +26,14 @@
             <a href="index.html" class="logo">Luca Alberti</a>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Chi Sono</a></li>
-                <li><a href="project.html" class="active">Progetti</a></li>
-                <li><a href="#">Contatti</a></li>
-                <li><a href="#">CV</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="project.html" class="active">Projects</a></li>
+                <!-- NUOVA SEZIONE PER LA LINGUA -->
+                <div class="language-selector">
+                    <button id="lang-it">IT</button>
+                    <span>|</span>
+                    <button id="lang-en">EN</button>
+                </div>
             </ul>
         </nav>
     </header>
@@ -38,7 +42,7 @@
         <div class="container">
             <!-- Titolo e Info principali -->
             <h1>Crimsonlands</h1>
-            <p class="subtitle">Project - Work in progress... | Ruolo: Game Designer & Developer</p>
+            <p class="subtitle">Project - Work in progress... | Role: Game Designer & Developer</p>
 
             <!-- Video di Gameplay (da YouTube è più facile) -->
             <div class="video-container">
@@ -65,17 +69,51 @@
 
             <!-- Descrizione del progetto -->
             <div class="project-description">
-                <h2>Il Progetto</h2>
-                <p>
-                    Work in progress...
+                <h2 data-key="about_title_1">Il Progetto</h2>
+                <p data-key="crimson_project">
+                    Crimsonland (titolo provvisorio) è un'IP transmediale in fase di sviluppo, nata da un concept presentato durante il Master. Il progetto si svilupperà a partire da un romanzo breve originale,
+                    che fungerà da world book per un videogioco investigativo narrativo in prima persona.
+                    L'esperienza di gioco è progettata per esplorare tematiche introspettive attraverso un'ambientazione onirica, ricca di misteri e simbolismo.
                 </p>
 
-                <h2>Il Mio Contributo</h2>
-                <p>
-                    Work in progress...
+                <h2 data-key="about_title_2">Il Mio Contributo</h2>
+                    <!-- Paragrafo introduttivo -->
+                <p data-key="crimson_contrib_intro">
+                    In qualità di autore e Solo Developer, sto gestendo l'intero processo creativo e produttivo. La mia responsabilità principale in questa fase è la costruzione delle fondamenta dell'IP, che include:
+                </p>
+                <!-- NUOVO ELENCO STRUTTURATO -->
+                <ul class="contribution-list">
+                        <strong data-key="crimson_contrib_wb_title">World Building & Scrittura:</strong>
+                        <span data-key="crimson_contrib_wb_desc">
+                            Stesura del romanzo breve, definizione della lore e sceneggiatura dei principali archi narrativi.
+                        </span>
+                    </li>
+                    <li>
+                        <strong data-key="crimson_contrib_gd_title">Game Design:</strong>
+                        <span data-key="crimson_contrib_gd_desc">
+                            Progettazione delle meccaniche investigative e del "core loop" di gioco.
+                        </span>
+                    </li>
+                    <li>
+                        <strong data-key="crimson_contrib_td_title">Sviluppo Tecnico:</strong>
+                        <span data-key="crimson_contrib_td_desc">
+                            Il progetto è il mio principale campo di studio per approfondire la pipeline di produzione in Unreal Engine 5. Attualmente sto implementando i sistemi di base, dalla programmazione del controller del personaggio alla creazione di prototipi per le meccaniche di interazione.
+                        </span>
+                    </li>
+                    <li>
+                        <strong data-key="crimson_contrib_ad_title">Art Direction:</strong>
+                        <span data-key="crimson_contrib_ad_desc">
+                            Definizione dello stile visivo e realizzazione dei primi concept art.
+                        </span>
+                    </li>
+                </ul>
+
+                <!-- Paragrafo conclusivo (lo manteniamo) -->
+                <p data-key="crimson_contrib_conclusion">
+                    Questo progetto rappresenta il mio impegno nel padroneggiare non solo gli aspetti tecnici dello sviluppo, ma anche le componenti narrative e di design che creano esperienze di gioco memorabili.
                 </p>
 
-                <h2>Tecnologie Usate</h2>
+                <h2 data-key="about_title_3">Tecnologie Usate</h2>
                 <ul>
                     <li>Unreal Engine 5</li>
                     <li>Blueprint</li>
@@ -84,10 +122,10 @@
                     <li>Python</li>
                 </ul>
             </div>
-            <!-- Link per giocare -->
+            <!-- Link per giocare
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="LINK_A_ITCH_IO" class="btn" target="_blank">Gioca su Itch.io</a>
-            </div>
+            <a href="LINK_A_ITCH_IO" class="btn" target="_blank">Gioca su Itch.io</a>
+            </div> -->
             <!-- Inizializza Swiper -->
             <script>
                 var swiper = new Swiper(".mySwiper", {
@@ -99,6 +137,8 @@
             </script>
         </div>
     </main>
+
+    <script src="js/translator.js"></script>
 
 </body>
 </html>

@@ -32,6 +32,7 @@
     <Content Include="devlog.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="docs\CV_Luca_Alberti.pdf" />
     <Content Include="games-carnacki.html">
       <SubType>Code</SubType>
     </Content>
@@ -58,6 +59,7 @@
     <Content Include="img\Crimsonland_Snap_1.PNG" />
     <Content Include="img\Crimsonland_Snap_2.png" />
     <Content Include="img\Font_Le Cronache di Debian_Ver 2.png" />
+    <Content Include="img\FotoMeCV_WIP_3.png" />
     <Content Include="img\LCdD_1.jpg" />
     <Content Include="img\LCdD_2.jpg" />
     <Content Include="img\LCdD_3.jpg" />

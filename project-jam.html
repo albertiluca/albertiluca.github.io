@@ -26,10 +26,14 @@
             <a href="index.html" class="logo">Luca Alberti</a>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Chi Sono</a></li>
-                <li><a href="project.html" class="active">Progetti</a></li>
-                <li><a href="#">Contatti</a></li>
-                <li><a href="#">CV</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="project.html" class="active">Projects</a></li>
+                <!-- NUOVA SEZIONE PER LA LINGUA -->
+                <div class="language-selector">
+                    <button id="lang-it">IT</button>
+                    <span>|</span>
+                    <button id="lang-en">EN</button>
+                </div>
             </ul>
         </nav>
     </header>
@@ -38,7 +42,7 @@
         <div class="container">
             <!-- Titolo e Info principali -->
             <h1>Scrub N' Smear</h1>
-            <p class="subtitle">Game Jam - BigRock Master | Ruolo: Game Designer & Programmer</p>
+            <p class="subtitle">Game Jam - BigRock Master | Role: Game Designer & Programmer</p>
 
             <!-- Video di Gameplay (da YouTube è più facile) -->
             <div class="video-container">
@@ -67,23 +71,21 @@
 
             <!-- Descrizione del progetto -->
             <div class="project-description">
-                <h2>Il Progetto</h2>
-                <p>
-                    Scrab N' Smear è il frutto della Game Jam di Bigrock del master Game 40. Sviluppato da zero in sole 34 ore, il gioco si presenta come cooperativo in locale
-                    a due giocatori. I due concorrenti devono sfidarsi e guadagnare il maggior numero di punti possibile entro lo scadere del tempo, chi avrà il maggior numero di punti
-                    è decretato come vincitore. Sarà possibile spingere via l'avversario e usare 3 tipi differenti di power-up (uno che incrementa la velocità, uno che la decrementa
-                    rallentandoti e uno neutro che non ha alcun effetto).
+                <h2 data-key="about_title_1">Il Progetto</h2>
+                <p data-key="about_p6">
+                    "Scrub N' Smear" è un party game cooperativo locale per due giocatori, sviluppato da zero in 34 ore durante la Game Jam del Master Game 40 di Bigrock.
+                    L'obiettivo era creare un'esperienza di gioco completa e divertente in un tempo estremamente limitato.
                 </p>
 
-                <h2>Il Mio Contributo</h2>
-                <p>
-                    Il gruppo formatosi era stato scelto casualmente tra i membri delle classi di Videogame, Computer Graphic, Concept Art e UX Design.
-                    Il ruolo che ho rivestito é stato quello di creare trama, scenario, protagonisti e meccaniche partendo dal tema proposto, dirigere i vari reparti,
-                    costruire la scena e inventare tutte le meccaniche mostrare nel gioco. Mentre questi svolgevano le loro mansioni il mio compito è stato quello di
-                    svolgere il ruolo sia di Game Designer del progetto che lead Game Programmer.
+                <h2 data-key="about_title_2">Il Mio Contributo</h2>
+                <p data-key="about_p7">
+                    Ho ricoperto il doppio ruolo di Game Designer e Lead Game Programmer. In fase di design, ho definito il "core loop" del gioco, ideato il sistema di punteggio
+                    e bilanciato i tre diversi power-up per garantire un gameplay dinamico e competitivo. Come programmatore, ho implementato in C# (Unity) l'intera logica di gioco,
+                    inclusa la fisica dei personaggi, l'interazione con gli oggetti e il sistema di power-up. Questo progetto ha consolidato la mia capacità di prototipare rapidamente
+                    e di lavorare efficacemente in team sotto pressione.
                 </p>
 
-                <h2>Tecnologie Usate</h2>
+                <h2 data-key="about_title_3">Tecnologie Usate</h2>
                 <ul>
                     <li>Unreal Engine 5</li>
                     <li>Blueprint</li>
@@ -93,9 +95,9 @@
                 </ul>
             </div>
             <!-- Link per giocare -->
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="LINK_A_ITCH_IO" class="btn" target="_blank">Gioca su Itch.io</a>
-            </div>
+            <!--      <div style="text-align: center; margin-top: 3rem;">
+            <a href="LINK_A_ITCH_IO" class="btn" target="_blank">Gioca su Itch.io</a>
+            </div> -->
             <!-- Inizializza Swiper -->
             <script>
                 var swiper = new Swiper(".mySwiper", {
@@ -107,6 +109,8 @@
             </script>
         </div>
     </main>
+
+    <script src="js/translator.js"></script>
 
 </body>
 </html>

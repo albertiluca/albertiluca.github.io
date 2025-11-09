@@ -28,10 +28,15 @@
             <a href="index.html" class="logo">Luca Alberti</a>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Chi Sono</a></li>
-                <li><a href="project.html" class="active">Progetti</a></li>
-                <li><a href="#">Contatti</a></li>
-                <li><a href="#">CV</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="project.html" class="active">Projects</a></li>
+                <!-- NUOVA SEZIONE PER LA LINGUA -->
+                <div class="language-selector">
+                    <button id="lang-it">IT</button>
+                    <span>|</span>
+                    <button id="lang-en">EN</button>
+                </div>
+            </ul>
             </ul>
         </nav>
     </header>
@@ -40,7 +45,7 @@
         <div class="container">
             <!-- Titolo e Info principali -->
             <h1>Carnacki: Occult Detective</h1>
-            <p class="subtitle">Project - Work in progress... | Ruolo: Game Designer & Developer</p>
+            <p class="subtitle">Project - Work in progress... | Role: Game Designer & Developer</p>
 
             <!-- Video di Gameplay (da YouTube è più facile) -->
             <div class="video-container">
@@ -74,25 +79,21 @@
 
             <!-- Descrizione del progetto -->
             <div class="project-description">
-                <h2>Il Progetto</h2>
-                <p>
-                    FPS d'investigazione dalla forte componente narrativa di stampo psychological-thriller. É l'adattamento, la trasposizione dell'opera originale di sir 
-                    William Hope Hodgson, famoso e influente scrittore di inizio '900. Tra le sue opere maggiori troviamo La Casa sull'Abisso e I Pirati Fantasma, Carnacki 
-                    era il personaggio di storie brevi, pubblicate inizialmente su riviste di settore e poi riunite in un unico romanzo. Il gioco è incentrato su Thomas Carnacki, 
-                    eccentrico quanto singolare investigatore del paranormale, e le sue avventure alla risoluzione dei terribili casi che segue, svoltesi durante l'epoca post-vittoriana.'
+                <h2 data-key="about_title_1">Il Progetto</h2>
+                <p data-key="about_p4">
+                    Adattamento videoludico dell'opera omonima di William Hope Hodgson, "Carnacki: Occult Detective" è un'investigazione psicologica in prima persona.
+                    Il progetto nasce come tesi di laurea in Informatica e si è evoluto in un'esplorazione complessa del game development, toccando ogni aspetto della pipeline di produzione.'
                 </p>
 
-                <h2>Il Mio Contributo</h2>
-                <p>
-                    Carnacki: Occult Detective è un mio progetto personale in solo developing, inizialmente nato come argomento per la tesi di laurea in Informatica per cui si è 
-                    prestato. Procedendo a tappe e in ordine sto seguendo e svolgendo ogni singola mansione necessaria ad essere ricoperta, dal Concept Artist al Game Programmer, 
-                    dal Sound Designer al Game Programmer, dal Modellatore al Tech Artist. Questo progetto è necessario a comprendere le diverse e molteplici dinamiche che compongono
-                    la spessa tela che si cela oltre la coltre del generico Game Developer, in modo tale ma migliorare la collaborazione e la comprensione delle varie complessità che 
-                    nascono durante lo sviluppo della creazione di un videogioco. Il gioco è stato iniziato ad essere sviluppato su Unity, utilizzando come impostazione necessaria la
-                    HD Render Pipeline, ma attualmente sto migrando il progetto su Unreal Engine 5, viste le sue spettacolari capacità.
+                <h2 data-key="about_title_2">Il Mio Contributo</h2>
+                <p data-key="about_p5">
+                    In qualità di Solo Developer, ho gestito l'intero ciclo di vita del progetto. Inizialmente sviluppato su Unity con la HD Render Pipeline, ho curato il design delle meccaniche investigative,
+                    la programmazione del gameplay e l'integrazione degli asset. La sfida tecnica principale è stata l'implementazione di un sistema di indizi dinamico e la gestione di un'atmosfera psicologica
+                    opprimente. Attualmente, sto migrando il progetto su Unreal Engine 5 per sfruttarne le capacità grafiche avanzate e approfondire la mia conoscenza di un secondo motore di gioco standard del
+                    settore.
                 </p>
 
-                <h2>Tecnologie Usate</h2>
+                <h2 data-key="about_title_3">Tecnologie Usate</h2>
                 <ul>
                     <li>Unity</li>
                     <li>Blueprint</li>
@@ -102,9 +103,9 @@
                 </ul>
             </div>
             <!-- Link per giocare -->
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="LINK_A_ITCH_IO" class="btn" target="_blank">Gioca su Itch.io</a>
-            </div>
+            <!--   <div style="text-align: center; margin-top: 3rem;">
+            <a href="LINK_A_ITCH_IO" class="btn" target="_blank">Gioca su Itch.io</a>
+            </div> -->
             <!-- Inizializza Swiper -->
             <script>
                 var swiper = new Swiper(".mySwiper", {
@@ -116,6 +117,8 @@
             </script>
         </div>
     </main>
+
+    <script src="js/translator.js"></script>
 
 </body>
 </html>

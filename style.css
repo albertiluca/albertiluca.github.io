@@ -597,3 +597,46 @@ nav {
         text-decoration: underline;
         text-underline-offset: 4px; /* Sposta un po' in basso la sottolineatura */
     }
+
+/* Stile per le note di disclaimer/avviso */
+.disclaimer-note {
+    font-size: 0.95rem; /* Un po' più piccolo del testo normale */
+    color: #a0a0a0; /* Un grigio un po' più scuro per essere meno invadente */
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05); /* Sfondo leggermente evidenziato */
+    border-left: 3px solid #007bff; /* Una barra laterale per attirare l'attenzione */
+    border-radius: 4px;
+}
+
+    /* Assicura che il tag <em> dentro la nota mantenga lo stile corsivo */
+    .disclaimer-note em {
+        font-style: italic;
+    }
+
+    /* --- Stile per l'Elenco delle Competenze nei Progetti --- */
+.contribution-list {
+    list-style-type: none; /* Rimuove i pallini di default */
+    padding-left: 0;
+    margin: 2rem 0; /* Aggiunge spazio sopra e sotto l'elenco */
+}
+
+.contribution-list li {
+    background-color: #1c1c1c; /* Sfondo leggermente diverso per ogni riga */
+    padding: 1.5rem;
+    margin-bottom: 1rem; /* Spazio tra gli elementi dell'elenco */
+    border-radius: 8px;
+    border-left: 3px solid #007bff; /* Bordo colorato per evidenziare */
+}
+
+.contribution-list strong {
+    display: block; /* Mette il titolo su una riga a sé */
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.contribution-list span {
+    line-height: 1.6;
+    color: #ddd;
+}
