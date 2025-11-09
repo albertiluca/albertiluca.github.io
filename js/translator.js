@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('[data-key]').forEach(element => {
             const key = element.getAttribute('data-key');
             if (translations[language] && translations[language][key]) {
-                element.textContent = translations[language][key];
+                element.innerHTML = translations[language][key];
             }
         });
 
