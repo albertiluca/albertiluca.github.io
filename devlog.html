@@ -17,7 +17,13 @@
                 <li><a href="games.html">Games</a></li>
                 <li><a href="project.html">Projects</a></li>
                 <li><a href="skills.html">Skills</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
+                <!--<li><a href="blog.html" class="active">DevLlog</a></li>-->
+                <!-- NUOVA SEZIONE PER LA LINGUA -->
+                <div class="language-selector">
+                    <button id="lang-it">IT</button>
+                    <span>|</span>
+                    <button id="lang-en">EN</button>
+                </div>
             </ul>
         </nav>
     </header>
@@ -30,7 +36,7 @@
         <header class="post-hero" style="background-image: url('img/mario-1-1.jpg');">
             <div class="hero-overlay"></div> <!-- Overlay scuro per leggibilità -->
             <div class="hero-content">
-                <h1>Breve Storia Videoludica</h1>
+                <h1 data-key="post1_titolo_intro"> Da Spacewar! a Unreal Engine 5: Una Riflessione Personale sulla Storia che Ispira il Mio Lavoro</h1>
                 <p class="post-meta">Pubblicato il 28 Ottobre 2025</p>
             </div>
         </header>
@@ -38,12 +44,12 @@
         <!-- 2. CORPO DELL'ARTICOLO -->
         <article class="post-body">
 
-            <p>
-                Quando nascono i videogiochi? Qual è il primo videogioco della storia? Addentriamoci nei polverosi recessi della storia e scopriamolo insieme, la risposta ti soprenderà.
+            <p data-key="post1_intro">
+                <em>Ogni volta che avvio Unreal Engine 5 per lavorare su un mio progetto, mi fermo a pensare al percorso incredibile che ci ha portati fin qui. Da dove veniamo? Quali sono state le scintille creative che hanno dato vita all'industria che amo? Capire la storia dei videogiochi non e' solo un esercizio accademico per me; e' una fonte di ispirazione e un modo per comprendere più a fondo i principi di design che ancora oggi sono validi. In questo post, ripercorro alcune delle tappe fondamentali che hanno segnato l'evoluzione del nostro medium, riflettendo su come queste lezioni del passato influenzino il mio approccio come Game Designer oggi.</em>
             </p>
 
             <h2>CRADS</h2>
-            <p>
+            <p data-key="post1_parte1">
                 I videogiochi sono nati nel secolo scorso, tale fenomeno `e risaputo, ma esattamente quand’`e la
                 data di nascita di questa nuova avanguardia?
                 Scaturiti dalle sperimentazioni derivanti dalla innovativa tecnologia bellica, dai laboratori di
@@ -79,7 +85,7 @@
                 tra cui i pi`u ricordati ed entrati nel cuore dei giocatori e della cultura come: Space Invaders e,
                 ovviamente, PAC-MAN.
             </p>
-            <p>
+            <p data-key="post1_parte2">
                 Si nota come anche l’atteggiamento e la psicologia con cui si approccia allo sviluppo del mezzo
                 videoludico cambi nel corso del tempo, sia CRADS, Spacewar! che PONG sono impostati con
                 una tipologia PlayerVSPlayer, mentre da Space Invaders e PAC-MAN in poi si adotta la strategia
@@ -105,23 +111,29 @@
                 altri settori.
             </p>
 
-            Con l’arrivo dell’ AGU- Automated Game Understanding, il pi`u recente campo di studi in
-            troduce l’applicazione delle AI nei videogiochi, un sistema capace di effettuare determinate
-            azioni senza l’espicito programma, passando cos`ıad una nuova concezione videoludica. Il tutto
-            viene supportato da vari algoritmi come i NEAT- Neuro Evolution of Augmenting Topologies,
-            affermando cos`ı una nuova generazione di evolute Reti Neurali.
-            Questo tipo di sistema prova ad emulare la logica umana, poich´e il programma `e scritto in
-            maniera tale da accettare tutti gli Input e decidere gli Output, variando le decisioni finali in
-            tempo reale con gli eventi.
-            L’aumento della fruizione dei videogiochi durante la pandemia di COVID-19 `e un fenomeno
-            degno di nota. Con le restrizioni sociali imposte dai vari governi, che includevano il confina
-            mento a casa, molti hanno trovato nei videogiochi una fonte di svago e un modo per combattere
-            la noia e l’isolamento. La possibilit`a di connettersi virtualmente con gli altri ha reso i video
-            giochi non solo un passatempo, ma anche un mezzo di socializzazione in un periodo di forte
-            distanziamento fisico. Di conseguenza, l’industria ha visto un notevole incremento nelle vendi
-            te e nell’utilizzo, consolidando ulteriormente la sua posizione come una delle più rilevanti del
-            settore dell’intrattenimento globale.
+            <p data-key="post1_parte3"> 
+                Con l’arrivo dell’ AGU- Automated Game Understanding, il pi`u recente campo di studi in
+                troduce l’applicazione delle AI nei videogiochi, un sistema capace di effettuare determinate
+                azioni senza l’espicito programma, passando cos`ıad una nuova concezione videoludica. Il tutto
+                viene supportato da vari algoritmi come i NEAT- Neuro Evolution of Augmenting Topologies,
+                affermando cos`ı una nuova generazione di evolute Reti Neurali.
+                Questo tipo di sistema prova ad emulare la logica umana, poich´e il programma `e scritto in
+                maniera tale da accettare tutti gli Input e decidere gli Output, variando le decisioni finali in
+                tempo reale con gli eventi.
+                L’aumento della fruizione dei videogiochi durante la pandemia di COVID-19 `e un fenomeno
+                degno di nota. Con le restrizioni sociali imposte dai vari governi, che includevano il confina
+                mento a casa, molti hanno trovato nei videogiochi una fonte di svago e un modo per combattere
+                la noia e l’isolamento. La possibilit`a di connettersi virtualmente con gli altri ha reso i video
+                giochi non solo un passatempo, ma anche un mezzo di socializzazione in un periodo di forte
+                distanziamento fisico. Di conseguenza, l’industria ha visto un notevole incremento nelle vendi
+                te e nell’utilizzo, consolidando ulteriormente la sua posizione come una delle più rilevanti del
+                settore dell’intrattenimento globale.
 
+            </p>
+
+            <h2 data-key="post1_titolo_outro"> Oltre la Tecnologia: La Ricerca dell'Interazione</h2>
+            <p data-key="post1_outro">
+                <em>Ripercorrere questa evoluzione, da un semplice punto su un tubo catodico alle complesse IA odierne, mi ricorda una verità fondamentale: ogni grande innovazione è partita da un'idea semplice e da un limite tecnico da superare. Come sviluppatore e designer, il mio obiettivo è portare con me questa lezione: usare la tecnologia di oggi non solo per creare mondi più realistici, ma per trovare nuove, semplici ed eleganti forme di interazione, proprio come hanno fatto i pionieri prima di noi. Questo è ciò che mi spinge a continuare a studiare, sperimentare e, soprattutto, a creare.</em>
             </p>
 
             <!-- Immagine all'interno del testo -->
@@ -129,51 +141,27 @@
 
 
             <!-- Video all'interno del testo -->
-            <div class="video-container-blog">
-                <video controls loop muted>
-                    <source src="video/clip-devlog.mp4" type="video/mp4">
-                </video>
-            </div>
+            <!--
+         <div class="video-container-blog">
+           <video controls loop muted>
+           <source src="video/clip-devlog.mp4" type="video/mp4">
+        </video>
+        </div>
+    -->
 
-           
         </article>
 
         <!--    NEW ARTICLE   -->
         <!-- 1. HERO SECTION DELL'ARTICOLO -->
-        <!-- Sostituisci con un'immagine di copertina per il tuo post -->
         <header class="post-hero" style="background-image: url('img/mario-1-1.jpg');">
             <div class="hero-overlay"></div> <!-- Overlay scuro per leggibilità -->
             <div class="hero-content">
-                <h1>Nuovo Articolo</h1>
+                <h1>Work in progress..</h1>
                 <p class="post-meta">Work in progress...</p>
             </div>
         </header>
 
-        <!-- 2. CORPO DELL'ARTICOLO -->
-        <article class="post-body">
+    <script src="js/translator.js"></script>
 
-            <p>
-                Paragrafo di apertura del post. 
-            </p>
-
-            <h2>Sottotitolo</h2>
-            <p>
-               Articolo.
-            </p>
-
-            <!-- Immagine all'interno del testo -->
-            <img src="img/altra-immagine.jpg" alt="Descrizione immagine">
-
-            <!-- Video all'interno del testo -->
-            <div class="video-container-blog">
-                <video controls loop muted>
-                    <source src="video/clip-devlog.mp4" type="video/mp4">
-                </video>
-            </div>
-
-
-        </article>
-
-    </main>
 </body>
 </html>
