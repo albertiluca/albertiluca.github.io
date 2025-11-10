@@ -5,43 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luca Alberti - Game Designer</title>
 
-    <!-- Questa riga collega il file CSS per dare lo stile -->
+    <!-- Collegamenti ai fogli di stile -->
     <link rel="stylesheet" href="style.css">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Il Tuo Nome - Game Designer</title>
-        <link rel="stylesheet" href="style.css">
-
-        <!-- AGGIUNGI QUESTA RIGA PER LE ICONE -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    </head>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
-    <!-- Questa è la barra di navigazione in alto -->
+    <!-- ======================= -->
+    <!-- HEADER CORRETTO         -->
+    <!-- ======================= -->
     <header>
         <nav>
-            <a href="#" class="logo">Luca Alberti</a>
+            <a href="index.html" class="logo" data-key="logo_name">Luca Alberti</a>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#about">Chi Sono</a></li>
-                <!-- <li><a href="#">Progetti</a></li> -->
-                <li><a href="#contacts">Contatti</a></li>
-                <a href="/docs/CV_Luca_Alberti.pdf" download target="_blank">CV</a>
-                <!-- NUOVA SEZIONE PER LA LINGUA -->
-                <div class="language-selector">
+                <li><a href="index.html" data-key="nav_home">Home</a></li>
+                <li><a href="#about" data-key="nav_about">Chi Sono</a></li>
+                <li><a href="#contacts" data-key="nav_contacts">Contatti</a></li>
+                <li><a href="/docs/CV_Luca_Alberti.pdf" download target="_blank" data-key="nav_cv">CV</a></li>
+
+                <!-- Selettore lingua DENTRO la lista -->
+                <li class="language-selector-item">
                     <button id="lang-it">IT</button>
                     <span>|</span>
                     <button id="lang-en">EN</button>
-                </div>
+                </li>
             </ul>
-
-
         </nav>
     </header>
+
 
     <!-- Questa è la sezione principale con il contenuto -->
     <main class="hero-section">
@@ -128,6 +120,6 @@
 
     <script src="js/translator.js"></script>
 
-<!-- Il resto del tuo sito, se ci fosse altro, andrebbe qui -->
+    <!-- Il resto del tuo sito, se ci fosse altro, andrebbe qui -->
 </body>
 </html>
