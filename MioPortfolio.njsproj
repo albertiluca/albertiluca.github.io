@@ -32,6 +32,7 @@
     <Content Include="devlog.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="docs\CV_JuniorEnvironmentArtist.pdf" />
     <Content Include="docs\CV_Luca_Alberti.pdf" />
     <Content Include="games-carnacki.html">
       <SubType>Code</SubType>
