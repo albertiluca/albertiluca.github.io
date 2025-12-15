@@ -734,7 +734,28 @@ nav {
         font-size: 1rem;
     }
 
- 
+    /* Stili per la galleria */
+    .project-gallery h2 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsive */
+        gap: 20px;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .gallery-caption {
+        padding: 15px;
+        background-color: #1a1a1a; /* Un colore di sfondo scuro per il testo */
+    }
 
 
 
