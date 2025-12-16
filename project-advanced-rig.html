@@ -1,38 +1,25 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nome Gioco - Dettagli</title>
+    <title>Project: Advanced Human Rig - Luca Alberti</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Importa il CSS di Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Inizializza Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
 </head>
-
 <body>
 
     <header>
-        <!-- Solito header -->
+        <!-- Inserisci qui il tuo header/nav -->
         <nav>
             <a href="index.html" class="logo">Luca Alberti</a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="games.html">Games</a></li>
                 <li><a href="project.html" class="active">Projects</a></li>
-                <!-- NUOVA SEZIONE PER LA LINGUA -->
                 <div class="language-selector">
-                    <button id="lang-it">IT</button>
-                    <span>|</span>
-                    <button id="lang-en">EN</button>
+                    <button id="lang-it">IT</button><span>|</span><button id="lang-en">EN</button>
                 </div>
             </ul>
         </nav>
@@ -40,47 +27,59 @@
 
     <main class="project-detail">
         <div class="container">
-            <!-- Titolo e Info principali -->
+
+            <!-- SEZIONE TITOLO -->
             <h1>Advanced Human Rig</h1>
             <p class="subtitle">A Technical Art project focused on creating a modular and scalable rigging system for humanoid characters.</p>
 
-            <!-- Video di Gameplay (da YouTube è più facile) -->
-            <div class="video-container">
-
-                <!-- Esempio di embed YouTube. Sostituisci l'ID del video dopo 'embed/' -->
-                <video controls loop autoplay muted>
-                    <source src="/video/VideoRig_1.mp4" type="video/mp4">
-                    Il tuo browser non supporta il tag video.
-                </video>
-            </div>
-
-            <!-- Carosello Immagini -->
-            <div class="project-description">
-                <h2>Gallery</h2>
-            </div>
-            <div class="swiper mySwiper">
+            <!-- CAROSELLO VIDEO -->
+            <div class="swiper video-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="/img/Rig_1.PNG" alt="Screenshot1"></div>
-
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <video controls loop muted playsinline>
+                            <source src="Video/VideoRig_1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <video controls loop muted playsinline>
+                            <source src="Video/VideoRig_2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
-                <!-- Aggiungi i pulsanti di navigazione -->
+                <!-- Pulsanti di Navigazione -->
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
 
-            <!-- Descrizione del progetto -->
+            <!-- CAROSELLO GALLERIA -->
+            <h2>Gallery</h2>
+            <div class="swiper gallery-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="/img/Rig_1.PNG" alt="Screenshot 1"></div>
+                    <div class="swiper-slide"><img src="/img/Rig_2.PNG" alt="Screenshot 2"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <!-- SEZIONE DESCRIZIONE DETTAGLIATA (CON TUTTI I TUOI TESTI) -->
             <div class="project-description">
+
                 <h2>Project Goals</h2>
                 <p>
                     The primary goal was to build a feature-rich humanoid rig from scratch, designed to provide animators with an efficient and intuitive workflow.
                 </p>
 
                 <h2>Role</h2>
-                <!-- Paragrafo introduttivo -->
                 <p>
                     Rigger & Technical Artist
                 </p>
-                <!-- NUOVO ELENCO STRUTTURATO -->
+
+                <h2>Key Technical Features</h2>
                 <ul class="contribution-list">
                     <li>
                         <strong>IK/FK Switch and Snap:</strong>
@@ -108,31 +107,58 @@
                     </li>
                 </ul>
 
-                <!-- Paragrafo conclusivo (lo manteniamo) -->
-
-                <h2>Tools:</h2>
-                <ul>
+                <h2>Tools Used:</h2>
+                <ul class="tools-list">
                     <li>Autodesk Maya</li>
-                    <li>Python</li>
+                    <li>Python (for scripting)</li>
                 </ul>
             </div>
-            <!-- Link per giocare
-            <div style="text-align: center; margin-top: 3rem;">
-            <a href="LINK_A_ITCH_IO" class="btn" target="_blank">Gioca su Itch.io</a>
-            </div> -->
-            <!-- Inizializza Swiper -->
-            <script>
-                var swiper = new Swiper(".mySwiper", {
-                    navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                    },
-                });
-            </script>
-        </div>
+
+        </div> <!-- Fine del div.container -->
     </main>
 
+    <!-- Importa il JS di Swiper e il tuo translator QUI, alla fine -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/translator.js"></script>
+
+    <!-- Script di Inizializzazione -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const videoSwiper = new Swiper('.video-swiper', {
+                loop: true,
+                navigation: {
+                    nextEl: '.video-swiper .swiper-button-next',
+                    prevEl: '.video-swiper .swiper-button-prev',
+                },
+                on: {
+                    slideChangeTransitionStart: function () {
+                        this.slides.forEach(slide => {
+                            const video = slide.querySelector('video');
+                            if (video) video.pause();
+                        });
+                    },
+                    slideChangeTransitionEnd: function () {
+                        const activeVideo = this.slides[this.activeIndex].querySelector('video');
+                        if (activeVideo) activeVideo.play();
+                    },
+                }
+            });
+
+            const gallerySwiper = new Swiper('.gallery-swiper', {
+                loop: true,
+                navigation: {
+                    nextEl: '.gallery-swiper .swiper-button-next',
+                    prevEl: '.gallery-swiper .swiper-button-prev',
+                },
+            });
+
+            const firstVideo = document.querySelector('.video-swiper .swiper-slide-active video');
+            if (firstVideo) {
+                firstVideo.play().catch(error => console.log("Autoplay blocked by browser."));
+            }
+        });
+    </script>
 
 </body>
 </html>

@@ -80,6 +80,7 @@
     <Content Include="img\ProtoSTHILGame_8.PNG" />
     <Content Include="img\Regno di Alcoma_%28Final%29.jpg" />
     <Content Include="img\Rig_1.PNG" />
+    <Content Include="img\Rig_2.PNG" />
     <Content Include="img\ScrubNRush_Gameplay3000.png" />
     <Content Include="img\ScrubNRush_Gameplay3034.png" />
     <Content Include="img\ScrubNRush_Gameplay3081.png" />
@@ -129,6 +130,7 @@
     <Content Include="Video\STHIL-GameTrailer2.mp4" />
     <Content Include="Video\trailer-jam.mp4" />
     <Content Include="Video\VideoRig_1.mp4" />
+    <Content Include="Video\VideoRig_2.mp4" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="img\" />

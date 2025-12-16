@@ -641,125 +641,42 @@ nav {
     color: #ddd;
 }
 
-/* ================================================= */
-/* --- MEDIA QUERIES PER IL RESPONSIVE DESIGN --- */
-/* ================================================= */
+/* ==========================================================================
+   STILI PER I CAROSELLI SWIPER (VIDEO E GALLERY) - Layout 16:9 Controllato
+   ========================================================================== */
 
-/* Applica queste regole su schermi larghi fino a 768px (tablet e smartphone) */
-@media (max-width: 768px) {
+/* Selettore comune per entrambi i caroselli per definire il layout */
+.project-detail .video-swiper,
+.project-detail .gallery-swiper {
+    /* Dimensioni e Posizionamento */
+    width: 100%;
+    max-width: 1280px; /* Larghezza massima, non toccherà i bordi */
+    margin: 40px auto; /* Centra orizzontalmente con spazio sopra/sotto */
+    /* Mantiene il formato 16:9 in modo robusto */
+    aspect-ratio: 16 / 9;
+    /* Estetica */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #111;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
 
-    /* --- Header e Navigazione --- */
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* CENTRA TUTTO ORIZZONTALMENTE */
-        gap: 1.5rem;
+/* Stili per i contenuti delle slide */
+.project-detail .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .project-detail .swiper-slide video,
+    .project-detail .swiper-slide img {
         width: 100%;
+        height: 100%;
+        object-fit: contain; /* Assicura che l'intero contenuto sia visibile */
     }
 
-        /* NUOVE REGOLE PER IL MENU */
-        nav ul {
-            flex-wrap: wrap; /* Permette ai link di andare a capo */
-            justify-content: center; /* Centra i link orizzontalmente */
-            gap: 1.2rem; /* Spazio verticale e orizzontale tra i link */
-            display: flex;
-            padding: 0; /* Rimuove il padding di default */
-            align-items: center;
-        }
-
-    header nav ul {
-        margin: 0 auto;
-    }
-
-    .language-selector-item {
-        display: flex;
-        justify-content: center;
-        width: 100%; /* <<< FORZA L'ELEMENTO A OCCUPARE TUTTA LA LARGHEZZA */
-        margin-left: 0;
-        margin-top: 1rem;
-    }
-
-    /* Riduciamo il padding generale dell'header su mobile */
-    header {
-        padding: 1rem;
-    }
-
-
-    /* --- Contenuti Generali e Home Page --- */
-    .hero-content h1,
-    .projects-page h1,
-    .skills-page h1,
-    .post-hero h1 {
-        font-size: 2.2rem; /* Riduci ancora un po' i titoli */
-    }
-
-    /* --- CORREZIONE SPECIFICA PER I PULSANTI SOVRAPPOSTI --- */
-    .hero-content .cta-buttons {
-        display: flex; /* Assicura che sia flex */
-        flex-direction: column; /* IMPILA I PULSANTI VERTICALMENTE */
-        align-items: center; /* Li centra orizzontalmente */
-        gap: 1rem; /* Spazio tra i pulsanti */
-        width: 100%; /* Occupa tutta la larghezza disponibile */
-    }
-
-    /* Sovrascriviamo lo stile dei pulsanti per essere sicuri */
-    .hero-content .btn {
-        width: 80%; /* Dà ai pulsanti una larghezza consistente */
-        max-width: 300px; /* Limita la larghezza massima */
-        text-align: center; /* Assicura che il testo sia centrato */
-        margin: 0; /* Resetta eventuali margini precedenti */
-    }
-
-    /* --- Sezione "Chi Sono" --- */
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem; /* Riduci lo spazio tra foto e testo */
-    }
-
-    .about-image {
-        max-width: 180px;
-    }
-
-    /* --- Pagina dei Progetti (Griglia) --- */
-    .project-grid {
-        grid-template-columns: 1fr; /* Forza una singola colonna su mobile */
-        gap: 1.5rem;
-    }
-
-    /* --- Pagina del Blog (Post singolo) --- */
-    .post-body {
-        margin-top: 2rem;
-        padding: 0 1rem;
-        font-size: 1rem;
-    }
-
-    /* Stili per la galleria */
-    .project-gallery h2 {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsive */
-        gap: 20px;
-    }
-
-    .gallery-item img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .gallery-caption {
-        padding: 15px;
-        background-color: #1a1a1a; /* Un colore di sfondo scuro per il testo */
-    }
-
-
-
-
-
-
+/* Stili per i pulsanti di navigazione */
+.project-detail .swiper-button-next,
+.project-detail .swiper-button-prev {
+    color: #fff;
 }
