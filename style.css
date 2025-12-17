@@ -641,6 +641,8 @@ nav {
     color: #ddd;
 }
 
+
+
 /* ==========================================================================
    STILI PER I CAROSELLI SWIPER (VIDEO E GALLERY) - Layout 16:9 Controllato
    ========================================================================== */
@@ -679,4 +681,87 @@ nav {
 .project-detail .swiper-button-next,
 .project-detail .swiper-button-prev {
     color: #fff;
+}
+
+/* ------------------ */
+
+/* ==========================================================================
+   REGOLE RESPONSIVE PER SMARTPHONE (LAYOUT FINALE)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    /* --- Reset della Struttura a Colonne (come discusso prima) --- */
+    body {
+        display: block;
+    }
+
+    header {
+        position: static;
+        width: 100%;
+        height: auto; /* <<< AGGIUNGI O MODIFICA QUESTA RIGA */
+        padding: 30px 20px;
+        text-align: center;
+
+        /* Aggiungiamo anche questo per sicurezza, per centrare verticalmente */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    main {
+        padding-left: 0;
+    }
+
+    /* --- 1. CENTRATURA DI TUTTI I TESTI E LINK NELL'HEADER --- */
+    header, header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* <<< CENTRA TUTTO ORIZZONTALMENTE */
+        text-align: center; /* Centra anche il testo non-flex */
+        gap: 20px; /* Spazio uniforme tra i link */
+    }
+
+
+    /* --- 2. SEZIONE "HERO" e PULSANTI --- */
+
+    .hero-section {
+        /* Annulla qualsiasi altezza fissa dal desktop */
+        height: auto;
+        /* Imposta un'altezza minima più contenuta, ad esempio 50% dello schermo */
+        min-height: 50vh; /* <<< PUOI GIOCARE CON QUESTO VALORE (es. 60vh, 400px) */
+        /* Assicura che il contenuto sia centrato verticalmente in questo nuovo spazio */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    /* Centra e impila i pulsanti "Games", "Skills", etc. */
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 15px; /* <<< RIDUCIAMO LO SPAZIO TRA I PULSANTI */
+        margin-top: 25px;
+    }
+
+        /* Stile per i singoli pulsanti per un look uniforme */
+        .cta-buttons .btn {
+            width: 80%;
+            max-width: 280px;
+        }
+
+    header nav ul .language-selector-item {
+        /* Trasformiamo il <li> in un contenitore flex */
+        display: flex;
+        /* Centriamo il suo contenuto (i bottoni) orizzontalmente */
+        justify-content: center;
+        /* Assicuriamo che occupi tutta la larghezza per potersi centrare */
+        width: 100%;
+        transform: translateX(-12px); /* <<< Prova a giocare con questo valore */
+    }
 }
