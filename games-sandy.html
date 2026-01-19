@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandy - Project Details</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Luca Alberti</a>
+            <ul>
+                <li><a href="index.html" data-key="nav_home">Home</a></li>
+                <li><a href="games.html" class="active" data-key="nav_games">Games</a></li>
+                <li><a href="projects.html" data-key="nav_projects">Projects</a></li>
+                <!-- Aggiungi qui gli altri link (Skills, Blog, etc.) per coerenza -->
+                <li class="language-selector-item">
+                    <button id="lang-it">IT</button>
+                    <span>|</span>
+                    <button id="lang-en">EN</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail">
+        <div class="container">
+            <!-- Title and Main Info -->
+            <h1 data-key="sandy_title">Sandy</h1>
+            <p class="subtitle" data-key="sandy_subtitle">BigRock Master's Thesis Project | Role: Game Designer & Programmer</p>
+
+            <!-- Gameplay Video -->
+            <div class="video-container">
+                <video controls loop autoplay muted>
+                    <source src="/video/SandyTrailer.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Image Carousel -->
+            <div class="project-description">
+                <h2 data-key="sandy_gallery_title">Gallery</h2>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="/img/Sandy1.jpg" alt="Screenshot 1"></div>
+                    <div class="swiper-slide"><img src="/img/Sandy2.jpg" alt="Screenshot 2"></div>
+                    <div class="swiper-slide"><img src="/img/Sandy3.jpg" alt="Screenshot 3"></div>
+                    <div class="swiper-slide"><img src="/img/Sandy4.jpg" alt="Screenshot 4"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <!-- Project Description -->
+            <div class="project-description" style="margin-top: 3rem;">
+                <h2 data-key="sandy_project_title">The Project</h2>
+                <p data-key="sandy_project_p1">
+                    Welcome to the world of Sandy, a whimsical puzzle-adventure created by the talented students of the BigRock Videogame Course. In a world where the floor is a vast frontier and everyday toys become towering obstacles, you must guide Sandy, an adorable ragdoll, on a heartwarming quest to find her way back to the safety of her dollhouse.
+                </p>
+
+                <h2 data-key="sandy_desc_title">Description</h2>
+                <p data-key="sandy_desc_p1">
+                    The Journey Home: the children's room may look cozy by day, but for a small doll like Sandy, it’s a labyrinth filled with wonder and peril. To reach her sanctuary, Sandy must navigate through forgotten building blocks, tangled yarn, and dusty corners. Along the way, she’ll need to collect precious buttons—the keepsakes that hold her stuffing and her memories together.
+                </p>
+
+                <h3 data-key="sandy_features_title">Key Features</h3>
+                <ul>
+                    <li data-key="sandy_feature_1"><b>Intricate Puzzles:</b> Use your wits to interact with the environment. Move blocks, solve clues, and bridge the gaps between furniture.</li>
+                    <li data--key="sandy_feature_2"><b>Dangerous Toys:</b> Not every toy is a friend. Avoid the traps and the unpredictable hazards lurking in the shadows of the playroom.</li>
+                    <li data-key="sandy_feature_3"><b>Heartfelt Atmosphere:</b> A charming story about resilience, told through a beautiful, tactile art style that makes you feel the texture of the fabric and the warmth of the room, entirely crafted by the students of the Master in Videogame at BigRock as their graduation thesis.</li>
+                </ul>
+
+                <h2 data-key="sandy_tech_title">Used Technologies</h2>
+                <ul>
+                    <li>Unreal Engine 5</li>
+                    <li>Blueprint</li>
+                    <li>C++</li>
+                    <li>Autodesk Maya</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+
+            <!-- Link to Play -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://store.steampowered.com/app/2227550/Sandy/?beta=1" class="btn btn-steam" target="_blank" data-key="sandy_btn_steam">
+                    <i class="fab fa-steam"></i> Available on Steam
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/js/translator.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+</body>
+</html>

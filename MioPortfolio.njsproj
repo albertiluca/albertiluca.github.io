@@ -83,6 +83,11 @@
     <Content Include="img\Rig_2.PNG" />
     <Content Include="img\Rig_3.PNG" />
     <Content Include="img\Rig_4.PNG" />
+    <Content Include="img\Sandy1.jpg" />
+    <Content Include="img\Sandy2.jpg" />
+    <Content Include="img\Sandy3.jpg" />
+    <Content Include="img\Sandy4.jpg" />
+    <Content Include="img\SandyCover.PNG" />
     <Content Include="img\ScrubNRush_Gameplay3000.png" />
     <Content Include="img\ScrubNRush_Gameplay3034.png" />
     <Content Include="img\ScrubNRush_Gameplay3081.png" />
@@ -94,7 +99,7 @@
     <Content Include="js\translator.js">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Page1.html">
+    <Content Include="games-sandy.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="project-advanced-rig.html">
@@ -129,6 +134,7 @@
     <Content Include="Video\Carnacki_estrattovideo3.mp4" />
     <Content Include="Video\Crimsonland_Video3.mp4" />
     <Content Include="Video\Le Cronache di Debian - Trailer ENG.mp4" />
+    <Content Include="Video\SandyTrailer.mp4" />
     <Content Include="Video\STHIL-GameTrailer2.mp4" />
     <Content Include="Video\trailer-jam.mp4" />
     <Content Include="Video\VideoRig_1.mp4" />
