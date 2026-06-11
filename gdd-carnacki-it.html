@@ -1,11 +1,13 @@
 <div class="gdd-document" style="font-family: 'Inter', sans-serif; color: #9ca3af; line-height: 1.8; text-align: left;">
-
+    
+    <!-- INTESTAZIONE DOCUMENTO -->
     <div style="text-align: center; margin-bottom: 40px; border-bottom: 1px solid rgba(168, 85, 247, 0.2); padding-bottom: 20px;">
         <h1 style="color: #f3f4f6; font-size: 2rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px;">PROJECT SHADOWSEEKER</h1>
         <h3 style="color: #a855f7; font-size: 1.1rem; font-weight: 400; letter-spacing: 1px;">GAME DESIGN DOCUMENT</h3>
         <p style="font-size: 0.8rem; color: #6b7280; margin-top: 10px;">Versione di Produzione 1.0 — Progetto di Adattamento Letterario</p>
     </div>
 
+    <!-- INDICE RAPIDO -->
     <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 8px; margin-bottom: 30px; border-left: 3px solid #f59e0b;">
         <p style="color: #f59e0b; font-weight: bold; margin-bottom: 5px; font-size: 0.9rem;">INDICE STRUTTURALE</p>
         <ul style="list-style: none; font-size: 0.85rem; padding-left: 5px; line-height: 1.5;">
@@ -19,60 +21,219 @@
         </ul>
     </div>
 
+    <!-- SEZIONE 1: BASICS -->
     <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">1. Basics & Concept</h3>
-    <p><strong>Prompt & High-Concept:</strong> Trasposizione videoludica di stampo letterario classica. Il titolo è concepito come un'esperienza 3D psychological-horror in prima persona a forte componente investigativa, caratterizzata da tinte noir, thriller e suggestioni di stampo lovecraftiane.</p>
+    <p><strong>Prompt & High-Concept:</strong> Trasposizione videoludica di stampo letterario classica ambientata nell'universo di Project Shadowseeker. Il titolo è concepito come un'esperienza 3D psychological-horror in prima persona a forte componente investigativa, caratterizzata da tinte noir, thriller e suggestioni di stampo lovecraftiane.</p>
     <p><strong>Struttura di Gioco:</strong> Il gameplay si sviluppa in modo rigorosamente lineare, focalizzandosi su scenari chiusi e percorsi ben definiti per massimizzare il pacing drammatico della tensione emotiva. La campagna si focalizza su un'esperienza single-player immersiva, supportata da una logica di sblocco obiettivi legati alle diverse difficoltà di gioco.</p>
-    <p><strong>Stile Visivo & Direzione Artistica:</strong> L'opera adotta uno stile di narrazione ibrido progettato per ottimizzare i costi di produzione e massimizzare l'immersione nell'atmosfera d'epoca (1905-1912):</p>
+    <p><strong>Stile Visivo & Direzione Artistica:</strong> L'opera adotta uno stile di narrazione ibrido progettato per ottimizzare i costi di produzione e massimizzare l'immersione nell'atmosfera tardo-vittoriana (1905-1912):</p>
     <ul style="padding-left: 20px; margin-bottom: 15px;">
         <li><strong>Comic Cinematic (La Cornice):</strong> Sequenze narrative realizzate tramite lo stile dei fumetti animati (Motion Comics). Le illustrazioni riprendono i bozzetti a carboncino e china presenti nei documenti storici di produzione, animate con effetti di parallasse, fumo e pioggia dinamica per le scene d'intermezzo.</li>
         <li><strong>Gameplay 3D:</strong> Esplorazione attiva in prima persona, caratterizzata da un'illuminazione diegetica cupa, ambienti opprimenti e sound design cinematografico.</li>
     </ul>
+    <p><strong>Inspirations & Benchmark:</strong> <em>Riven</em>, <em>The Shore</em>, <em>Call of Cthulhu: Dark Corners of the Earth</em>, <em>The Sinking City</em>, <em>What Remains of Edith Finch</em>, <em>The Vanishing of Ethan Carter</em>.</p>
 
+    <!-- SEZIONE 2: CORE GAMEPLAY -->
     <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">2. Core Gameplay Loop & Mechanics</h3>
     <p>Il loop d'interazione principale si divide in due macro-fasi sistemiche ricorrenti: l'<strong>Investigazione</strong> e l'<strong>Assedio Rituale</strong>.</p>
+
     <h4 style="color: #a855f7; margin-top: 15px; font-size: 1rem;">A. Fase Investigativa ed Esplorazione</h4>
     <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li><strong>Monitoraggio dello Status Psicofisico (ECG):</strong> Lo stress emotivo del protagonista è costantemente monitorato tramite un elettrocardiografo diegetico integrato nel diario di gioco. In presenza di anomalie o entità paranormali, il battito cardiaco subisce un'accelerazione progressiva. Uno stress elevato causa instabilità motoria (oscillazione della mira) e rallentamento dei tempi di interazione con gli oggetti. Il giocatore deve assumere estratti alchemici per calmare il sistema nervoso.</li>
+        <li><strong>Monitoraggio dello Status Psicofisico (ECG):</strong> Lo stress emotivo dell'Investigatore è costantemente monitorato tramite un elettrocardiografo diegetico integrato nel diario di gioco. In presenza di anomalie o entità paranormali, il battito cardiaco subisce un'accelerazione progressiva. Uno stress elevato causa instabilità motoria (oscillazione della mira) e rallentamento dei tempi di interazione con gli oggetti. Il giocatore deve assumere estratti alchemici per calmare il sistema nervoso.</li>
         <li><strong>Fotografia Spiritica:</strong> Strumento analitico fondamentale per rilevare tracce invisibili a occhio nudo. Il giocatore deve posizionare fisicamente la fotocamera su un treppiede stabile, scattare una lastra sensibile alle frequenze esoteriche e sviluppare i negativi tramite solventi chimici per svelare indizi, rune o punti deboli delle entità.</li>
+        <li><strong>Gestione Inventario (Radial Wheel):</strong> Il giocatore dispone di una ruota degli strumenti con un limite di 8 slot. Le risorse chiave (pile, munizioni, gesso, estratti) sono contate, costringendo l'utente a un'attenta pianificazione strategica prima di lasciare le aree sicure (Safe Rooms).</li>
     </ul>
 
     <h4 style="color: #a855f7; margin-top: 15px; font-size: 1rem;">B. Fase di Assedio Rituale</h4>
     <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li><strong>Costruzione delle Difese (Pianificazione):</strong> Il giocatore deve allestire fisicamente le barriere protettive seguendo tre step operativi: purificazione con Scopa di Issopo, tracciamento del cerchio di gesso/sale ed elettrificazione con pile e valvole a vuoto.</li>
-        <li><strong>Combattimento Strategico (Le 3 Fasi):</strong> Repulsione frequenziale tramite il Pentacolo Elettrico, attivazione di trappole e archi elettrici esterni tramite armi da fuoco, e confinamento finale tramite incisione manuale dei Sigilli di Protezione.</li>
+        <li>
+            <strong>Costruzione delle Difese (Pianificazione):</strong> Il giocatore deve allestire fisicamente le barriere protettive dell'ambiente d'indagine seguendo tre step operativi sequenziali:
+            <ol style="padding-left: 20px; margin-top: 5px;">
+                <li><em>Pulizia:</em> Uso della Scopa di Issopo per eliminare la contaminazione spirituale dall'area di tracciamento.</li>
+                <li><em>Tracciamento:</em> Disegno del cerchio protettivo primario sul pavimento utilizzando gesso o sale (con un sistema di usura dinamica del perimetro).</li>
+                <li><em>Elettrificazione:</em> Posizionamento avanzato di tubi a vuoto e Pile Weston per caricare elettricamente il cerchio rituale.</li>
+            </ol>
+        </li>
+        <li>
+            <strong>Combattimento Strategico (Le 3 Fasi):</strong>
+            <ol style="padding-left: 20px; margin-top: 5px;">
+                <li><em>Repulsione:</em> Modulazione frequenziale del campo di forza del Pentacolo Elettrico per arrestare le cariche dei nemici.</li>
+                <li><em>Trappole:</em> Utilizzo di armi da fuoco per colpire accumulatori ambientali o teleruttori esterni, attivando archi elettrici protettivi.</li>
+                <li><em>Confinamento:</em> Fase ad alto rischio in cui il giocatore deve uscire temporaneamente dal cerchio protettivo per incidere fisicamente i Sigilli di Protezione sull'ancora dell'entità, chiudendo definitivamente il varco dimensionale.</li>
+            </ol>
+        </li>
     </ul>
 
+    <!-- SEZIONE 3: LEVEL DESIGN -->
     <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">3. World Architecture & Level Design</h3>
+    <p>Il mondo di gioco è strutturato in tre macro-scenari lineari progettati per supportare la narrazione ed enfatizzare l'andamento ciclico dei capitoli:</p>
     <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li><strong>1. Lo Studio dell'Investigatore:</strong> L'abitazione del protagonista, utilizzata come Hub centrale per i passaggi narrativi.</li>
-        <li><strong>2. La Residenza d'Epoca:</strong> Lo scenario del primo caso, studiato come arena di difesa strategica (La Camera Grigia).</li>
-        <li><strong>3. Il Distretto Urbano:</strong> Area di transizione urbana per l'acquisto di componenti ed equipaggiamento speciale.</li>
+        <li>
+            <strong>1. Lo Studio dell'Investigatore (Hub centrale):</strong> L'abitazione privata del protagonista.
+            <!-- IMMAGINE STUDIO INTERNO -->
+            <div style="text-align: center; margin: 25px 0;">
+                <img src="img/StanzaTest (1).png" alt="Investigator Study Concept" style="max-width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(168, 85, 247, 0.25); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p style="font-size: 0.8rem; color: #6b7280; margin-top: 8px; font-style: italic;">Studio ambientale rielaborato tramite IA partendo da sketch e WIP di produzione in-game.</p>
+            </div>
+        </li>
+        <li>
+            <strong>2. La Residenza d'Epoca:</strong> Lo scenario principale del primo caso. Una magione isolata, spettrale e opprimente.
+            <!-- IMMAGINE BIBLIOTECA -->
+            <div style="text-align: center; margin: 25px 0;">
+                <img src="img/StanzaTest2 (1).png" alt="Library Concept" style="max-width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(168, 85, 247, 0.25); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p style="font-size: 0.8rem; color: #6b7280; margin-top: 8px; font-style: italic;">Interno della Biblioteca di gioco, concept elaborato via IA da WIP e sketch di layout 3D.</p>
+            </div>
+        </li>
+        <li><strong>3. Il Distretto Urbano:</strong> Area urbana di transizione. Consente al giocatore di interfacciarsi con negozianti e artigiani per l'acquisto di componenti chimici e sviluppo di lastre.</li>
     </ul>
 
+    <!-- SEZIONE 4: FOLKLORE -->
     <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">4. Folklore, Lore & Spells</h3>
-    <p>La cosmologia magica e scientifica del gioco poggia interamente su un <strong>Manoscritto Antico</strong> (XIV secolo).</p>
+    <p>La cosmologia magica e scientifica del gioco poggia interamente sul misterioso ed esoterico <strong>Manoscritto Antico</strong> (XIV secolo), l'unica risorsa teorica in grado di fornire all'Investigatore i mezzi logici per contrastare le minacce esterne.</p>
     <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li><strong>Il Rituale dei Sigilli:</strong> Si compone di 8 segni fondamentali che garantiscono barriere fisiche e mentali. L'ordine sequenziale è vitale per l'attivazione dei sistemi difensivi.</li>
+        <li><strong>Il Rituale dei Sigilli:</strong> Si compone di 8 segni fondamentali che garantiscono barriere fisiche e mentali (<em>Protezione, Proiezione, Condivisione, Osservazione, Forza, Opportunità, Chiarezza, Potere</em>). L'ordine sequenziale è vitale per l'attivazione dei sistemi difensivi.</li>
+        <li>
+            <strong>La Teoria dei Sette Piani:</strong>
+            <ul style="padding-left: 20px; margin-top: 5px;">
+                <li><em>Piani Inferiori (1-4):</em> Malkuth (Elementare), Netzach (Terrestre), Hod (Astrale/Sogni) e Kethur (Causale). Costituiscono la dimensione d'azione in cui si muove il gameplay e da cui emergono le manifestazioni spettrali.</li>
+                <li><em>Piani Superiori (5-7):</em> Fohatico, Mahatico e Alayico. Regni governati da pure leggi matematiche e sorgente d'energia positiva.</li>
+            </ul>
+        </li>
     </ul>
 
+    <!-- SEZIONE 5: CHARACTERS (Con immagini e sfocature programmate) -->
     <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">5. Dramatis Personae (Characters)</h3>
-    <p><strong>I Personaggi:</strong> L'Investigatore (Uomo di scienza pragmatico), la comitiva di testimoni e i domestici della residenza (il Maggiordomo e la Domestica).</p>
+    <ul style="list-style: none; padding-left: 0;">
+        <!-- L'INVESTIGATORE -->
+        <li style="margin-bottom: 30px;">
+            <p><strong>L'Investigatore:</strong> Protagonista. Detective dell'occulto, uomo di scienza meticoloso e pragmatico, guidato dalla logica e dal rispetto per le leggi della fisica. Affronta l'ignoto con il timore di chi ne comprende la reale minaccia, ma con la determinazione di chi possiede gli strumenti scientifici e storici per arginarlo.</p>
 
+            <!-- CONTAINER IMMAGINE CON BLUR CSS ULTRA-CALIBRATO E RESPONSIVE MOBILE -->
+            <div style="text-align: center; margin: 20px 0; position: relative; display: block; max-width: 100%; line-height: 0;">
+                <img src="img/CarnackiSketch1_CharacterDesignAI (1).png" alt="The Investigator Concept" style="max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 12px; border: 1px solid rgba(168, 85, 247, 0.25); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+
+                <!-- Sfocatura Titolo in alto a sinistra (Stabile con TOP) -->
+                <div style="position: absolute; top: 1.8%; left: 1.5%; width: 18%; height: 7%; background: rgba(5, 2, 10, 0.95); backdrop-filter: blur(10px); border-radius: 3px; border: 1px solid rgba(168, 85, 247, 0.15);"></div>
+
+                <!-- Sfocatura Pergamena in basso a sinistra (Convertita in TOP per evitare lo scivolamento mobile) -->
+                <div style="position: absolute; top: 73%; left: 1.5%; width: 15.5%; height: 4.5%; background: rgba(5, 2, 10, 0.95); backdrop-filter: blur(10px); border-radius: 3px; border: 1px solid rgba(168, 85, 247, 0.15);"></div>
+
+                <!-- Ripristiniamo la line-height solo per la didascalia descrittiva sotto -->
+                <p style="font-size: 0.8rem; color: #6b7280; margin-top: 8px; font-style: italic; line-height: 1.8; text-align: center;">Studio di Character Design ( turnarounds ed espressioni ) elaborato con assistenza IA a partire da sketch e WIP in-game.</p>
+            </div>
+        </li>
+
+        <!-- IL MAGGIORDOMO -->
+        <li style="margin-bottom: 30px;">
+            <p><strong>Il Maggiordomo:</strong> Personaggio secondario chiave del Capitolo 1. Uomo timorato ma fedele. Custode dei segreti storici della magione infestata, introduce l'investigatore ai misteri della residenza e funge da guida interna.</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="img/PeterSketch1_CharacterDesignAI (1).png" alt="The Butler Concept" style="max-width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(168, 85, 247, 0.25); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p style="font-size: 0.8rem; color: #6b7280; margin-top: 8px; font-style: italic;">Studio di Character Design del Maggiordomo, elaborato con IA partendo da bozzetti cartacei originali di produzione.</p>
+            </div>
+        </li>
+
+        <!-- LA DOMESTICA -->
+        <li style="margin-bottom: 30px;">
+            <p><strong>La Domestica:</strong> Ultima arrivata tra la servitù della magione. Silenziosa, legata alla famiglia da un debito morale del passato che le impedisce di abbandonare la tenuta nonostante l'incombere della maledizione.</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="img/MirandaSketch1_CharacterDesignAI (1).png" alt="The Maid Concept" style="max-width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(168, 85, 247, 0.25); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p style="font-size: 0.8rem; color: #6b7280; margin-top: 8px; font-style: italic;">Studio di Character Design della Domestica, elaborato tramite IA da schizzi preliminari di sviluppo.</p>
+            </div>
+        </li>
+
+        <!-- LINEUP FINALE CON SFOCATURE SUI TITOLI -->
+        <li style="margin-bottom: 30px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px;">
+            <p><strong>Composizione dei Personaggi & Key Art:</strong> Di seguito vengono mostrate le pose in-game (Turnaround per modellazione 3D) accostate alle relative Key Art illustrative d'atmosfera.</p>
+            
+            <div style="text-align: center; margin: 20px 0; position: relative; display: inline-block; width: 100%;">
+                <img src="img/Carnacki_Atto1_KeyArt1 (1).png" alt="Characters Lineup Concept" style="max-width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(168, 85, 247, 0.25); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                
+                <!-- Sfocatura Titolo Carnacki in alto a sinistra -->
+                <div style="position: absolute; top: 1.5%; left: 1%; width: 12%; height: 4.5%; background: rgba(5, 2, 10, 0.95); backdrop-filter: blur(10px); border-radius: 4px; border: 1px solid rgba(168, 85, 247, 0.1);"></div>
+                
+                <!-- Sfocatura Key Art Carnacki in alto a destra -->
+                <div style="position: absolute; top: 1.5%; left: 51.5%; width: 12%; height: 4.5%; background: rgba(5, 2, 10, 0.95); backdrop-filter: blur(10px); border-radius: 4px; border: 1px solid rgba(168, 85, 247, 0.1);"></div>
+
+                <p style="font-size: 0.8rem; color: #6b7280; margin-top: 8px; font-style: italic;">Turnaround e Key Art dei protagonisti rielaborati con IA partendo da pose 3D e sketch d'atmosfera di produzione.</p>
+            </div>
+        </li>
+    </ul>
+
+    <!-- SEZIONE 6: TAXONOMY -->
     <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">6. System Taxonomy (Enemies)</h3>
-    <p><strong>Le Minacce:</strong> Classificate dal livello 1 al 5 secondo il Manoscritto. Focus sull'Entità Oscura (Classe 2), anomalia della Camera Grigia vincolata a un oggetto di famiglia e vulnerabile all'elettricità.</p>
+    <p>Le minacce paranormali esterne (classificate come Ab-naturali) seguono la categorizzazione del Manoscritto Antico:</p>
+    <ul>
+        <li><strong>Classe 1 — Fughe Psichiche / Poltergeist:</strong> Anomalie visive ed acustiche che non arrecano danno biologico diretto, ma minano la stabilità psicofisica del protagonista incrementandone il battito cardiaco (ECG).</li>
+        <li><strong>Classe 2 — Aeiirii (Fantasmi/Demoni):</strong> Manifestazioni semi-materiali vincolate a un oggetto di ancoraggio terreno. Inducono a danni biologici e psicosi. Richiedono barriere protettive.</li>
+        <li><strong>Classe 3 & 4 — Saiitii (Le Ombre Mobili):</strong> Parassiti energetici della materia inanimata o biologica morta. Altamente ostili e dotati di mobilità estesa, possono aggirare o corrompere le difese primarie. Il fuoco è l'unico agente neutralizzante.</li>
+        <li><strong>Classe 5 — Raaee (Astarri):</strong> Entità luminose superiori, benevole e cariche di energia. Agiscono fornendo suggerimenti crittografici o possono essere invocate tramite l'<em>Unknown Last Line</em> per salvarsi in situazioni di estremo pericolo.</li>
+        <li><strong>L'Entità Oscura (Boss del Capitolo 1):</strong> Manifestazione ostile di Classe 2 legata a un anello perduto della famiglia residenziale. È in grado di teletrasportarsi nell'ombra, confondere la mente del giocatore e colpire con velocità fulminea. Risulta vulnerabile all'elettricità, ai sigilli e alle formule recitate.</li>
+    </ul>
 
+    <!-- SEZIONE 7: MISSION SCRIPTING FLOW -->
     <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">7. Capitolo 1: Quest Scripting Flow</h3>
+    <p>Di seguito viene illustrata l'architettura logica di progressione delle missioni del primo episodio, strutturata in step logici di obiettivi ordinati per il tracciamento del codice di gioco:</p>
+
     <div style="background: rgba(168, 85, 247, 0.03); border: 1px solid rgba(168, 85, 247, 0.15); border-radius: 8px; padding: 15px; font-size: 0.9rem;">
         <p>
-            <strong>[INTRODUZIONE]</strong> - Obj 0.1: Parla con il Maggiordomo.<br>
-            <strong>[FASE 1]</strong> - Obj 1.1: Piazza 3 Segni e 3 Simboli nella tua camera d'appoggio.<br>
-            <strong>[FASE 2]</strong> - Obj 2.1: Accendi i 6 candelabri. Obj 2.2: Ispeziona la Camera Grigia. Obj 2.3: Sigilla le 3 finestre con nastro e trappole.<br>
-            <strong>[FASE 3]</strong> - Obj 3.1: Sigilla le 5 porte d'accesso.<br>
-            <strong>[FASE 4]</strong> - Obj 4.1: Conduci ricerche in camera e in biblioteca.<br>
-            <strong>[FASE 5]</strong> - Obj 5.1: Piazza fotocamera e auto-scatto sulla porta.<br>
-            <strong>[FASE 6]</strong> - Obj 6.1: Compra reagenti nella Bottega Esoterica del Distretto Urbano.<br>
-            <strong>[FASE 7]</strong> - Obj 7.1: Allestisci il cerchio ed elettrificalo. Sopravvivi alla notte.<br>
-            <strong>[FASE 8]</strong> - Obj 8.1: Preleva l'anello, confina l'entità e fondi l'oggetto con la fiamma ossidrica.
+            <strong>[INTRODUZIONE]</strong><br>
+            - Obiettivo 0.1: Interagisci con il maggiordomo Peter all'ingresso della magione.
+        </p>
+
+        <p style="margin-top: 10px;">
+            <strong>[FASE 1: PREPARAZIONE E SICUREZZA]</strong><br>
+            - Obiettivo 1.1: Posiziona 3 Segni di Saiitii e 3 Simboli del Rituale Saamaaa nella tua camera d'appoggio.<br>
+            - Obiettivo 1.2: Recupera la Borsa degli Strumenti ed equipaggia l'Inventario.<br>
+            - Obiettivo 1.3: Raggiungi il maggiordomo Peter nel Salotto.
+        </p>
+
+        <p style="margin-top: 10px;">
+            <strong>[FASE 2: INVESTIGAZIONE STANZA GRIGIA]</strong><br>
+            - Obiettivo 2.1: Accendi i 6 candelabri diegetici per ristabilire l'illuminazione primaria.<br>
+            - Obiettivo 2.2: Ispeziona la Stanza Grigia alla ricerca di varchi d'infestazione.<br>
+            - Obiettivo 2.3: Applica il nastro sigillante sulle 3 finestre e posiziona 3 fili trappola coordinati.<br>
+            - Obiettivo 2.4: Applica i Sigilli Saiitii nei 3 punti di ancoraggio energetico individuati.
+        </p>
+
+        <p style="margin-top: 10px;">
+            <strong>[FASE 3: ISOLAMENTO PERIMETRALE]</strong><br>
+            - Obiettivo 3.1: Esci nel corridoio e sigilla le 5 porte d'accesso per prevenire fughe psichiche.
+        </p>
+
+        <p style="margin-top: 10px;">
+            <strong>[FASE 4: ANALISI DEGLI INDIZI]</strong><br>
+            - Obiettivo 4.1: Torna nella Stanza Grigia ed effettua ricerche approfondite sui mobili e sul letto.<br>
+            - Obiettivo 4.2: Conduci un sopralluogo in biblioteca per decifrare i simboli occulti delle indagini.<br>
+            - Obiettivo 4.3: Parla con il maggiordomo e la domestica per raccogliere informazioni storiche.
+        </p>
+
+        <p style="margin-top: 10px;">
+            <strong>[FASE 5: FOTOGRAFIA SPIRITICA]</strong><br>
+            - Obiettivo 5.1: Recupera la fotocamera e posiziona il treppiede davanti all'ingresso della Stanza Grigia.<br>
+            - Obiettivo 5.2: Collega il meccanismo di auto-scatto alla maniglia della porta per catturare le entità di passaggio.
+        </p>
+
+        <p style="margin-top: 10px;">
+            <strong>[FASE 6: RIFORNIMENTO E SVILUPPO]</strong><br>
+            - Obiettivo 6.1: Raggiungi il negozio "Safarà" nel Budello di Londra per sviluppare le lastre e acquistare 5 reagenti chimici.<br>
+            - Obiettivo 6.2: Ritorna alla Magione degli Anderson e preparati all'assedio finale.
+        </p>
+
+        <p style="margin-top: 10px;">
+            <strong>[FASE 7: L'ASSEDIO NOTTURNO]</strong><br>
+            - Obiettivo 7.1: Sigillati all'interno della Stanza Grigia.<br>
+            - Obiettivo 7.2: Traccia la prima linea difensiva rituale (cerchio di gesso/sale).<br>
+            - Obiettivo 7.3: Allestisci la seconda linea difensiva (batterie e tubi a vuoto) e attiva il Pentacolo Elettrico.<br>
+            - Obiettivo 7.4: Sopravvivi all'assedio notturno della Mano d'Ombra e respingi i suoi assalti.
+        </p>
+
+        <p style="margin-top: 10px;">
+            <strong>[FASE 8: CONFINAMENTO E CONCLUSIONE]</strong><br>
+            - Obiettivo 8.1: Individua il punto d'origine dell'infestazione nella Stanza Grigia e preleva l'anello degli Anderson (ancora).<br>
+            - Obiettivo 8.2: Esci dal Pentacolo prima della materializzazione finale dell'entità e catturala.<br>
+            - Obiettivo 8.3: Raduna Peter e Miranda e distruggi definitivamente l'anello tramite fiamma ossidrica, spezzando la maledizione.
         </p>
     </div>
+
 </div>

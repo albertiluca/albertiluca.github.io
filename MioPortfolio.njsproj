@@ -42,6 +42,8 @@
     <Content Include="img\CarnackiLOGO_1.PNG" />
     <Content Include="img\CarnackiLOGO_2.PNG" />
     <Content Include="img\CarnackiLOGO_3.PNG" />
+    <Content Include="img\CarnackiSketch1_CharacterDesignAI %281%29.png" />
+    <Content Include="img\Carnacki_Atto1_KeyArt1 %281%29.png" />
     <Content Include="img\Costruzione1.PNG" />
     <Content Include="img\Costruzione10.PNG" />
     <Content Include="img\Costruzione2.PNG" />
@@ -63,12 +65,16 @@
     <Content Include="img\LCdD_6.jpg" />
     <Content Include="img\LCdD_7.jpg" />
     <Content Include="img\LCdD_SaveFire.png" />
+    <Content Include="img\MirandaSketch1_CharacterDesignAI %281%29.png" />
+    <Content Include="img\PeterSketch1_CharacterDesignAI %281%29.png" />
     <Content Include="img\Regno di Alcoma_%28Final%29.jpg" />
     <Content Include="img\Sandy1.jpg" />
     <Content Include="img\Sandy2.jpg" />
     <Content Include="img\Sandy3.jpg" />
     <Content Include="img\Sandy4.jpg" />
     <Content Include="img\SandyCover.PNG" />
+    <Content Include="img\StanzaTest %281%29.png" />
+    <Content Include="img\StanzaTest2 %281%29.png" />
     <Content Include="js\languages.json">
       <SubType>Code</SubType>
     </Content>

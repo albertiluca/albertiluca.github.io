@@ -1,10 +1,13 @@
 <div class="gdd-document" style="font-family: 'Inter', sans-serif; color: #9ca3af; line-height: 1.8; text-align: left;">
+    
+    <!-- DOCUMENT HEADER -->
     <div style="text-align: center; margin-bottom: 40px; border-bottom: 1px solid rgba(168, 85, 247, 0.2); padding-bottom: 20px;">
         <h1 style="color: #f3f4f6; font-size: 2rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px;">PROJECT SHADOWSEEKER</h1>
         <h3 style="color: #a855f7; font-size: 1.1rem; font-weight: 400; letter-spacing: 1px;">GAME DESIGN DOCUMENT</h3>
         <p style="font-size: 0.8rem; color: #6b7280; margin-top: 10px;">Production Version 1.0 — Literary Adaptation Project</p>
     </div>
 
+    <!-- STRUCTURAL INDEX -->
     <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 8px; margin-bottom: 30px; border-left: 3px solid #f59e0b;">
         <p style="color: #f59e0b; font-weight: bold; margin-bottom: 5px; font-size: 0.9rem;">STRUCTURAL INDEX</p>
         <ul style="list-style: none; font-size: 0.85rem; padding-left: 5px; line-height: 1.5;">
@@ -18,21 +21,25 @@
         </ul>
     </div>
 
+    <!-- SECTION 1: BASICS -->
     <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">1. Basics & Concept</h3>
-    <p><strong>Prompt & High-Concept:</strong> Classic literary-style video game adaptation. The title is designed as a 3D first-person psychological horror experience with a deep investigative focus, featuring noir style, thriller elements, and Lovecraftian tones.</p>
+    <p><strong>Prompt & High-Concept:</strong> Classic literary-style video game adaptation set in the Project Shadowseeker universe. The title is designed as a 3D first-person psychological horror experience with a deep investigative focus, featuring noir style, thriller elements, and Lovecraftian tones.</p>
     <p><strong>Game Structure:</strong> The gameplay is strictly linear, focusing on closed scenarios and well-defined paths to optimize the dramatic pacing. The campaign offers an immersive single-player experience, with achievements tied to different game difficulties.</p>
     <p><strong>Visual & Artistic Direction:</strong> The game adopts a hybrid storytelling style to optimize production costs and maximize historical immersion (1905-1912):</p>
     <ul style="padding-left: 20px; margin-bottom: 15px;">
         <li><strong>Comic Cinematic (The Frame):</strong> Narrative sequences designed in Motion Comic style, featuring charcoal and ink illustrations, animated with parallax, smoke, and rain effects.</li>
         <li><strong>3D Gameplay:</strong> First-person active exploration, characterized by dim diegetic lighting, oppressive rooms, and cinematic sound design.</li>
     </ul>
+    <p><strong>Inspirations & Benchmark:</strong> <em>Riven</em>, <em>The Shore</em>, <em>Call of Cthulhu: Dark Corners of the Earth</em>, <em>The Sinking City</em>, <em>What Remains of Edith Finch</em>, <em>The Vanishing of Ethan Carter</em>.</p>
 
+    <!-- SECTION 2: CORE GAMEPLAY -->
     <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">2. Core Gameplay Loop & Mechanics</h3>
     <p>The main loop is divided into two recurring systemic phases: <strong>Investigation</strong> and <strong>Ritual Siege</strong>.</p>
     <h4 style="color: #a855f7; margin-top: 15px; font-size: 1rem;">A. Investigation Phase & Exploration</h4>
     <ul style="padding-left: 20px; margin-bottom: 15px;">
         <li><strong>Status Monitoring (ECG):</strong> The protagonist's stress is tracked in real-time by a diegetic electrocardiograph in the journal. Near entities, the heart rate increases, causing camera shake (unstable aim) and slowing down interactions. The player must use alchemical extracts to calm down.</li>
         <li><strong>Spirit Photography:</strong> Vital for revealing hidden traces. The player must set up the camera on a tripod, take a plate photo, and develop the negatives with chemicals to reveal hidden runes and weak points.</li>
+        <li><strong>Inventory Management (Radial Wheel):</strong> The player has a tool wheel with a limit of 8 slots. Key resources (batteries, ammunition, chalk, extracts) are limited, forcing the player into careful strategic planning before leaving safe rooms.</li>
     </ul>
 
     <h4 style="color: #a855f7; margin-top: 15px; font-size: 1rem;">B. Ritual Siege Phase</h4>
@@ -41,37 +48,127 @@
         <li><strong>Strategic Combat (3 Stages):</strong> Repelling entities with the Electric Pentacle, shooting external fuses/triggers to release defensive electric arcs, and manual confinement by engraving the Protection Seals.</li>
     </ul>
 
+    <!-- SECTION 3: LEVEL DESIGN -->
     <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">3. World Architecture & Level Design</h3>
+    <p>The game world is structured into three linear macro-scenarios designed to support the narrative and emphasize the cyclical flow of the chapters:</p>
     <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li><strong>1. The Investigator's Study:</strong> The protagonist's house, used as the main hub for story segments.</li>
-        <li><strong>2. The Period Residence:</strong> The first case location, designed as a strategic defense arena (The Gray Chamber).</li>
-        <li><strong>3. The Urban District:</strong> Urban transition area to buy special components and equipment.</li>
+        <li>
+            <strong>1. The Investigator's Study (Central Hub):</strong> The protagonist's private residence.
+            <!-- HUB ENVIRONMENT IMAGE -->
+            <div style="text-align: center; margin: 25px 0;">
+                <img src="img/StanzaTest (1).png" alt="Investigator Study Concept" style="max-width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(168, 85, 247, 0.25); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p style="font-size: 0.8rem; color: #6b7280; margin-top: 8px; font-style: italic;">Studio environmental concept reworked via AI starting from original in-game development WIPs.</p>
+            </div>
+        </li>
+        <li>
+            <strong>2. The Period Residence:</strong> The first case location, designed as a strategic defense arena (The Gray Chamber).
+            <!-- LIBRARY ENVIRONMENT IMAGE -->
+            <div style="text-align: center; margin: 25px 0;">
+                <img src="img/StanzaTest2 (1).png" alt="Library Concept" style="max-width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(168, 85, 247, 0.25); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p style="font-size: 0.8rem; color: #6b7280; margin-top: 8px; font-style: italic;">The Residence Library, visual concept generated via AI from 3D layout WIPs.</p>
+            </div>
+        </li>
+        <li><strong>3. The Urban District (London):</strong> Urban transition area to buy special components and develop photographic plates.</li>
     </ul>
 
+    <!-- SECTION 4: FOLKLORE -->
     <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">4. Folklore, Lore & Spells</h3>
-    <p>The esoterical cosmology of the game relies entirely on an <strong>Ancient Manuscript</strong> (14th century).</p>
+    <p>The esoterical cosmology of the game relies entirely on an <strong>Ancient Manuscript</strong> (14th century) used by the Investigator to counter external threats.</p>
     <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li><strong>The Seals Ritual:</strong> Composed of 8 core signs that create physical and mental barriers. The sequential order is vital to activate defensive systems.</li>
+        <li><strong>The Seals Ritual:</strong> Composed of 8 core signs that create physical and mental barriers (Protection, Projection, Sharing, Observation, Force, Opportunity, Clarity, Power). The sequential order is vital to activate defensive systems.</li>
+        <li>
+            <strong>The Seven Planes Theory:</strong>
+            <ul style="padding-left: 20px; margin-top: 5px;">
+                <li><em>Lower Planes (1-4):</em> Malkuth (Elemental), Netzach (Terrestrial), Hod (Astral/Dreams), and Kethur (Causal). They constitute the interaction dimension where the gameplay takes place and from which ghostly manifestations emerge.</li>
+                <li><em>Upper Planes (5-7):</em> Fohatic, Mahatic, and Alayic. Realms governed by pure mathematical laws and sources of positive energy.</li>
+            </ul>
+        </li>
     </ul>
 
+    <!-- SECTION 5: CHARACTERS (Bilingual with same Blur CSS) -->
     <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">5. Dramatis Personae (Characters)</h3>
-    <p><strong>Characters:</strong> The Investigator (Pragmatic occult scientist), the circle of witnesses, and the residence servants (the Butler and the Maid).</p>
+    <ul style="list-style: none; padding-left: 0;">
+        <!-- THE INVESTIGATOR -->
+        <li style="margin-bottom: 30px;">
+            <p><strong>The Investigator:</strong> Protagonist. Occult investigator, a meticulous and pragmatic man of science, guided by logic and respect for the laws of physics. He faces the unknown with the fear of one who understands its real threat, but with the determination of one who possesses the scientific and historical tools to counter it.</p>
 
+            <!-- CONTAINER IMMAGINE CON BLUR CSS ULTRA-CALIBRATO E RESPONSIVE MOBILE (English) -->
+            <div style="text-align: center; margin: 20px 0; position: relative; display: block; max-width: 100%; line-height: 0;">
+                <img src="img/CarnackiSketch1_CharacterDesignAI (1).png" alt="The Investigator Concept" style="max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 12px; border: 1px solid rgba(168, 85, 247, 0.25); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+
+                <!-- Sfocatura Titolo in alto a sinistra (Stabile con TOP) -->
+                <div style="position: absolute; top: 1.8%; left: 1.5%; width: 18%; height: 7%; background: rgba(5, 2, 10, 0.95); backdrop-filter: blur(10px); border-radius: 3px; border: 1px solid rgba(168, 85, 247, 0.15);"></div>
+
+                <!-- Sfocatura Pergamena in basso a sinistra (Convertita in TOP per evitare lo scivolamento mobile) -->
+                <div style="position: absolute; top: 73%; left: 1.5%; width: 15.5%; height: 4.5%; background: rgba(5, 2, 10, 0.95); backdrop-filter: blur(10px); border-radius: 3px; border: 1px solid rgba(168, 85, 247, 0.15);"></div>
+
+                <!-- Ripristiniamo la line-height solo per la didascalia descrittiva sotto -->
+                <p style="font-size: 0.8rem; color: #6b7280; margin-top: 8px; font-style: italic; line-height: 1.8; text-align: center;">Character Design Study (turnaround & expressions) generated with AI from preliminary production sketches.</p>
+            </div>
+        </li>
+
+        <!-- THE BUTLER -->
+        <li style="margin-bottom: 30px;">
+            <p><strong>The Butler:</strong> Key secondary character of Chapter 1. A fearful but loyal man. Custodian of the mansion's historical secrets, he introduces the investigator to the mysteries of the residence and acts as an internal guide.</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="img/PeterSketch1_CharacterDesignAI (1).png" alt="The Butler Concept" style="max-width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(168, 85, 247, 0.25); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p style="font-size: 0.8rem; color: #6b7280; margin-top: 8px; font-style: italic;">The Butler's Character Design, generated via AI from original production concepts.</p>
+            </div>
+        </li>
+
+        <!-- THE MAID -->
+        <li style="margin-bottom: 30px;">
+            <p><strong>The Maid:</strong> The newest addition to the mansion's staff. Quiet, tied to the family by a past moral debt that prevents her from leaving the estate despite the impending curse.</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="img/MirandaSketch1_CharacterDesignAI (1).png" alt="The Maid Concept" style="max-width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(168, 85, 247, 0.25); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p style="font-size: 0.8rem; color: #6b7280; margin-top: 8px; font-style: italic;">The Maid's Character Design, generated via AI from preliminary development WIPs.</p>
+            </div>
+        </li>
+
+        <!-- LINEUP WITH BLURS -->
+        <li style="margin-bottom: 30px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px;">
+            <p><strong>Character Composition & Key Art:</strong> The in-game modeling turnarounds are shown next to their respective atmospheric Key Art illustrative works.</p>
+            
+            <div style="text-align: center; margin: 20px 0; position: relative; display: inline-block; width: 100%;">
+                <img src="img/Carnacki_Atto1_KeyArt1 (1).png" alt="Characters Lineup Concept" style="max-width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(168, 85, 247, 0.25); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                
+                <!-- Blur Turnaround Title Top-Left -->
+                <div style="position: absolute; top: 1.5%; left: 1%; width: 12%; height: 4.5%; background: rgba(5, 2, 10, 0.95); backdrop-filter: blur(10px); border-radius: 4px; border: 1px solid rgba(168, 85, 247, 0.1);"></div>
+                
+                <!-- Blur Key Art Title Top-Right -->
+                <div style="position: absolute; top: 1.5%; left: 51.5%; width: 12%; height: 4.5%; background: rgba(5, 2, 10, 0.95); backdrop-filter: blur(10px); border-radius: 4px; border: 1px solid rgba(168, 85, 247, 0.1);"></div>
+
+                <p style="font-size: 0.8rem; color: #6b7280; margin-top: 8px; font-style: italic;">Turnaround lineup and Key Art sheets generated with AI from 3D models and atmospheric visual sketches.</p>
+            </div>
+        </li>
+    </ul>
+
+    <!-- SECTION 6: TAXONOMY -->
     <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">6. System Taxonomy (Enemies)</h3>
-    <p><strong>Threats:</strong> Classified from level 1 to 5. Focus on the Dark Entity (Class 2), the anomaly of the Gray Chamber tied to a lost family ring and highly vulnerable to electricity.</p>
+    <p>External threats (classified as Ab-natural) follow the strict taxonomy of the Ancient Manuscript:</p>
+    <ul>
+        <li><strong>Class 1 — Psychic Leaks / Poltergeist:</strong> Acoustic or visual anomalies that do not cause direct biological damage, but undermine the protagonist's psychophysical stability by increasing heart rate (ECG).</li>
+        <li><strong>Class 2 — Aeiirii (Ghosts/Demons):</strong> Semi-material manifestations bound to a physical anchor. They induce biological damage and psychosis, requiring protective barriers.</li>
+        <li><strong>Class 3 & 4 — Saiitii (Moving Shadows):</strong> Energy parasites of dead organic or inorganic matter. Highly hostile and highly mobile, they can bypass or corrupt primary defenses. Fire is the only neutralizing agent.</li>
+        <li><strong>Class 5 — Raaee (Astarri):</strong> Superior, benevolent, energy-charged light entities. They act by providing cryptographic suggestions or can be invoked via the Unknown Last Line as a saving resource in situations of extreme danger.</li>
+        <li><strong>The Dark Entity (Chapter 1 Boss):</strong> A hostile Class 2 manifestation bound to a lost family ring. It can teleport in the dark, confuse the player's mind, and strike with lightning speed. It is vulnerable to electricity, seals, and recited formulas.</li>
+    </ul>
 
+    <!-- SECTION 7: QUEST SCRIPTING -->
     <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">7. Chapter 1: Quest Scripting Flow</h3>
+    <p>The following section illustrates the logical progression architecture of the first episode's missions, structured as logical steps of ordered objectives for game code tracking:</p>
+
     <div style="background: rgba(168, 85, 247, 0.03); border: 1px solid rgba(168, 85, 247, 0.15); border-radius: 8px; padding: 15px; font-size: 0.9rem;">
-        <p>
-            <strong>[INTRODUCTION]</strong> - Obj 0.1: Talk to the Butler.<br>
-            <strong>[STAGE 1]</strong> - Obj 1.1: Set up 3 Saiitii Signs and 3 Symbols in your guest room.<br>
-            <strong>[STAGE 2]</strong> - Obj 2.1: Light 6 candles. Obj 2.2: Inspect the Gray Chamber. Obj 2.3: Seal 3 windows with tape and wire traps.<br>
-            <strong>[STAGE 3]</strong> - Obj 3.1: Seal 5 access doors.<br>
-            <strong>[STAGE 4]</strong> - Obj 4.1: Research clues in your room and library.<br>
-            <strong>[STAGE 5]</strong> - Obj 5.1: Set up camera and auto-shutter on the door.<br>
-            <strong>[STAGE 6]</strong> - Obj 6.1: Buy chemicals from the Esoteric Shop in the Urban District.<br>
-            <strong>[STAGE 7]</strong> - Obj 7.1: Set up the circle and electrify it. Survive the night.<br>
-            <strong>[STAGE 8]</strong> - Obj 8.1: Take the ring, confine the entity, and melt the ring with the blowtorch.
-        </p>
+        <p><strong>[INTRODUCTION]</strong> - Obj 0.1: Talk to the Butler.<br>
+        <strong>[STAGE 1]</strong> - Obj 1.1: Set up 3 Saiitii Signs and 3 Symbols in your guest room.<br>
+        <strong>[STAGE 2]</strong> - Obj 2.1: Light 6 candles. Obj 2.2: Inspect the Gray Chamber. Obj 2.3: Seal 3 windows with tape and wire traps.<br>
+        <strong>[STAGE 3]</strong> - Obj 3.1: Seal 5 access doors.<br>
+        <strong>[STAGE 4]</strong> - Obj 4.1: Research clues in your room and library.<br>
+        <strong>[STAGE 5]</strong> - Obj 5.1: Set up camera and auto-shutter on the door.<br>
+        <strong>[STAGE 6]</strong> - Obj 6.1: Buy chemicals from the Esoteric Shop in the Urban District.<br>
+        <strong>[STAGE 7]</strong> - Obj 7.1: Set up the circle and electrify it. Survive the night.<br>
+        <strong>[STAGE 8]</strong> - Obj 8.1: Take the ring, confine the entity, and melt the ring with the blowtorch.</p>
     </div>
 </div>
