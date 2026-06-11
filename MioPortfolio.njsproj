@@ -93,7 +93,7 @@
     <Content Include="skills.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Style.css">
+    <Content Include="style.css">
       <SubType>Code</SubType>
     </Content>
     <Content Include="Video\Altroquando_Dove sarà finito il nostro Debian.mp4" />
