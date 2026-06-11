@@ -3,123 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luca Alberti - Game Designer</title>
-
-    <!-- Collegamenti ai fogli di stile -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Luca Alberti | Game Designer & Tech Artist</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
-
 <body>
 
-    <!-- ======================= -->
-    <!-- HEADER CORRETTO         -->
-    <!-- ======================= -->
-    <header>
-        <nav>
-            <a href="index.html" class="logo" data-key="logo_name">Luca Alberti</a>
-            <ul>
-                <li><a href="index.html" data-key="nav_home">Home</a></li>
-                <li><a href="#about" data-key="nav_about">About Me</a></li>
-                <li><a href="#contacts" data-key="nav_contacts">Contact Info</a></li>
-                <li><a href="/docs/CV_JuniorEnvironmentArtist.pdf" download target="_blank" data-key="nav_cv">CV</a></li>
+    <!-- VIDEO DI SFONDO (Misterioso e d'atmosfera) -->
+    <div class="video-bg-container">
+        <video autoplay loop muted playsinline class="video-bg">
+            <source src="Video/VideoRig_2.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
 
-                <!-- Selettore lingua DENTRO la lista -->
-                <li class="language-selector-item">
-                    <button id="lang-it">IT</button>
-                    <span>|</span>
-                    <button id="lang-en">EN</button>
-                </li>
+    <!-- HEADER CON SELETTORE LINGUA -->
+    <header class="main-header">
+        <a href="#hero" class="logo">Luca Alberti</a>
+        <nav class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#sandy">Sandy</a></li>
+                <li><a href="#carnacki">Carnacki</a></li>
+                <li><a href="#debian">Debian</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about" data-key="nav_about">Chi Sono</a></li>
             </ul>
+            <div class="language-selector">
+                <button id="lang-it">IT</button>
+                <span>|</span>
+                <button id="lang-en">EN</button>
+            </div>
         </nav>
     </header>
 
-
-    <!-- Questa è la sezione principale con il contenuto -->
-    <main class="hero-section">
-
-        <!-- Video temporaneamente disattivato -->
-
-        <div class="hero-content">
-            <h1 data-key="hero_title">Ciao, sono Luca</h1>
-            <p data-key="hero_subtitle">Game Designer & Developer</p>
-            <hr>
-            <!-- I tuoi 4 pulsanti -->
-            <div class="cta-buttons">
-                <a href="games.html" class="btn">Games</a>
-                <a href="project.html" class="btn">Projects</a>
-                <a href="skills.html" class="btn">Skills</a>
-                <a href="devlog.html" class="btn">DevLog</a>
+    <main>
+        <!-- SEZIONE HERO (Presentazione) -->
+        <section id="hero" class="section hero-section">
+            <div class="hero-content">
+                <h1 data-key="hero_title">Ciao, sono Luca</h1>
+                <p class="subtitle" data-key="hero_subtitle">Sono un Game Designer & Tech Artist</p>
+                <div class="cta-buttons">
+                    <a href="#carnacki" class="btn" data-key="btn_explore">Esplora Progetti</a>
+                    <a href="docs/CV_Luca_Alberti.pdf" target="_blank" class="btn btn-secondary" data-key="btn_cv">Scarica CV</a>
+                </div>
             </div>
-        </div>
+        </section>
+
+
+        <!-- SEZIONE 1: SANDY (Disponibile su Steam) -->
+        <section id="sandy" class="section project-section">
+            <div class="project-container">
+                <div class="project-header">
+                    <h2 data-key="sandy_title">Sandy</h2>
+                    <span class="project-badge badge-steam">Disponibile su Steam</span>
+                </div>
+
+                <div class="project-grid">
+                    <!-- Colonna Sinistra: Video Trailer -->
+                    <div class="project-media">
+                        <video autoplay loop muted playsinline class="project-video-preview">
+                            <source src="Video/SandyTrailer.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <!-- Colonna Destra: Dettagli Level Design -->
+                    <div class="project-info">
+                        <p class="project-description" data-key="sandy_description">
+                            Benvenuto nel mondo di Sandy, un'avventura rompicapo creata dagli studenti del corso di videogiochi di BigRock. In un mondo in cui il pavimento è un'immensa frontiera, accompagna una piccola bambola attraverso una cameretta apparentemente accogliente di giorno, ma che di notte si trasforma in un labirinto pieno di meraviglie e pericoli.
+                        </p>
+
+                        <div class="project-highlights">
+                            <h3 data-key="sandy_highlights_title">Level Design Focus:</h3>
+                            <ul>
+                                <li>
+                                    <strong data-key="sandy_highlight_1_title">Level Design Pipeline:</strong>
+                                    <span data-key="sandy_highlight_1_desc">Gestione dell'intera pipeline di livello: dal layout iniziale su carta al greyboxing, fino alla rifinitura estetica, all'illuminazione d'atmosfera e al pacing.</span>
+                                </li>
+                                <li>
+                                    <strong data-key="sandy_highlight_2_title">Pacing & Enigmi:</strong>
+                                    <span data-key="sandy_highlight_2_desc">Bilanciamento del ritmo di gioco alternando zone di esplorazione sicura a enigmi ambientali tridimensionali complessi (interazione con blocchi, leve e ostacoli dinamici).</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="project-buttons">
+                            <a href="https://store.steampowered.com/app/4261550/Sandy/" target="_blank" class="btn btn-steam" data-key="sandy_btn_steam">
+                                Gioca su Steam
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SEZIONE 2: CARNACKI -->
+        <section id="carnacki" class="section project-section">
+            <div class="project-container">
+                <div class="project-header">
+                    <h2 data-key="carnacki_title">Carnacki: Occult Detective</h2>
+                    <span class="project-badge">UE5 - In Sviluppo</span>
+                </div>
+
+                <div class="project-grid">
+                    <!-- Colonna Sinistra: Video e Media -->
+                    <div class="project-media">
+                        <video autoplay loop muted playsinline class="project-video-preview">
+                            <source src="Video/Carnacki_estrattovideo3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <!-- Colonna Destra: Dettagli di Design -->
+                    <div class="project-info">
+                        <p class="project-description" data-key="carnacki_description">
+                            Trasposizione videoludica 3D in prima persona del romanzo di William Hope Hodgson. Un horror psicologico investigativo con forte focus sull'atmosfera e sulla pianificazione strategica delle difese.
+                        </p>
+
+                        <div class="project-highlights">
+                            <h3 data-key="carnacki_highlights_title">Game Design & Tech Art Focus:</h3>
+                            <ul>
+                                <li>
+                                    <strong data-key="carnacki_highlight_1_title">System Design:</strong>
+                                    <span data-key="carnacki_highlight_1_desc">Progettazione delle meccaniche core: livello di stress (ECG), fotografia spiritica e sistema di difesa rituale a tre fasi (pulizia, cerchio protettivo, tecnologia).</span>
+                                </li>
+                                <li>
+                                    <strong data-key="carnacki_highlight_2_title">Technical Art:</strong>
+                                    <span data-key="carnacki_highlight_2_desc">Prototipazione logica tramite Blueprints in Unreal Engine 5, ottimizzazione delle scene e implementazione tecnica degli asset 3D.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="project-buttons">
+                            <!-- Il Bottone di attivazione -->
+                            <button id="open-gdd-btn" class="btn" data-key="carnacki_btn_gdd">Leggi il GDD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LA FINESTRA MODAL PROTETTA (Posizionata correttamente fuori dalla griglia ma nella sezione) -->
+            <div id="gdd-modal" class="gdd-modal-overlay" oncontextmenu="return false;">
+                <div class="gdd-modal-content" onselectstart="return false;" ondragstart="return false;">
+                    <!-- Header della finestra -->
+                    <div class="gdd-modal-header">
+                        <h3 data-key="gdd_modal_title">Carnacki: Occult Detective - Game Design Document</h3>
+                        <button id="close-gdd-btn" class="close-modal-btn">&times;</button>
+                    </div>
+
+                    <!-- Area del Testo (Gestita dinamicamente dal file gdd-carnacki.html) -->
+                    <div class="gdd-modal-body" id="gdd-text-content">
+                        <p style="text-align: center; color: var(--accent-neon);">Caricamento documento in corso...</p>
+                    </div>
+
+                    <!-- Footer di tutela -->
+                    <div class="gdd-modal-footer">
+                        <p class="gdd-protection-notice" data-key="gdd_notice">Documento protetto. Download e selezione testo disabilitati per la tutela della proprietà intellettuale.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SEZIONE 3: LE CRONACHE DI DEBIAN (Solo Project) -->
+        <section id="debian" class="section project-section">
+            <div class="project-container">
+                <div class="project-header">
+                    <h2 data-key="debian_title">Le Cronache di Debian</h2>
+                    <span class="project-badge badge-itch">Solo Project - Itch.io</span>
+                </div>
+
+                <div class="project-grid">
+                    <!-- Colonna Sinistra: Video Trailer -->
+                    <div class="project-media">
+                        <video autoplay loop muted playsinline class="project-video-preview">
+                            <source src="Video/Le Cronache di Debian - Trailer ENG.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <!-- Colonna Destra: Dettagli Design e Logica -->
+                    <div class="project-info">
+                        <p class="project-description" data-key="debian_description">
+                            Un gioco di ruolo classico sviluppato interamente in solitaria con RPG Maker MV. Il progetto rappresenta una solida prova di gestione del ciclo di sviluppo completo, affrontando il bilanciamento dei sistemi di combattimento, il design dell'interfaccia utente (UI) e l'architettura logica delle missioni.
+                        </p>
+
+                        <div class="project-highlights">
+                            <h3 data-key="debian_highlights_title">Design & Architecture Focus:</h3>
+                            <ul>
+                                <li>
+                                    <strong data-key="debian_highlight_1_title">Quest Logic & Variable Scripting:</strong>
+                                    <span data-key="debian_highlight_1_desc">Architettura logica delle quest ramificate tramite un sistema coordinato di variabili e switch locali, garantendo una progressione priva di soft-lock e una gestione coerente dello stato del mondo di gioco.</span>
+                                </li>
+                                <li>
+                                    <strong data-key="debian_highlight_2_title">System & Economy Balancing:</strong>
+                                    <span data-key="debian_highlight_2_desc">Bilanciamento matematico delle curve di progressione dei personaggi, delle statistiche dei nemici e dell'economia di gioco (costi dei negozi, drop-rate degli oggetti).</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="project-buttons">
+                            <a href="https://onironauts.itch.io/le-cronache-di-debian-demo-version" target="_blank" class="btn btn-itch" data-key="debian_btn_itch">
+                                Gioca su Itch.io
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SEZIONE 4: SKILLS -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <h2 data-key="skills_title" class="skills-main-title">Skills & Competenze</h2>
+                <p data-key="skills_subtitle" class="skills-subtitle">Le tecnologie e i software che utilizzo regolarmente nel mio flusso di lavoro.</p>
+
+                <div class="skills-accordion">
+                    <!-- Sezione 1: Linguaggi di Programmazione -->
+                    <button class="accordion-button" data-key="skills_lang_btn">Linguaggi di Programmazione & Logica</button>
+                    <div class="accordion-panel">
+                        <div class="skills-grid">
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag highlight-logic">Blueprint (UE5)</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML5 / CSS3</span>
+                        </div>
+                    </div>
+
+                    <!-- Sezione 2: Motori e Software -->
+                    <button class="accordion-button" data-key="skills_software_btn">Motori Grafici & Software</button>
+                    <div class="accordion-panel">
+                        <div class="skills-grid">
+                            <span class="skill-tag highlight-engine">Unreal Engine 5</span>
+                            <span class="skill-tag">Unity</span>
+                            <span class="skill-tag">Autodesk Maya</span>
+                            <span class="skill-tag">Substance Painter</span>
+                            <span class="skill-tag">ZBrush</span>
+                            <span class="skill-tag">Autodesk Sketchbook</span>
+                            <span class="skill-tag">Audacity</span>
+                            <span class="skill-tag">Adobe After Effects</span>
+                            <span class="skill-tag">Adobe Premiere</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    </main> <!-- Fine della sezione Hero -->
-    <!-- ================================= -->
-    <!-- NUOVA SEZIONE "CHI SONO" (ABOUT ME) -->
-    <!-- ================================= -->
-    <section id="about" class="about-section">
+
+    <!-- SEZIONE 5: CHI SONO -->
+    <section id="about" class="section about-section">
         <div class="container">
-            <h2 data-key="about_title">Chi Sono</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <!-- Sostituisci con una tua foto professionale -->
-                    <img src="img/FotoMeCV_WIP_3.png" alt="Una foto di [Il Tuo Nome]">
+            <div class="about-grid">
+                <div class="about-info">
+                    <h2 data-key="about_title">Chi Sono</h2>
+                    <p class="about-text" data-key="about_p1">
+                        Sono un Game Designer con un percorso che unisce la sensibilità artistica di un diploma in arte multimediale alla struttura logica di una laurea in informatica, specializzato attraverso il Master a BigRock.
+                    </p>
+                    <p class="about-text" data-key="about_p2">
+                        Vedo lo sviluppo logico e la programmazione non come il mio obiettivo primario, ma come un potente strumento di comunicazione. Questo background mi permette di dialogare fluentemente con i programmatori, comprendendo i vincoli tecnici fin dalle prime fasi di concept per progettare meccaniche e livelli che siano stimolanti per il giocatore e sostenibili per il team di sviluppo.
+                    </p>
+                    <p class="about-text" data-key="about_p3">
+                        Attualmente lavoro come consulente sviluppatore, un'esperienza che ha affinato la mia attitudine al problem solving metodico all'interno di team strutturati.
+                    </p>
                 </div>
-                <div class="about-text">
-                    <p data-key="about_p1">
-                        La mia passione per i videogiochi è nata fin da bambino, ma è stata la curiosità di capire "come funzionano" a spingermi verso la laurea in Informatica e poi al Master in Videogames conseguito a Bigrock.
-                    </p>
-                    <p data-key="about_p2">
-                        Junior 3D Artist con un profilo unico che unisce una solida base tecnica,
-                        derivante da una Laurea in Informatica, a una specializzazione
-                        creativa ottenuta con un Master in Videogames. Questa doppia
-                        competenza mi permette di approcciare la modellazione 3D e la
-                        creazione di asset non solo con un occhio artistico, ma anche con una
-                        profonda comprensione delle performance, dell'ottimizzazione e
-                        delle pipeline di produzione. Sono fortemente motivato a tradurre la mia
-                        passione per la grafica computerizzata in asset di alta
-                        qualità, funzionali e pronti per l'integrazione in game engine.
-                    </p>
+
+                <div class="about-media">
+                    <div class="about-placeholder-box">
+                        <span class="tech-icon">&#x2699;</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    </section> <!-- Fine della sezione "Chi Sono" -->
-    <!-- ================================= -->
-    <!-- NUOVA SEZIONE "CONTATTI"          -->
-    <!-- ================================= -->
-    <section id="contacts" class="contacts-section">
-        <div class="container">
-            <h2 data-key="about_title_p2">Mettiamoci in Contatto</h2>
-            <p data-key="about_p3">
-                Sono sempre aperto a nuove opportunità di collaborazione e a discutere di progetti interessanti. Puoi trovarmi qui:
-            </p>
-            <div class="social-links">
-                <!-- Sostituisci '#' con i link ai tuoi profili! -->
-                <a href="mailto:luca.alberti.works@gmail.com" target="_blank" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/lucaalberti96/" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="#" target="_blank" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" target="_blank" title="Itch.io">
-                    <i class="fab fa-itch-io"></i>
-                </a>
-                <a href="https://www.artstation.com/debian_965" traget="_blank" title="ArtStation">
-                    <i class="fab fa-artstation"></i>
-                </a>
-            </div>
-        </div>
-    </section>
+    <footer class="main-footer">
+        <p>&copy; 2026 Luca Alberti.</p>
+    </footer>
 
-
+    <!-- Script per la traduzione -->
     <script src="js/translator.js"></script>
-
-    <!-- Il resto del tuo sito, se ci fosse altro, andrebbe qui -->
+    <!-- Script esterni di comportamento -->
+    <script src="portfolio.js"></script>
 </body>
 </html>

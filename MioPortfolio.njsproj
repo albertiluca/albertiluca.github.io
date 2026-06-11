@@ -29,18 +29,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="devlog.html">
-      <SubType>Code</SubType>
-    </Content>
+    <Content Include="docs\Carnacki-NewGDD_2 %281%29.pdf" />
     <Content Include="docs\CV_JuniorEnvironmentArtist.pdf" />
     <Content Include="docs\CV_Luca_Alberti.pdf" />
     <Content Include="games-carnacki.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="games-crimsonlands.html">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="games.html">
+    <Content Include="gdd-carnacki-en.html" />
+    <Content Include="gdd-carnacki-it.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="img\CarnackiLOGO_1.PNG" />
@@ -56,12 +52,9 @@
     <Content Include="img\Costruzione7.PNG" />
     <Content Include="img\Costruzione8.PNG" />
     <Content Include="img\Costruzione9.PNG" />
-    <Content Include="img\CRADS.PNG" />
-    <Content Include="img\Crimsonland_Snap_1.PNG" />
-    <Content Include="img\Crimsonland_Snap_2.png" />
+    <Content Include="devlog.html" />
     <Content Include="img\Font_Le Cronache di Debian_Ver 2.png" />
     <Content Include="img\FotoMeCV_WIP_3.png" />
-    <Content Include="img\JackDaniels.jpeg" />
     <Content Include="img\LCdD_1.jpg" />
     <Content Include="img\LCdD_2.jpg" />
     <Content Include="img\LCdD_3.jpg" />
@@ -70,29 +63,12 @@
     <Content Include="img\LCdD_6.jpg" />
     <Content Include="img\LCdD_7.jpg" />
     <Content Include="img\LCdD_SaveFire.png" />
-    <Content Include="img\ProtoSTHILGame_1.PNG" />
-    <Content Include="img\ProtoSTHILGame_2.PNG" />
-    <Content Include="img\ProtoSTHILGame_3.PNG" />
-    <Content Include="img\ProtoSTHILGame_4.PNG" />
-    <Content Include="img\ProtoSTHILGame_5.PNG" />
-    <Content Include="img\ProtoSTHILGame_6.PNG" />
-    <Content Include="img\ProtoSTHILGame_7.PNG" />
-    <Content Include="img\ProtoSTHILGame_8.PNG" />
     <Content Include="img\Regno di Alcoma_%28Final%29.jpg" />
-    <Content Include="img\Rig_1.PNG" />
-    <Content Include="img\Rig_2.PNG" />
-    <Content Include="img\Rig_3.PNG" />
-    <Content Include="img\Rig_4.PNG" />
     <Content Include="img\Sandy1.jpg" />
     <Content Include="img\Sandy2.jpg" />
     <Content Include="img\Sandy3.jpg" />
     <Content Include="img\Sandy4.jpg" />
     <Content Include="img\SandyCover.PNG" />
-    <Content Include="img\ScrubNRush_Gameplay3000.png" />
-    <Content Include="img\ScrubNRush_Gameplay3034.png" />
-    <Content Include="img\ScrubNRush_Gameplay3081.png" />
-    <Content Include="img\ScrubNRush_Gameplay3128.png" />
-    <Content Include="img\STHIL-Cover.png" />
     <Content Include="js\languages.json">
       <SubType>Code</SubType>
     </Content>
@@ -102,23 +78,13 @@
     <Content Include="games-sandy.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="project-advanced-rig.html">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="project-jam.html">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="img\ScrubNSmear.PNG" />
     <Content Include="index.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="portfolio.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="project-lecronachedidebian.html">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="project-sthil.html">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="project.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="server.js" />
@@ -132,14 +98,8 @@
     </Content>
     <Content Include="Video\Altroquando_Dove sarà finito il nostro Debian.mp4" />
     <Content Include="Video\Carnacki_estrattovideo3.mp4" />
-    <Content Include="Video\Crimsonland_Video3.mp4" />
     <Content Include="Video\Le Cronache di Debian - Trailer ENG.mp4" />
     <Content Include="Video\SandyTrailer.mp4" />
-    <Content Include="Video\STHIL-GameTrailer2.mp4" />
-    <Content Include="Video\trailer-jam.mp4" />
-    <Content Include="Video\VideoRig_1.mp4" />
-    <Content Include="Video\VideoRig_2.mp4" />
-    <Content Include="Video\VideoRig_3.mp4" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="img\" />

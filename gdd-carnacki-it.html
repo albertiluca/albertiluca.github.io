@@ -1,0 +1,174 @@
+<div class="gdd-document" style="font-family: 'Inter', sans-serif; color: #9ca3af; line-height: 1.8;">
+
+    <!-- INTESTAZIONE DOCUMENTO -->
+    <div style="text-align: center; margin-bottom: 40px; border-bottom: 1px solid rgba(168, 85, 247, 0.2); padding-bottom: 20px;">
+        <h1 style="color: #f3f4f6; font-size: 2rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px;">CARNACKI: OCCULT DETECTIVE</h1>
+        <h3 style="color: #a855f7; font-size: 1.1rem; font-weight: 400; letter-spacing: 1px;">GAME DESIGN DOCUMENT</h3>
+        <p style="font-size: 0.8rem; color: #6b7280; margin-top: 10px;">Versione di Produzione 1.0 — Progetto di Adattamento Letterario</p>
+    </div>
+
+    <!-- INDICE RAPIDO -->
+    <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 8px; margin-bottom: 30px; border-left: 3px solid #f59e0b;">
+        <p style="color: #f59e0b; font-weight: bold; margin-bottom: 5px; font-size: 0.9rem;">INDICE STRUTTURALE</p>
+        <ul style="list-style: none; font-size: 0.85rem; padding-left: 5px;">
+            <li>1. BASICS & CONCEPT</li>
+            <li>2. CORE GAMEPLAY LOOP & MECHANICS</li>
+            <li>3. WORLD ARCHITECTURE & LEVEL DESIGN</li>
+            <li>4. FOLKLORE, LORE & SPELLS</li>
+            <li>5. DRAMATIS PERSONAE (CHARACTERS)</li>
+            <li>6. SYSTEM TAXONOMY (ENEMIES)</li>
+            <li>7. CAPITOLO 1: QUEST SCRIPTING FLOW</li>
+        </ul>
+    </div>
+
+    <!-- SEZIONE 1: BASICS -->
+    <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">1. Basics & Concept</h3>
+    <p><strong>Prompt & High-Concept:</strong> Trasposizione videoludica ufficiale del ciclo di romanzi e racconti di William Hope Hodgson (1877-1918), <em>"Carnacki: The Ghost Finder"</em>. Il titolo è concepito come un'esperienza 3D psychological-horror in prima persona a forte componente investigativa, caratterizzata da tinte noir, thriller e suggestioni di stampo lovecraftiane.</p>
+    <p><strong>Struttura di Gioco:</strong> Il gameplay si sviluppa in modo rigorosamente lineare, focalizzandosi su scenari chiusi e percorsi ben definiti per massimizzare il pacing drammatico della tensione emotiva. La campagna si focalizza su un'esperienza single-player immersiva, supportata da una logica di sblocco obiettivi legati alle diverse difficoltà di gioco.</p>
+    <p><strong>Stile Visivo & Direzione Artistica:</strong> L'opera adotta uno stile di narrazione ibrido progettato per ottimizzare i costi di produzione e massimizzare l'immersione nell'atmosfera tardo-vittoriana (1905-1912):</p>
+    <ul>
+        <li><strong>Comic Cinematic (La Cornice):</strong> Sequenze narrative realizzate tramite lo stile dei fumetti animati (Motion Comics). Le illustrazioni riprendono i bozzetti a carboncino e china presenti nei documenti storici di produzione, animate con effetti di parallasse, fumo e pioggia dinamica per le scene d'intermezzo.</li>
+        <li><strong>Gameplay 3D:</strong> Esplorazione attiva in prima persona, caratterizzata da un'illuminazione diegetica cupa, ambienti opprimenti e sound design cinematografico.</li>
+    </ul>
+    <p><strong>Inspirations & Benchmark:</strong> <em>Riven</em>, <em>The Shore</em>, <em>Call of Cthulhu: Dark Corners of the Earth</em>, <em>The Sinking City</em>, <em>What Remains of Edith Finch</em>, <em>The Vanishing of Ethan Carter</em>.</p>
+
+    <!-- SEZIONE 2: CORE GAMEPLAY -->
+    <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">2. Core Gameplay Loop & Mechanics</h3>
+    <p>Il loop d'interazione principale si divide in due macro-fasi sistemiche ricorrenti: l'<strong>Investigazione</strong> e l'<strong>Assedio Rituale</strong>.</p>
+
+    <h4 style="color: #a855f7; margin-top: 15px; font-size: 1rem;">A. Fase Investigativa ed Esplorazione</h4>
+    <ul>
+        <li><strong>Monitoraggio dello Status Psicofisico (ECG):</strong> Lo stress emotivo di Carnacki è costantemente monitorato tramite un elettrocardiografo diegetico integrato nel diario di gioco. In presenza di anomalie o entità paranormali, il battito cardiaco subisce un'accelerazione progressiva. Uno stress elevato causa instabilità motoria (oscillazione della mira) e rallentamento dei tempi di interazione con gli oggetti. Il giocatore deve assumere estratti alchemici per calmare il sistema nervoso.</li>
+        <li><strong>Fotografia Spiritica:</strong> Strumento analitico fondamentale per rilevare tracce invisibili a occhio nudo. Il giocatore deve posizionare fisicamente la fotocamera su un treppiede stabile, scattare una lastra sensibile alle frequenze esoteriche e sviluppare i negativi tramite solventi chimici per svelare indizi, rune o punti deboli delle entità.</li>
+        <li><strong>Gestione Inventario (Radial Wheel):</strong> Il giocatore dispone di una ruota degli strumenti con un limite di 8 slot. Le risorse chiave (pile, munizioni, gesso, estratti) sono contate, costringendo l'utente a un'attenta pianificazione strategica prima di lasciare le aree sicure (Safe Rooms).</li>
+    </ul>
+
+    <h4 style="color: #a855f7; margin-top: 15px; font-size: 1rem;">B. Fase di Assedio Rituale</h4>
+    <ul>
+        <li>
+            <strong>Costruzione delle Difese (Pianificazione):</strong> Il giocatore deve allestire fisicamente le barriere protettive dell'ambiente d'indagine seguendo tre step operativi sequenziali:
+            <ol>
+                <li><em>Pulizia:</em> Uso della Scopa di Issopo per eliminare la contaminazione spirituale dall'area di tracciamento.</li>
+                <li><em>Tracciamento:</em> Disegno del cerchio protettivo primario sul pavimento utilizzando gesso o sale (con un sistema di usura dinamica del perimetro).</li>
+                <li><em>Elettrificazione:</em> Posizionamento avanzato di tubi a vuoto e Pile Weston per caricare elettricamente il cerchio rituale.</li>
+            </ol>
+        </li>
+        <li>
+            <strong>Combattimento Strategico (Le 3 Fasi):</strong>
+            <ol>
+                <li><em>Repulsione:</em> Modulazione frequenziale del campo di forza del Pentacolo Elettrico per arrestare le cariche dei nemici.</li>
+                <li><em>Trappole:</em> Utilizzo di armi da fuoco per colpire accumulatori ambientali o teleruttori esterni, attivando archi elettrici protettivi.</li>
+                <li><em>Confinamento:</em> Fase ad alto rischio in cui il giocatore deve uscire temporaneamente dal cerchio protettivo per incidere fisicamente i Sigilli Saamaaa sull'ancora dell'entità, chiudendo definitivamente il varco dimensionale.</li>
+            </ol>
+        </li>
+    </ul>
+
+    <!-- SEZIONE 3: LEVEL DESIGN -->
+    <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">3. World Architecture & Level Design</h3>
+    <p>Il mondo di gioco è strutturato in tre macro-scenari lineari progettati per supportare la narrazione ed enfatizzare l'andamento ciclico dei capitoli:</p>
+    <ul>
+        <li><strong>1. Il Civico 427 di Cheyne Walk (Chelsea, Londra):</strong> L'abitazione privata di Carnacki. Funge da Hub centrale e porto sicuro per le sequenze narrative d'intermezzo prima dell'inizio delle missioni.</li>
+        <li><strong>2. La Magione degli Anderson:</strong> Lo scenario principale del primo caso. Una magione isolata, spettrale e opprimente, in cui gli spazi chiusi (e in particolare la Stanza Grigia) sono pensati as arene di difesa strategica ed enigmi ambientali.</li>
+        <li><strong>3. Il Budello (Londra):</strong> Area urbana di transizione. Consente al giocatore di interfacciarsi con negozianti e artigiani per l'acquisto di componenti chimici, l'approvvigionamento di pile Weston e lo sviluppo delle lastre fotografiche.</li>
+    </ul>
+
+    <!-- SEZIONE 4: FOLKLORE -->
+    <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">4. Folklore, Lore & Spells</h3>
+    <p>La cosmologia magica e scientifica del gioco poggia interamente sul misterioso ed esoterico <strong>Manoscritto Sigsand</strong> (XIV secolo), l'unica risorsa teorica in grado di fornire a Carnacki i mezzi logici per contrastare le minacce esterne.</p>
+    <ul>
+        <li><strong>Il Rituale Saamaaa:</strong> Si compone di 8 segni fondamentali che garantiscono barriere fisiche e mentali (<em>Protezione, Proiezione, Condivisione, Osservazione, Forza, Opportunità, Chiarezza, Potere</em>). Il corretto ordine sequenziale è vitale per l'attivazione dei sistemi difensivi.</li>
+        <li>
+            <strong>La Teoria dei Sette Piani:</strong>
+            <ul>
+                <li><em>Piani Inferiori (1-4):</em> Malkuth (Elementare), Netzach (Terrestre), Hod (Astrale/Sogni) e Kethur (Causale). Costituiscono la dimensione d'azione in cui si muove il gameplay e da cui emergono le manifestazioni spettrali.</li>
+                <li><em>Piani Superiori (5-7):</em> Fohatico, Mahatico e Alayico. Regni governati da pure leggi matematiche e sorgente d'energia positiva.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- SEZIONE 5: CHARACTERS -->
+    <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">5. Dramatis Personae (Characters)</h3>
+    <ul>
+        <li><strong>Thomas Carnacki:</strong> Protagonista. Investigatore dell'occulto, uomo di scienza meticoloso e pragmatico, guidato dalla logica e dal rispetto per le leggi della fisica. Affronta l'ignoto con il timore di chi ne comprende la reale minaccia, ma con la determinazione di chi possiede gli strumenti scientifici e storici per arginarlo.</li>
+        <li><strong>La Comitiva di Cheyne Walk (Dodgson, Jessop, Arkwright, Taylor):</strong> Amici intimi del protagonista. Costituiscono la cornice sociale e narrativa. Dodgson funge da voce narrante esterna e rappresenta, insieme agli altri, la prospettiva razionale dell'utente rispetto agli orrori dei casi rievocati.</li>
+        <li><strong>Peter (Il Maggiordomo della Magione Anderson):</strong> Personaggio secondario chiave del Capitolo 1. Uomo timorato ma fedele. Custode dei segreti storici della magione infestata, introduce Carnacki ai misteri della residenza e funge da guida interna.</li>
+        <li><strong>Miranda (La Domestica della Magione Anderson):</strong> Ultima arrivata tra la servitù della magione. Silenziosa, legata alla famiglia Anderson da un debito morale del passato che le impedisce di abbandonare la tenuta nonostante l'incombere della maledizione.</li>
+    </ul>
+
+    <!-- SEZIONE 6: TAXONOMY -->
+    <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">6. System Taxonomy (Enemies)</h3>
+    <p>Le minacce paranormali esterne (classificate come Ab-naturali) seguono la categorizzazione del Manoscritto Sigsand:</p>
+    <ul>
+        <li><strong>Classe 1 — Fughe Psichiche / Poltergeist:</strong> Anomalie visive ed acustiche che non arrecano danno biologico diretto, ma minano la stabilità psicofisica del protagonista incrementandone il battito cardiaco (ECG).</li>
+        <li><strong>Classe 2 — Aeiirii (Fantasmi/Demoni):</strong> Manifestazioni semi-materiali vincolate a un oggetto di ancoraggio terreno. Inducono a danni biologici e psicosi. Richiedono barriere protettive.</li>
+        <li><strong>Classe 3 & 4 — Saiitii (Le Ombre Mobili):</strong> Parassiti energetici della materia inanimata o biologica morta. Altamente ostili e dotati di mobilità estesa, possono aggirare o corrompere le difese primarie. Il fuoco è l'unico agente neutralizzante.</li>
+        <li><strong>Classe 5 — Raaee (Astarri):</strong> Entità luminose superiori, benevole e cariche di energia. Agiscono fornendo suggerimenti crittografici o possono essere invocate tramite l'<em>Unknown Last Line</em> per salvarsi in situazioni di estremo pericolo.</li>
+        <li><strong>La Mano d'Ombra (Boss del Capitolo 1):</strong> Manifestazione ostile di Classe 2 (Aeiirii) legata a un anello perduto degli Anderson. È in grado di teletrasportarsi nell'ombra, confondere la mente del giocatore e colpire con velocità fulminea. Risulta vulnerabile all'elettricità, ai sigilli e alle formule recitate.</li>
+    </ul>
+
+    <!-- SEZIONE 7: MISSION SCRIPTING FLOW -->
+    <h3 style="color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem;">7. Capitolo 1: Quest Scripting Flow</h3>
+    <p>Di seguito viene illustrata l'architettura logica di progressione delle missioni del primo episodio, strutturata in step logici di obiettivi ordinati per il tracciamento del codice di gioco:</p>
+
+    <div style="background: rgba(168, 85, 247, 0.03); border: 1px solid rgba(168, 85, 247, 0.15); border-radius: 8px; padding: 15px; font-size: 0.9rem;">
+        <p>
+            <strong>[INTRODUZIONE]</strong><br>
+            - Obiettivo 0.1: Interagisci con il maggiordomo Peter all'ingresso della magione.
+        </p>
+
+        <p style="margin-top: 10px;">
+            <strong>[FASE 1: PREPARAZIONE E SICUREZZA]</strong><br>
+            - Obiettivo 1.1: Posiziona 3 Segni di Saiitii e 3 Simboli del Rituale Saamaaa nella tua camera d'appoggio.<br>
+            - Obiettivo 1.2: Recupera la Borsa degli Strumenti ed equipaggia l'Inventario.<br>
+            - Obiettivo 1.3: Raggiungi il maggiordomo Peter nel Salotto.
+        </p>
+
+        <p style="margin-top: 10px;">
+            <strong>[FASE 2: INVESTIGAZIONE STANZA GRIGIA]</strong><br>
+            - Obiettivo 2.1: Accendi i 6 candelabri diegetici per ristabilire l'illuminazione primaria.<br>
+            - Obiettivo 2.2: Ispeziona la Stanza Grigia alla ricerca di varchi d'infestazione.<br>
+            - Obiettivo 2.3: Applica il nastro sigillante sulle 3 finestre e posiziona 3 fili trappola coordinati.<br>
+            - Obiettivo 2.4: Applica i Sigilli Saiitii nei 3 punti di ancoraggio energetico individuati.
+        </p>
+
+        <p style="margin-top: 10px;">
+            <strong>[FASE 3: ISOLAMENTO PERIMETRALE]</strong><br>
+            - Obiettivo 3.1: Esci nel corridoio e sigilla le 5 porte d'accesso per prevenire fughe psichiche.
+        </p>
+
+        <p style="margin-top: 10px;">
+            <strong>[FASE 4: ANALISI DEGLI INDIZI]</strong><br>
+            - Obiettivo 4.1: Torna nella Stanza Grigia ed effettua ricerche approfondite sui mobili e sul letto.<br>
+            - Obiettivo 4.2: Conduci un sopralluogo in biblioteca per decifrare i simboli occulti delle indagini.<br>
+            - Obiettivo 4.3: Parla con il maggiordomo e la domestica per raccogliere informazioni storiche.
+        </p>
+
+        <p style="margin-top: 10px;">
+            <strong>[FASE 5: FOTOGRAFIA SPIRITICA]</strong><br>
+            - Obiettivo 5.1: Recupera la fotocamera e posiziona il treppiede davanti all'ingresso della Stanza Grigia.<br>
+            - Obiettivo 5.2: Collega il meccanismo di auto-scatto alla maniglia della porta per catturare le entità di passaggio.
+        </p>
+
+        <p style="margin-top: 10px;">
+            <strong>[FASE 6: RIFORNIMENTO E SVILUPPO]</strong><br>
+            - Obiettivo 6.1: Raggiungi il negozio "Safarà" nel Budello di Londra per sviluppare le lastre e acquistare 5 reagenti chimici.<br>
+            - Obiettivo 6.2: Ritorna alla Magione degli Anderson e preparati all'assedio finale.
+        </p>
+
+        <p style="margin-top: 10px;">
+            <strong>[FASE 7: L'ASSEDIO NOTTURNO]</strong><br>
+            - Obiettivo 7.1: Sigillati all'interno della Stanza Grigia.<br>
+            - Obiettivo 7.2: Traccia la prima linea difensiva rituale (cerchio di gesso/sale).<br>
+            - Obiettivo 7.3: Allestisci la seconda linea difensiva (batterie e tubi a vuoto) e attiva il Pentacolo Elettrico.<br>
+            - Obiettivo 7.4: Sopravvivi all'assedio notturno della Mano d'Ombra e respingi i suoi assalti.
+        </p>
+
+        <p style="margin-top: 10px;">
+            <strong>[FASE 8: CONFINAMENTO E CONCLUSIONE]</strong><br>
+            - Obiettivo 8.1: Individua il punto d'origine dell'infestazione nella Stanza Grigia e preleva l'anello degli Anderson (ancora).<br>
+            - Obiettivo 8.2: Esci dal Pentacolo prima della materializzazione finale dell'entità e catturala.<br>
+            - Obiettivo 8.3: Raduna Peter e Miranda e distruggi definitivamente l'anello tramite fiamma ossidrica, spezzando la maledizione.
+        </p>
+    </div>
+
+</div>
