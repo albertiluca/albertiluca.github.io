@@ -66,6 +66,7 @@
     <Content Include="img\LCdD_7.jpg" />
     <Content Include="img\LCdD_SaveFire.png" />
     <Content Include="img\MirandaSketch1_CharacterDesignAI %281%29.png" />
+    <Content Include="img\OnironautViolet.png" />
     <Content Include="img\PeterSketch1_CharacterDesignAI %281%29.png" />
     <Content Include="img\Regno di Alcoma_%28Final%29.jpg" />
     <Content Include="img\Sandy1.jpg" />
@@ -96,6 +97,10 @@
     <Content Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="skills-content-en.html" />
+    <Content Include="skills-content-it.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="skills.html">
       <SubType>Code</SubType>
     </Content>
@@ -103,9 +108,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="Video\Altroquando_Dove sarà finito il nostro Debian.mp4" />
-    <Content Include="Video\Carnacki_estrattovideo3.mp4" />
-    <Content Include="Video\Le Cronache di Debian - Trailer ENG.mp4" />
-    <Content Include="Video\SandyTrailer.mp4" />
+    <Content Include="Video\carnackiEstratto_trailer.mp4" />
+    <Content Include="Video\leCronacheDiDebian_trailer.mp4" />
+    <Content Include="Video\sandy_trailer.mp4" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="img\" />

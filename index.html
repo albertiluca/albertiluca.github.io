@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luca Alberti | Game Designer & Tech Artist</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -25,7 +25,7 @@
         <nav class="nav-container">
             <ul class="nav-links">
                 <li><a href="#sandy">Sandy</a></li>
-                <li><a href="#project Shadowseeker">Project Shadowseeker</a></li>
+                <li><a href="#projectShadowseeker">Project Shadowseeker</a></li>
                 <li><a href="#debian">Debian</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#about" data-key="nav_about">Chi Sono</a></li>
@@ -64,7 +64,7 @@
                     <!-- Colonna Sinistra: Video Trailer -->
                     <div class="project-media">
                         <video autoplay loop muted playsinline class="project-video-preview">
-                            <source src="Video/SandyTrailer.mp4" type="video/mp4">
+                            <source src="Video/sandy_trailer.mp4" type="video/mp4">
                         </video>
                     </div>
 
@@ -99,9 +99,8 @@
         </section>
 
 
-        <!-- SEZIONE 2: CARNACKI -->
         <!-- SEZIONE 2: PROJECT SHADOWSEEKER -->
-        <section id="project Shadowseeker" class="section project-section">
+        <section id="projectShadowseeker" class="section project-section">
             <div class="project-container">
                 <div class="project-header">
                     <h2 data-key="carnacki_title">Project Shadowseeker</h2>
@@ -112,7 +111,7 @@
                     <!-- Colonna Sinistra: Video e Media -->
                     <div class="project-media">
                         <video autoplay loop muted playsinline class="project-video-preview">
-                            <source src="Video/Carnacki_estrattovideo3.mp4" type="video/mp4">
+                            <source src="Video/carnackiEstratto_trailer.mp4" type="video/mp4">
                         </video>
                     </div>
 
@@ -123,11 +122,11 @@
                         </p>
 
                         <div class="project-highlights">
-                            <h3 data-key="carnacki_highlights_title">Design & Tech Art Focus:</h3>
+                            <h3 data-key="carnacki_highlights_title">Game Design & Tech Art Focus:</h3>
                             <ul>
                                 <li>
                                     <strong data-key="carnacki_highlight_1_title">System Design:</strong>
-                                    <span data-key="carnacki_highlight_1_desc">Progettazione delle meccaniche core: monitoraggio dello stress in tempo reale (ECG), fotografia spettrale su lastre fisiche e sistema di difesa rituale a tre fasi (purificazione, barriere protettive, elettrificazione).</span>
+                                    <span data-key="carnacki_highlight_1_desc">Progettazione delle meccaniche core: livello di stress (ECG), fotografia spettrale e sistema di difesa rituale a tre fasi (purificazione, barriere protettive, elettrificazione).</span>
                                 </li>
                                 <li>
                                     <strong data-key="carnacki_highlight_2_title">Technical Art:</strong>
@@ -137,22 +136,28 @@
                         </div>
 
                         <div class="project-buttons">
+                            <!-- Il Bottone di attivazione -->
                             <button id="open-gdd-btn" class="btn" data-key="carnacki_btn_gdd">Leggi il GDD</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- LA FINESTRA MODAL PROTETTA -->
+            <!-- LA FINESTRA MODAL PROTETTA (Posizionata correttamente fuori dalla griglia ma nella sezione) -->
             <div id="gdd-modal" class="gdd-modal-overlay" oncontextmenu="return false;">
                 <div class="gdd-modal-content" onselectstart="return false;" ondragstart="return false;">
+                    <!-- Header della finestra -->
                     <div class="gdd-modal-header">
                         <h3 data-key="gdd_modal_title">Project Shadowseeker - Game Design Document</h3>
                         <button id="close-gdd-btn" class="close-modal-btn">&times;</button>
                     </div>
+
+                    <!-- Area del Testo (Gestita dinamicamente dal file gdd-carnacki-it.html o -en.html) -->
                     <div class="gdd-modal-body" id="gdd-text-content">
                         <p style="text-align: center; color: var(--accent-neon);">Caricamento documento in corso...</p>
                     </div>
+
+                    <!-- Footer di tutela -->
                     <div class="gdd-modal-footer">
                         <p class="gdd-protection-notice" data-key="gdd_notice">Documento protetto. Download e selezione testo disabilitati per la tutela della proprietà intellettuale.</p>
                     </div>
@@ -173,7 +178,7 @@
                     <!-- Colonna Sinistra: Video Trailer -->
                     <div class="project-media">
                         <video autoplay loop muted playsinline class="project-video-preview">
-                            <source src="Video/Le Cronache di Debian - Trailer ENG.mp4" type="video/mp4">
+                            <source src="Video/leCronacheDiDebian_trailer.mp4" type="video/mp4">
                         </video>
                     </div>
 
@@ -208,44 +213,9 @@
         </section>
 
 
-        <!-- SEZIONE 4: SKILLS -->
+        <!-- SEZIONE 4: SKILLS (Ora completamente pulita e caricata via JS) -->
         <section id="skills" class="section skills-section">
-            <div class="container">
-                <h2 data-key="skills_title" class="skills-main-title">Skills & Competenze</h2>
-                <p data-key="skills_subtitle" class="skills-subtitle">Le tecnologie e i software che utilizzo regolarmente nel mio flusso di lavoro.</p>
-
-                <div class="skills-accordion">
-                    <!-- Sezione 1: Linguaggi di Programmazione -->
-                    <button class="accordion-button" data-key="skills_lang_btn">Linguaggi di Programmazione & Logica</button>
-                    <div class="accordion-panel">
-                        <div class="skills-grid">
-                            <span class="skill-tag">C++</span>
-                            <span class="skill-tag">C#</span>
-                            <span class="skill-tag highlight-logic">Blueprint (UE5)</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">HTML5 / CSS3</span>
-                        </div>
-                    </div>
-
-                    <!-- Sezione 2: Motori e Software -->
-                    <button class="accordion-button" data-key="skills_software_btn">Motori Grafici & Software</button>
-                    <div class="accordion-panel">
-                        <div class="skills-grid">
-                            <span class="skill-tag highlight-engine">Unreal Engine 5</span>
-                            <span class="skill-tag">Unity</span>
-                            <span class="skill-tag">Autodesk Maya</span>
-                            <span class="skill-tag">Substance Painter</span>
-                            <span class="skill-tag">ZBrush</span>
-                            <span class="skill-tag">Autodesk Sketchbook</span>
-                            <span class="skill-tag">Audacity</span>
-                            <span class="skill-tag">Adobe After Effects</span>
-                            <span class="skill-tag">Adobe Premiere</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p style="text-align: center; color: var(--accent-neon);">Caricamento competenze in corso...</p>
         </section>
     </main>
 
@@ -254,6 +224,7 @@
     <section id="about" class="section about-section">
         <div class="container">
             <div class="about-grid">
+                <!-- Colonna Sinistra: La tua Bio -->
                 <div class="about-info">
                     <h2 data-key="about_title">Chi Sono</h2>
                     <p class="about-text" data-key="about_p1">
@@ -267,11 +238,17 @@
                     </p>
                 </div>
 
+                <!-- Colonna Destra: Foto/Avatar Personalizzato -->
                 <div class="about-media">
-                    <div class="about-placeholder-box">
-                        <span class="tech-icon">&#x2699;</span>
-                    </div>
+                    <!-- Inserimento dell'avatar dell'astronauta -->
+                    <img src="img/OnironautViolet.png" alt="Luca Alberti Avatar" class="about-photo">
                 </div>
+                <!-- Colonna Destra: Foto o Elemento Visivo -->
+                <!--<div class="about-media">
+        <div class="about-placeholder-box">
+            <span class="tech-icon">&#x2699;</span>
+        </div>
+    </div>-->
             </div>
         </div>
     </section>
