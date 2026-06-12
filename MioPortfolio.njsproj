@@ -107,16 +107,16 @@
     <Content Include="style.css">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Video\Altroquando_Dove sarà finito il nostro Debian.mp4" />
-    <Content Include="Video\carnackiEstratto_trailer.mp4" />
-    <Content Include="Video\leCronacheDiDebian_trailer.mp4" />
-    <Content Include="Video\sandy_trailer.mp4" />
+    <Content Include="video\Altroquando_Dove sarà finito il nostro Debian.mp4" />
+    <Content Include="video\carnackiEstratto_trailer.mp4" />
+    <Content Include="video\leCronacheDiDebian_trailer.mp4" />
+    <Content Include="video\sandy_trailer.mp4" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="img\" />
     <Folder Include="js\" />
     <Folder Include="docs\" />
-    <Folder Include="Video\" />
+    <Folder Include="video\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
