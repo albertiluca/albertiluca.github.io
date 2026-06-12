@@ -1,6 +1,7 @@
 # Dipendenze di Node.js
 /node_modules
 
+
 # File temporanei di Visual Studio
 /.vs
 /obj
