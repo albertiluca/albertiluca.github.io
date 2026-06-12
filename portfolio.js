@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     // ==========================================================================
-    // GESTIONE CARICAMENTO ASINCRONO BILINGUE DELLE SKILLS
+    // 1. GESTIONE CARICAMENTO ASINCRONO BILINGUE DELLE SKILLS
     // ==========================================================================
     var skillsSection = document.getElementById("skills");
 
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ==========================================================================
-    // GESTIONE CARICAMENTO ASINCRONO BILINGUE DEL GDD POP-UP (Fetch)
+    // 2. GESTIONE CARICAMENTO ASINCRONO BILINGUE DEL GDD POP-UP (Fetch)
     // ==========================================================================
     var modal = document.getElementById("gdd-modal");
     var openBtn = document.getElementById("open-gdd-btn");
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ==========================================================================
-    // GESTIONE TRADUZIONE IN TEMPO REALE (Skills e GDD coordinati)
+    // 3. GESTIONE TRADUZIONE IN TEMPO REALE (Skills e GDD coordinati)
     // ==========================================================================
     const langItBtn = document.getElementById("lang-it");
     const langEnBtn = document.getElementById("lang-en");
@@ -147,8 +147,79 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // ==========================================================================
-    // AVVIO INIZIALE DEL SITO (Caricamento delle Skills corrette)
+    // 4. AVVIO INIZIALE DEL SITO (Caricamento delle Skills corrette)
     // ==========================================================================
     loadLocalizedSkills();
+
+    // ==========================================================================
+    // 5. EASTER EGG SUL PULSANTE CV (Hold-to-Charge per Mobile, Hover per PC)
+    // ==========================================================================
+    var cvBtn = document.getElementById("cv-btn");
+    var cvPreview = document.getElementById("cv-preview");
+    var chargeInterval = null;
+    var chargeLevel = 0;       // Percentuale di caricamento (0-100)
+    var isHolding = false;     // Traccia se l'utente sta tenendo premuto
+
+    if (cvBtn && cvPreview) {
+
+        // Funzione che avvia il riempimento della barra
+        function startCharge(e) {
+            isHolding = true;
+            chargeLevel = 0;
+            cvBtn.style.setProperty("--charge-width", "0%");
+
+            // Incrementa la barra del 5% ogni 60ms (Totale: 1.2 secondi per caricare al 100%)
+            chargeInterval = setInterval(function () {
+                chargeLevel += 5;
+                if (chargeLevel >= 100) {
+                    chargeLevel = 100;
+                    clearInterval(chargeInterval);
+                    triggerCVPreview();
+                }
+                cvBtn.style.setProperty("--charge-width", chargeLevel + "%");
+            }, 60);
+        }
+
+        // Funzione che ferma il caricamento se rilasciato prima del tempo
+        function stopCharge() {
+            isHolding = false;
+            clearInterval(chargeInterval);
+
+            // Se rilasciato prima del 100%, resetta la barra
+            if (chargeLevel < 100) {
+                chargeLevel = 0;
+                cvBtn.style.setProperty("--charge-width", "0%");
+            }
+        }
+
+        // Sblocca la nuvoletta di preview su mobile
+        function triggerCVPreview() {
+            cvPreview.classList.add("preview-active");
+            cvBtn.style.setProperty("--charge-width", "100%");
+
+            // Chiude automaticamente la preview dopo 4 secondi per non intasare lo schermo
+            setTimeout(function () {
+                cvPreview.classList.remove("preview-active");
+                cvBtn.style.setProperty("--charge-width", "0%");
+                chargeLevel = 0;
+            }, 4000);
+        }
+
+        // --- EVENTI MOBILE/TOUCH ---
+        cvBtn.addEventListener("touchstart", function (e) {
+            e.preventDefault(); // Impedisce il download immediato al tocco lungo nativo del sistema
+            startCharge(e);
+        });
+
+        cvBtn.addEventListener("touchend", function (e) {
+            stopCharge();
+            // Se è stato un tap rapido (senza caricamento), apri il PDF normalmente
+            if (chargeLevel < 25) {
+                window.open(cvBtn.href, "_blank");
+            }
+        });
+
+        cvBtn.addEventListener("touchcancel", stopCharge);
+    }
 
 });

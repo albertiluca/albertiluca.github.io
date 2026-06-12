@@ -39,14 +39,26 @@
     </header>
 
     <main>
-        <!-- SEZIONE HERO (Presentazione) -->
+
+
+        <!-- SEZIONE HERO (Presentazione con Easter Egg sul CV) -->
         <section id="hero" class="section hero-section">
             <div class="hero-content">
                 <h1 data-key="hero_title">Ciao, sono Luca</h1>
                 <p class="subtitle" data-key="hero_subtitle">Sono un Game Designer & Tech Artist</p>
                 <div class="cta-buttons">
-                    <a href="#carnacki" class="btn" data-key="btn_explore">Esplora Progetti</a>
-                    <a href="docs/CV_Luca_Alberti.pdf" target="_blank" class="btn btn-secondary" data-key="btn_cv">Scarica CV</a>
+                    <a href="#sandy" class="btn" data-key="btn_explore">Esplora Progetti</a>
+
+                    <!-- CONTAINER DEL CV CON NUVOLETTA DI PREVIEW -->
+                    <div class="cv-btn-container" id="cv-container">
+                        <a href="docs/CV_Luca_Alberti.pdf" target="_blank" class="btn btn-secondary" id="cv-btn" data-key="btn_cv">Scarica CV</a>
+
+                        <!-- La Nuvoletta di Preview (Vignetta) -->
+                        <div class="cv-preview-card" id="cv-preview">
+                            <img src="img/cv_preview.png" alt="CV Preview" class="cv-preview-image">
+                            <p data-key="cv_preview_msg">Anteprima CV</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

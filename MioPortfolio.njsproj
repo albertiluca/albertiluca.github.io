@@ -32,6 +32,7 @@
     <Content Include="docs\Carnacki-NewGDD_2 %281%29.pdf" />
     <Content Include="docs\CV_JuniorEnvironmentArtist.pdf" />
     <Content Include="docs\CV_Luca_Alberti.pdf" />
+    <Content Include="docs\LucaAlberti_GameDesigner_TechArtist - CV.pdf" />
     <Content Include="games-carnacki.html">
       <SubType>Code</SubType>
     </Content>

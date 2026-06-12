@@ -1002,3 +1002,95 @@ a {
         background: rgba(245, 158, 11, 0.15) !important;
         box-shadow: 0 0 12px rgba(245, 158, 11, 0.35) !important;
     }
+
+/* ==========================================================================
+   18. MICRO-INTERAZIONE GAMIFICATA SUL BOTTONE CV (Hold-to-Charge)
+   ========================================================================== */
+.cv-btn-container {
+    position: relative;
+    display: inline-block;
+}
+
+#cv-btn {
+    position: relative;
+    overflow: hidden; /* Taglia la barra di caricamento interna */
+    z-index: 1;
+}
+
+    /* La barra di caricamento interna che si riempie da sinistra a destra */
+    #cv-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: var(--charge-width, 0%); /* Variabile dinamica controllata da JS */
+        height: 100%;
+        /* Gradiente neon viola/arancione che si riempie */
+        background: linear-gradient(90deg, rgba(168, 85, 247, 0.25) 0%, rgba(245, 158, 11, 0.35) 100%);
+        z-index: -1;
+        transition: width 0.08s linear;
+    }
+
+/* La nuvoletta di preview (Vignetta) */
+.cv-preview-card {
+    position: absolute;
+    bottom: 135%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #05020a;
+    border: 1px solid var(--accent-neon);
+    border-radius: 16px;
+    padding: 12px;
+    width: 170px; /* Dimensione compatta ed elegante */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 100;
+    pointer-events: none;
+}
+
+    /* Freccetta sotto la nuvoletta */
+    .cv-preview-card::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 6px;
+        border-style: solid;
+        border-color: #05020a transparent transparent transparent;
+    }
+
+.cv-preview-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 8px;
+}
+
+.cv-preview-card p {
+    font-size: 0.68rem;
+    color: var(--accent-neon);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* --- INTERAZIONE SU PC (Hover) --- */
+@media (hover: hover) {
+    .cv-btn-container:hover .cv-preview-card {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* --- INTERAZIONE SU MOBILE (Quando sbloccata dal tocco lungo) --- */
+.cv-preview-card.preview-active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(-50%) translateY(0) !important;
+}
