@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     // ==========================================================================
-    // 1. GESTIONE CARICAMENTO ASINCRONO BILINGUE DELLE SKILLS
+    // 1. CARICAMENTO ASINCRONO BILINGUE DELLE SKILLS
     // ==========================================================================
     var skillsSection = document.getElementById("skills");
 
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function loadLocalizedSkills() {
         if (!skillsSection) return;
         const lang = getActiveLanguage();
-        const skillsFile = `skills-content-${lang}.html`; // Carica skills-content-it.html o skills-content-en.html
+        const skillsFile = `skills-content-${lang}.html`;
 
         fetch(skillsFile)
             .then(response => {
@@ -97,31 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // ==========================================================================
-    // 3. GESTIONE TRADUZIONE IN TEMPO REALE (Skills e GDD coordinati)
-    // ==========================================================================
-    const langItBtn = document.getElementById("lang-it");
-    const langEnBtn = document.getElementById("lang-en");
-
-    if (langItBtn && langEnBtn) {
-        langItBtn.addEventListener("click", function () {
-            // Aggiorna le skills in tempo reale all'istante
-            setTimeout(loadLocalizedSkills, 50);
-
-            // Se la modal del GDD è aperta, aggiorna anche il GDD all'istante
-            if (modal && modal.style.display === "flex") {
-                setTimeout(loadLocalizedGDD, 50);
-            }
-        });
-
-        langEnBtn.addEventListener("click", function () {
-            setTimeout(loadLocalizedSkills, 50);
-            if (modal && modal.style.display === "flex") {
-                setTimeout(loadLocalizedGDD, 50);
-            }
-        });
-    }
-
     if (closeBtn) {
         closeBtn.addEventListener("click", function () {
             modal.style.display = "none";
@@ -136,7 +111,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // BLOCCO TASTIERA (Salvataggio e Stampa)
+    // ==========================================================================
+    // 3. GESTIONE TRADUZIONE IN TEMPO REALE (Skills e GDD coordinati)
+    // ==========================================================================
+    const langItBtn = document.getElementById("lang-it");
+    const langEnBtn = document.getElementById("lang-en");
+
+    if (langItBtn && langEnBtn) {
+        langItBtn.addEventListener("click", function () {
+            setTimeout(loadLocalizedSkills, 50);
+            if (modal && modal.style.display === "flex") {
+                setTimeout(loadLocalizedGDD, 50);
+            }
+        });
+
+        langEnBtn.addEventListener("click", function () {
+            setTimeout(loadLocalizedSkills, 50);
+            if (modal && modal.style.display === "flex") {
+                setTimeout(loadLocalizedGDD, 50);
+            }
+        });
+    }
+
+    // ==========================================================================
+    // 4. BLOCCO TASTIERA (Salvataggio e Stampa)
+    // ==========================================================================
     window.addEventListener('keydown', function (e) {
         if (modal && modal.style.display === "flex") {
             if ((e.ctrlKey && e.key === 's') || (e.ctrlKey && e.key === 'p')) {
@@ -147,28 +146,55 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // ==========================================================================
-    // 4. AVVIO INIZIALE DEL SITO (Caricamento delle Skills corrette)
+    // 5. EASTER EGG AVATAR (Spostato in sicurezza dentro il blocco DOMContentLoaded)
     // ==========================================================================
-    loadLocalizedSkills();
+    var avatar = document.getElementById("about-avatar");
+    var dblClickTimer = null;
+
+    if (avatar) {
+        function triggerElasticJump() {
+            if (!avatar.classList.contains("bounce-active")) {
+                avatar.classList.add("bounce-active");
+                setTimeout(function () {
+                    avatar.classList.remove("bounce-active");
+                }, 1000);
+            }
+        }
+
+        // --- GESTIONE PC ---
+        avatar.addEventListener("dblclick", function () {
+            triggerElasticJump();
+        });
+
+        // --- GESTIONE MOBILE ---
+        avatar.addEventListener("touchstart", function (e) {
+            if (dblClickTimer === null) {
+                dblClickTimer = setTimeout(function () {
+                    dblClickTimer = null;
+                }, 300);
+            } else {
+                clearTimeout(dblClickTimer);
+                dblClickTimer = null;
+                e.preventDefault();
+                triggerElasticJump();
+            }
+        });
+    }
 
     // ==========================================================================
-    // 5. EASTER EGG SUL PULSANTE CV (Hold-to-Charge per Mobile, Hover per PC)
+    // 6. MICRO-INTERAZIONE SUL BOTTONE CV (Hold-to-Charge)
     // ==========================================================================
     var cvBtn = document.getElementById("cv-btn");
     var cvPreview = document.getElementById("cv-preview");
     var chargeInterval = null;
-    var chargeLevel = 0;       // Percentuale di caricamento (0-100)
-    var isHolding = false;     // Traccia se l'utente sta tenendo premuto
+    var chargeLevel = 0;
 
     if (cvBtn && cvPreview) {
 
-        // Funzione che avvia il riempimento della barra
         function startCharge(e) {
-            isHolding = true;
             chargeLevel = 0;
             cvBtn.style.setProperty("--charge-width", "0%");
 
-            // Incrementa la barra del 5% ogni 60ms (Totale: 1.2 secondi per caricare al 100%)
             chargeInterval = setInterval(function () {
                 chargeLevel += 5;
                 if (chargeLevel >= 100) {
@@ -180,24 +206,18 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 60);
         }
 
-        // Funzione che ferma il caricamento se rilasciato prima del tempo
         function stopCharge() {
-            isHolding = false;
             clearInterval(chargeInterval);
-
-            // Se rilasciato prima del 100%, resetta la barra
             if (chargeLevel < 100) {
                 chargeLevel = 0;
                 cvBtn.style.setProperty("--charge-width", "0%");
             }
         }
 
-        // Sblocca la nuvoletta di preview su mobile
         function triggerCVPreview() {
             cvPreview.classList.add("preview-active");
             cvBtn.style.setProperty("--charge-width", "100%");
 
-            // Chiude automaticamente la preview dopo 4 secondi per non intasare lo schermo
             setTimeout(function () {
                 cvPreview.classList.remove("preview-active");
                 cvBtn.style.setProperty("--charge-width", "0%");
@@ -205,15 +225,14 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 4000);
         }
 
-        // --- EVENTI MOBILE/TOUCH ---
+        // --- EVENTI MOBILE ---
         cvBtn.addEventListener("touchstart", function (e) {
-            e.preventDefault(); // Impedisce il download immediato al tocco lungo nativo del sistema
+            e.preventDefault();
             startCharge(e);
         });
 
         cvBtn.addEventListener("touchend", function (e) {
             stopCharge();
-            // Se è stato un tap rapido (senza caricamento), apri il PDF normalmente
             if (chargeLevel < 25) {
                 window.open(cvBtn.href, "_blank");
             }
@@ -222,4 +241,9 @@ document.addEventListener("DOMContentLoaded", function () {
         cvBtn.addEventListener("touchcancel", stopCharge);
     }
 
-});
+    // ==========================================================================
+    // 7. AVVIO INIZIALE DEL SITO (Caricamento delle Skills corrette)
+    // ==========================================================================
+    loadLocalizedSkills();
+
+}); 

@@ -292,7 +292,8 @@ a {
 .cta-buttons {
     display: flex;
     gap: 16px;
-    justify-content: center; /* Centra i bottoni rispetto al testo */
+    justify-content: center;
+    align-items: center; /* FORZA i figli ad allinearsi perfettamente sulla stessa linea di altezza */
 }
 
 /* Mantiene i bottoni allineati a sinistra all'interno dei progetti */
@@ -315,6 +316,16 @@ a {
     border: 1px solid var(--accent-neon);
     text-align: center;
     cursor: pointer;
+}
+
+/* Forza i due bottoni della Hero ad essere "gemelli" (Stesse dimensioni a capsula) */
+.hero-content .btn {
+    min-width: 180px !important; /* Forza una larghezza minima identica per entrambi */
+    height: 46px !important; /* Forza l'altezza identica al pixel per entrambi */
+    display: inline-flex !important; /* Usa il flex interno per centrare il testo */
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 20px !important; /* Gestisce lo spazio interno sui lati */
 }
 
     .btn:hover {
@@ -1004,7 +1015,7 @@ a {
     }
 
 /* ==========================================================================
-   18. MICRO-INTERAZIONE GAMIFICATA SUL BOTTONE CV (Hold-to-Charge)
+   17. MICRO-INTERAZIONE GAMIFICATA SUL BOTTONE CV (Hold-to-Charge)
    ========================================================================== */
 .cv-btn-container {
     position: relative;
@@ -1093,4 +1104,67 @@ a {
     opacity: 1 !important;
     visibility: visible !important;
     transform: translateX(-50%) translateY(0) !important;
+}
+
+/* ==========================================================================
+   18. ANIMAZIONE SQUASH & STRETCH SULL'AVATAR (Easter Egg)
+   ========================================================================== */
+.about-photo {
+    width: 100%;
+    max-width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 1px solid var(--accent-neon);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #05020a;
+    cursor: pointer;
+    transform-origin: bottom center; /* Imposta il perno alla base per un corretto schiacciamento a terra */
+}
+
+    .about-photo:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 40px rgba(168, 85, 247, 0.55);
+    }
+
+/* La classe attiva che scatena la fisica del salto e del rimbalzo */
+.bounce-active {
+    animation: elasticJump 1s cubic-bezier(0.25, 1, 0.5, 1) 1 !important;
+}
+
+/* KEYFRAMES FISICHE: Preparazione -> Salto & Inclinazione -> Caduta -> Schiacciamento -> Rimbalzo -> Fine */
+@keyframes elasticJump {
+    0% {
+        transform: scale(1, 1) translateY(0) rotate(0deg);
+    }
+
+    15% {
+        transform: scale(1.15, 0.8) translateY(0) rotate(0deg);
+    }
+    /* 1. SCHIACCIA: Si carica verso il basso */
+    30% {
+        transform: scale(0.85, 1.2) translateY(-45px) rotate(-8deg);
+    }
+    /* 2. SALTA: Si allunga in aria e si inclina a sinistra */
+    50% {
+        transform: scale(1, 1) translateY(-15px) rotate(-4deg);
+    }
+    /* 3. APICE: Inizia la caduta */
+    68% {
+        transform: scale(1.22, 0.75) translateY(0) rotate(0deg);
+    }
+    /* 4. IMPATTO: Si schiaccia forte a terra per ammortizzare */
+    82% {
+        transform: scale(0.92, 1.08) translateY(-10px) rotate(2deg);
+    }
+    /* 5. RIMBALZO: Piccolo balzo in alto di assestamento con inclinazione a destra */
+    92% {
+        transform: scale(1.05, 0.95) translateY(0) rotate(0deg);
+    }
+    /* 6. ASSESTAMENTO: Ultimo micro-schiacciamento */
+    100% {
+        transform: scale(1, 1) translateY(0) rotate(0deg);
+    }
+    /* 7. RIPOSO: Torna stabile */
 }
