@@ -42,7 +42,7 @@ canvas {
 #mobile-interface {
     display: none; /* Nascosto di default su Desktop */
     position: relative; /* Cambiato da absolute per seguire fluidamente il ridimensionamento del gioco */
-    margin-top: 30px; /* Distanza fissa e pulita dal bordo viola del canvas */
+    margin-top: 10px; /* Distanza fissa e pulita dal bordo viola del canvas */
     width: 512px;
     max-width: 90vw;
     justify-content: space-between;
