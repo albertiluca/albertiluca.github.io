@@ -242,7 +242,42 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ==========================================================================
-    // 7. AVVIO INIZIALE DEL SITO (Caricamento delle Skills corrette)
+    // 7. GESTIONE GIOCAFOLIO (Apertura, Chiusura ed evento d'uscita da giocafolio)
+    // ==========================================================================
+    var gameModal = document.getElementById("game-modal");
+    var openGameBtn = document.getElementById("open-game-btn");
+    var closeGameBtn = document.getElementById("close-game-btn");
+    var gameIframe = document.getElementById("game-iframe");
+
+    if (openGameBtn && gameModal && gameIframe) {
+        openGameBtn.addEventListener("click", function () {
+            gameModal.style.display = "flex";
+            document.body.style.overflow = "hidden"; // Blocca lo scroll del sito dietro
+
+            // Carica la pagina giocafolio.html situata nella sottocartella giocafolio/
+            gameIframe.src = "giocafolio/giocafolio.html";
+        });
+    }
+
+    if (closeGameBtn) {
+        closeGameBtn.addEventListener("click", function () {
+            gameModal.style.display = "none";
+            document.body.style.overflow = "auto";
+            gameIframe.src = ""; // Svuota l'iframe per fermare l'esecuzione
+        });
+    }
+
+    // Ascolta il messaggio d'uscita proveniente da giocafolio.html
+    window.addEventListener("message", function (event) {
+        if (event.data === 'close-giocafolio') {
+            gameModal.style.display = "none";
+            document.body.style.overflow = "auto";
+            gameIframe.src = ""; // Ferma l'esecuzione
+        }
+    });
+
+    // ==========================================================================
+    // 8. AVVIO INIZIALE DEL SITO (Caricamento delle Skills corrette)
     // ==========================================================================
     loadLocalizedSkills();
 

@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #05020a;
+    color: #f3f4f6;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Allinea in alto */
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 15px; /* Spinge verso Folio's Room */
+}
+
+/* Container della Canvas di Gioco - mantiene i 512x512 */
+#canvas-container {
+    position: relative;
+    border: 2px solid #a855f7;
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);
+    border-radius: 12px;
+    overflow: visible; /* Permette alla pulsantiera di uscire in basso */
+    width: 512px;
+    height: 512px;
+    max-width: 90vw;
+    max-height: 90vw;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    image-rendering: pixelated;
+}
+
+/* INTERFACCIA MOBILE ESTERNA (Sotto al bordo viola) */
+#mobile-interface {
+    display: none; /* Nascosto di default su Desktop */
+    position: absolute;
+    top: 530px; /* Posizionato nel nero sotto al bordo di 512px */
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+    z-index: 15;
+}
+
+/* Attiva l'interfaccia mobile solo se viene rilevato il touch */
+body.touch-active #mobile-interface {
+    display: flex;
+}
+
+/* Stile Joystick */
+#touch-joystick {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: rgba(168, 85, 247, 0.08);
+    border: 2px solid rgba(168, 85, 247, 0.4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    touch-action: none;
+}
+
+#touch-knob {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    background: rgba(168, 85, 247, 0.6);
+    border: 2px solid #a855f7;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+    transition: transform 0.05s ease-out;
+    touch-action: none;
+}
+
+/* Stile pulsanti A e B */
+#touch-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.touch-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.3rem;
+    user-select: none;
+    cursor: pointer;
+    touch-action: none;
+}
+
+#btn-b {
+    background: rgba(244, 63, 94, 0.15);
+    border: 2px solid #f43f5e;
+    color: #f43f5e;
+    box-shadow: 0 0 10px rgba(244, 63, 94, 0.3);
+}
+
+    #btn-b:active {
+        background: rgba(244, 63, 94, 0.4);
+    }
+
+#btn-a {
+    background: rgba(6, 182, 212, 0.15);
+    border: 2px solid #06b6d4;
+    color: #06b6d4;
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+}
+
+    #btn-a:active {
+        background: rgba(6, 182, 212, 0.4);
+    }

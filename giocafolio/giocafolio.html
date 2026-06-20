@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folio's Room</title>
+    <!-- Collegamento al foglio di stile dedicato del gioco -->
+    <link rel="stylesheet" href="giocafolio.css">
+</head>
+<body>
+
+    <div id="canvas-container">
+        <canvas id="gameCanvas" width="512" height="512"></canvas>
+
+        <!-- Controlli Mobile HTML esterni al canvas -->
+        <div id="mobile-interface">
+            <div id="touch-joystick">
+                <div id="touch-knob"></div>
+            </div>
+            <div id="touch-buttons">
+                <div id="btn-b" class="touch-btn">B</div>
+                <div id="btn-a" class="touch-btn">A</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Moduli Helper esterni per i media (caricati direttamente nella stessa cartella) -->
+    <script src="audio-system.js"></script>
+    <script src="video-system.js"></script>
+    <script src="document-system.js"></script>
+
+    <!-- Il motore di gioco principale (caricato una sola volta alla fine) -->
+    <script src="giocafolio.js"></script>
+
+</body>
+</html>

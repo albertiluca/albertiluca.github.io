@@ -29,15 +29,101 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="audio\pixel-glow.mp3" />
     <Content Include="docs\Carnacki-NewGDD_2 %281%29.pdf" />
     <Content Include="docs\CV_JuniorEnvironmentArtist.pdf" />
     <Content Include="docs\CV_Luca_Alberti.pdf" />
+    <Content Include="docs\LucaAlberti_GameDesigner_TechArtist - CV.png" />
     <Content Include="docs\LucaAlberti_GameDesigner_TechArtist - CV.pdf" />
     <Content Include="games-carnacki.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="gdd-carnacki-en.html" />
     <Content Include="gdd-carnacki-it.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="giocafolio\audio-system.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="giocafolio\character\animations\walk\east\frame_000.png" />
+    <Content Include="giocafolio\character\animations\walk\east\frame_001.png" />
+    <Content Include="giocafolio\character\animations\walk\east\frame_002.png" />
+    <Content Include="giocafolio\character\animations\walk\east\frame_003.png" />
+    <Content Include="giocafolio\character\animations\walk\east\frame_004.png" />
+    <Content Include="giocafolio\character\animations\walk\east\frame_005.png" />
+    <Content Include="giocafolio\character\animations\walk\north-east\frame_000.png" />
+    <Content Include="giocafolio\character\animations\walk\north-east\frame_001.png" />
+    <Content Include="giocafolio\character\animations\walk\north-east\frame_002.png" />
+    <Content Include="giocafolio\character\animations\walk\north-east\frame_003.png" />
+    <Content Include="giocafolio\character\animations\walk\north-east\frame_004.png" />
+    <Content Include="giocafolio\character\animations\walk\north-east\frame_005.png" />
+    <Content Include="giocafolio\character\animations\walk\north-west\frame_000.png" />
+    <Content Include="giocafolio\character\animations\walk\north-west\frame_001.png" />
+    <Content Include="giocafolio\character\animations\walk\north-west\frame_002.png" />
+    <Content Include="giocafolio\character\animations\walk\north-west\frame_003.png" />
+    <Content Include="giocafolio\character\animations\walk\north-west\frame_004.png" />
+    <Content Include="giocafolio\character\animations\walk\north-west\frame_005.png" />
+    <Content Include="giocafolio\character\animations\walk\north\frame_000.png" />
+    <Content Include="giocafolio\character\animations\walk\north\frame_001.png" />
+    <Content Include="giocafolio\character\animations\walk\north\frame_002.png" />
+    <Content Include="giocafolio\character\animations\walk\north\frame_003.png" />
+    <Content Include="giocafolio\character\animations\walk\north\frame_004.png" />
+    <Content Include="giocafolio\character\animations\walk\north\frame_005.png" />
+    <Content Include="giocafolio\character\animations\walk\south-east\frame_000.png" />
+    <Content Include="giocafolio\character\animations\walk\south-east\frame_001.png" />
+    <Content Include="giocafolio\character\animations\walk\south-east\frame_002.png" />
+    <Content Include="giocafolio\character\animations\walk\south-east\frame_003.png" />
+    <Content Include="giocafolio\character\animations\walk\south-east\frame_004.png" />
+    <Content Include="giocafolio\character\animations\walk\south-east\frame_005.png" />
+    <Content Include="giocafolio\character\animations\walk\south-west\frame_000.png" />
+    <Content Include="giocafolio\character\animations\walk\south-west\frame_001.png" />
+    <Content Include="giocafolio\character\animations\walk\south-west\frame_002.png" />
+    <Content Include="giocafolio\character\animations\walk\south-west\frame_003.png" />
+    <Content Include="giocafolio\character\animations\walk\south-west\frame_004.png" />
+    <Content Include="giocafolio\character\animations\walk\south-west\frame_005.png" />
+    <Content Include="giocafolio\character\animations\walk\south\frame_000.png" />
+    <Content Include="giocafolio\character\animations\walk\south\frame_001.png" />
+    <Content Include="giocafolio\character\animations\walk\south\frame_002.png" />
+    <Content Include="giocafolio\character\animations\walk\south\frame_003.png" />
+    <Content Include="giocafolio\character\animations\walk\south\frame_004.png" />
+    <Content Include="giocafolio\character\animations\walk\south\frame_005.png" />
+    <Content Include="giocafolio\character\animations\walk\west\frame_000.png" />
+    <Content Include="giocafolio\character\animations\walk\west\frame_001.png" />
+    <Content Include="giocafolio\character\animations\walk\west\frame_002.png" />
+    <Content Include="giocafolio\character\animations\walk\west\frame_003.png" />
+    <Content Include="giocafolio\character\animations\walk\west\frame_004.png" />
+    <Content Include="giocafolio\character\animations\walk\west\frame_005.png" />
+    <Content Include="giocafolio\character\east.png" />
+    <Content Include="giocafolio\document-system.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="giocafolio\video-system.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="img\prop_desktop_empty.png" />
+    <Content Include="img\prop_desktop_on.png" />
+    <Content Include="img\prop_chair.png" />
+    <Content Include="img\prop_curtains.png" />
+    <Content Include="img\prop_dog.png" />
+    <Content Include="img\prop_sofa.png" />
+    <Content Include="img\prop_desk.png" />
+    <Content Include="img\prop_bed.png" />
+    <Content Include="img\prop_plant.png" />
+    <Content Include="giocafolio\character\north-east.png" />
+    <Content Include="giocafolio\character\north-west.png" />
+    <Content Include="giocafolio\character\north.png" />
+    <Content Include="giocafolio\character\south-east.png" />
+    <Content Include="giocafolio\character\south-west.png" />
+    <Content Include="giocafolio\character\south.png" />
+    <Content Include="giocafolio\character\west.png" />
+    <Content Include="img\FolioRoom_LV.png" />
+    <Content Include="giocafolio\giocafolio.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="giocafolio\giocafolio.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="giocafolio\giocafolio.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="img\CarnackiLOGO_1.PNG" />
@@ -116,9 +202,23 @@
     <Content Include="video\sandy_trailer.mp4" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="giocafolio\character\" />
+    <Folder Include="giocafolio\character\animations\" />
+    <Folder Include="giocafolio\character\animations\idle\" />
+    <Folder Include="giocafolio\character\animations\walk\" />
+    <Folder Include="giocafolio\character\animations\walk\east\" />
+    <Folder Include="giocafolio\character\animations\walk\west\" />
+    <Folder Include="giocafolio\character\animations\walk\south-west\" />
+    <Folder Include="giocafolio\character\animations\walk\south-east\" />
+    <Folder Include="giocafolio\character\animations\walk\south\" />
+    <Folder Include="giocafolio\character\animations\walk\north-west\" />
+    <Folder Include="giocafolio\character\animations\walk\north-east\" />
+    <Folder Include="giocafolio\character\animations\walk\north\" />
     <Folder Include="img\" />
     <Folder Include="js\" />
     <Folder Include="docs\" />
+    <Folder Include="giocafolio\" />
+    <Folder Include="audio\" />
     <Folder Include="video\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />

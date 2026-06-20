@@ -11,14 +11,13 @@
 </head>
 <body>
 
-    <!-- VIDEO DI SFONDO (Misterioso e d'atmosfera) -->
+    <!-- VIDEO DI SFONDO (Misterioso e d'atmosfera - Decommenta se vuoi riattivarlo) -->
     <!--<div class="video-bg-container">
         <video autoplay loop muted playsinline class="video-bg">
-            <source src="Video/VideoRig_2.mp4" type="video/mp4">
+            <source src="video/videorig_2.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
     </div>-->
-
     <!-- HEADER CON SELETTORE LINGUA -->
     <header class="main-header">
         <a href="#hero" class="logo">Luca Alberti</a>
@@ -39,26 +38,27 @@
     </header>
 
     <main>
-
-
         <!-- SEZIONE HERO (Presentazione con Easter Egg sul CV) -->
         <section id="hero" class="section hero-section">
             <div class="hero-content">
                 <h1 data-key="hero_title">Ciao, sono Luca</h1>
                 <p class="subtitle" data-key="hero_subtitle">Sono un Game Designer & Tech Artist</p>
                 <div class="cta-buttons">
+
+                    <!-- 1. Esplora Progetti (Sinistra) -->
                     <a href="#sandy" class="btn" data-key="btn_explore">Esplora Progetti</a>
 
-                    <!-- CONTAINER DEL CV CON NUVOLETTA DI PREVIEW -->
+                    <!-- 2. Scarica CV con la sua nuvoletta di anteprima (Centro) -->
                     <div class="cv-btn-container" id="cv-container">
                         <a href="docs/LucaAlberti_GameDesigner_TechArtist - CV.pdf" target="_blank" class="btn btn-secondary" id="cv-btn" data-key="btn_cv">Scarica CV</a>
-
-                        <!-- La Nuvoletta di Preview (Vignetta) -->
                         <div class="cv-preview-card" id="cv-preview">
                             <img src="img/PreviewCV2.png" alt="CV Preview" class="cv-preview-image">
                             <p data-key="cv_preview_msg">Anteprima CV</p>
                         </div>
                     </div>
+
+                    <!-- 3. Gioca Folio esterno e indipendente (Destra) -->
+                    <button id="open-game-btn" class="btn" data-key="btn_game">Gioca Folio</button>
                 </div>
             </div>
         </section>
@@ -138,7 +138,7 @@
                             <ul>
                                 <li>
                                     <strong data-key="carnacki_highlight_1_title">System Design:</strong>
-                                    <span data-key="carnacki_highlight_1_desc">Progettazione delle meccaniche core: livello di stress (ECG), fotografia spettrale e sistema di difesa rituale a tre fasi (purificazione, barriere protettive, elettrificazione).</span>
+                                    <span data-key="carnacki_highlight_1_desc">Progettazione delle meccaniche core: livello di stress (ECG), fotografia spettrale e sistema di difesa rituale a tre fasi (pulizia, cerchio protettivo, tecnologia).</span>
                                 </li>
                                 <li>
                                     <strong data-key="carnacki_highlight_2_title">Technical Art:</strong>
@@ -252,10 +252,9 @@
 
                 <!-- Colonna Destra: Foto/Avatar Personalizzato -->
                 <div class="about-media">
-                    <!-- Sostituito l'ingranaggio con l'astronauta e l'ID per il salto -->
                     <img src="img/OnironautViolet.png" alt="Luca Alberti" class="about-photo" id="about-avatar" tabindex="0">
                 </div>
-               
+
             </div>
         </div>
     </section>
@@ -263,6 +262,19 @@
     <footer class="main-footer">
         <p>&copy; 2026 Luca Alberti.</p>
     </footer>
+
+    <!-- POP-UP PER IL GIOCAFOLIO -->
+    <div id="game-modal" class="gdd-modal-overlay">
+        <div class="gdd-modal-content" style="max-width: 1000px; height: 85vh; max-height: 85vh;">
+            <div class="gdd-modal-header">
+                <h3 data-key="game_modal_title">Folio's Room</h3>
+                <button id="close-game-btn" class="close-modal-btn">&times;</button>
+            </div>
+            <div class="gdd-modal-body" style="padding: 0; overflow: hidden; flex: 1;">
+                <iframe id="game-iframe" src="" style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+        </div>
+    </div>
 
     <!-- Script per la traduzione -->
     <script src="js/translator.js"></script>

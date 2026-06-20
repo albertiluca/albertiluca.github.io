@@ -6,6 +6,7 @@
     --bg-card: rgba(18, 11, 31, 0.65); /* Card semi-trasparenti stile "glassmorphism" */
     --accent-neon: #a855f7; /* Viola neon per elementi attivi e bordi */
     --accent-amber: #f59e0b; /* Ambra calda per hover (richiamo focolare/candela) */
+    --accent-green: #10b981; /* Verde smeraldo neon per il Gioca Folio */
     --accent-cyan: #06b6d4; /* Ciano/Azzurro per Steam e dettagli tecnici */
     --accent-red: #f43f5e; /* Rosso per Itch.io e badge */
     --text-primary: #f3f4f6; /* Bianco freddo molto leggibile */
@@ -349,12 +350,12 @@ a {
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     }
 
-/* Bottone per Steam e Itch */
-.btn-steam {
-    background: #171a21;
-    border-color: var(--accent-cyan);
-    color: var(--accent-cyan);
-}
+    /* Bottone per Steam e Itch */
+    .btn-steam {
+        background: #171a21;
+        border-color: var(--accent-cyan);
+        color: var(--accent-cyan);
+    }
 
     .btn-steam:hover {
         background: var(--accent-cyan);
@@ -363,11 +364,11 @@ a {
         box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
     }
 
-.btn-itch {
-    background: #000;
-    border-color: var(--accent-red);
-    color: var(--accent-red);
-}
+    .btn-itch {
+        background: #000;
+        border-color: var(--accent-red);
+        color: var(--accent-red);
+    }
 
     .btn-itch:hover {
         background: var(--accent-red);
@@ -376,6 +377,36 @@ a {
         box-shadow: 0 0 20px rgba(244, 63, 94, 0.4);
     }
 
+    /* Il pulsante a riposo: Sfondo pieno Ciano, testo scuro ad alto contrasto */
+    #open-game-btn {
+        min-width: 180px !important; /* Forza larghezza identica ai gemelli */
+        height: 46px !important; /* Forza altezza identica al pixel */
+        display: inline-flex !important; /* Centra il testo internamente */
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 20px !important;
+        /* MODIFICATO: Sfondo solido Ciano, testo scuro per massima leggibilità */
+        background: var(--accent-cyan) !important;
+        border: 1px solid var(--accent-cyan) !important;
+        color: #05020a !important; /* Testo scuro sul ciano brillante */
+
+        border-radius: 50px !important;
+        font-size: 0.9rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        font-weight: 700 !important;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out !important;
+    }
+
+    /* Al passaggio del mouse: Diventa verde smeraldo con bagliore dedicato */
+    #open-game-btn:hover {
+        background: var(--accent-green) !important;
+        border-color: var(--accent-green) !important;
+        color: #05020a !important;
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.45) !important; /* Bagliore verde */
+        transform: translateY(-2px) !important;
+    }
 /* ==========================================================================
    8. FOOTER
    ========================================================================== */
