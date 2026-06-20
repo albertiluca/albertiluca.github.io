@@ -20,7 +20,7 @@ function openProjectDocument(docType) {
     const existingOverlay = document.getElementById("document-overlay");
     if (existingOverlay) existingOverlay.remove();
 
-    // Creazione del contenitore overlay (Agganciato a tutto schermo sull'intero body dell'iframe)
+    // Creazione del contenitore overlay a tutto schermo (Z-Index superiore ai video)
     const overlay = document.createElement("div");
     overlay.id = "document-overlay";
     overlay.style.position = "absolute";
@@ -31,7 +31,7 @@ function openProjectDocument(docType) {
     overlay.style.backgroundColor = "#05020a";
     overlay.style.display = "flex";
     overlay.style.flexDirection = "column";
-    overlay.style.zIndex = "120"; // Superiore a qualsiasi altro elemento
+    overlay.style.zIndex = "120";
     overlay.style.overflow = "hidden";
 
     // Barra Superiore dinamica con il pulsante "Torna al Gioco" a tema
@@ -55,7 +55,7 @@ function openProjectDocument(docType) {
 
     overlay.appendChild(backBar);
 
-    // INTEGRATO: Iniezione dinamica della scrollbar personalizzata coordinata al colore del tema
+    // Iniezione dinamica della scrollbar personalizzata coordinata al colore del tema
     let scrollStyle = document.getElementById("document-scrollbar-style");
     if (!scrollStyle) {
         scrollStyle = document.createElement("style");
@@ -73,20 +73,22 @@ function openProjectDocument(docType) {
         #document-scroll-container::-webkit-scrollbar-thumb {
             background: ${themeColor};
             border-radius: 4px;
+            box-shadow: 0 0 6px ${themeColor};
         }
     `;
 
-    // GESTIONE DIFFERENZIATA: Immagine interattiva per il CV, Iframe per il GDD
+    // Creazione del contenitore per il testo scorrevole (condiviso tra CV e GDD)
+    const scrollContainer = document.createElement("div");
+    scrollContainer.id = "document-scroll-container";
+    scrollContainer.style.width = "100%";
+    scrollContainer.style.height = "calc(100% - 45px)"; // Esclude l'altezza della barra superiore
+    scrollContainer.style.overflowY = "auto"; // Abilita lo scorrimento
+    scrollContainer.style.backgroundColor = "#05020a";
+    scrollContainer.style.boxSizing = "border-box";
+
     if (docType === "cv") {
-        // Contenitore scorrevole per l'immagine del CV
-        const scrollContainer = document.createElement("div");
-        scrollContainer.id = "document-scroll-container";
-        scrollContainer.style.width = "100%";
-        scrollContainer.style.height = "calc(100% - 45px)"; // Esclude l'altezza della barra superiore
-        scrollContainer.style.overflow = "auto"; // Abilita scorrimento sia verticale che orizzontale per lo zoom
-        scrollContainer.style.backgroundColor = "#05020a";
+        // --- INTERFACCIA CV (IMMAGINE SCORREVOLE INTERATTIVA) ---
         scrollContainer.style.padding = "10px";
-        scrollContainer.style.boxSizing = "border-box";
 
         const cvImg = document.createElement("img");
         cvImg.src = docSrc;
@@ -99,7 +101,7 @@ function openProjectDocument(docType) {
         cvImg.style.transition = "width 0.2s ease-out"; // Transizione fluida dello zoom
         cvImg.style.cursor = "zoom-in"; // Cursore a lente di ingrandimento
 
-        // INTEGRATO: Sistema di Zoom a clic/tap singolo per massima leggibilità
+        // Sistema di Zoom a clic/tap singolo per massima leggibilità
         let isZoomed = false;
         cvImg.addEventListener("click", () => {
             isZoomed = !isZoomed;
@@ -116,19 +118,38 @@ function openProjectDocument(docType) {
         overlay.appendChild(scrollContainer);
     }
     else if (docType === "gdd") {
-        // Iframe per caricare la pagina HTML del GDD di Carnacki
-        const docFrame = document.createElement("iframe");
-        docFrame.id = "document-scroll-container"; // Applica la stessa scrollbar personalizzata
-        docFrame.src = docSrc;
-        docFrame.style.width = "100%";
-        docFrame.style.height = "calc(100% - 45px)";
-        docFrame.style.border = "none";
-        docFrame.style.backgroundColor = "#05020a";
+        // --- INTERFACCIA GDD (FETCH INJECTION CON RISOLUZIONE DINAMICA PERCORSI) ---
+        scrollContainer.style.padding = "20px";
 
-        overlay.appendChild(docFrame);
+        // Esegue il fetch asincrono del file HTML del tuo GDD
+        fetch(docSrc)
+            .then(response => {
+                if (!response.ok) throw new Error("Errore nel caricamento del file.");
+                return response.text();
+            })
+            .then(html => {
+                // INTEGRATO: Sostituzione dinamica al volo di tutti i percorsi relativi delle immagini
+                // per reindirizzarli verso la cartella corretta della root (../img/) dal contesto di giocafolio/
+                let correctedHtml = html.replace(/src="img\//g, 'src="../img/');
+                correctedHtml = correctedHtml.replace(/src='img\//g, "src='../img/");
+                correctedHtml = correctedHtml.replace(/src="\.\/img\//g, 'src="../img/');
+
+                // Inietta l'HTML corretto nel div: ora le immagini appariranno all'istante
+                scrollContainer.innerHTML = correctedHtml;
+            })
+            .catch(err => {
+                console.error("Errore nel recupero del GDD:", err);
+                scrollContainer.innerHTML = `
+                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 80%; color: #9ca3af; font-family: monospace; font-size: 12px; text-align: center;">
+                        <p>Impossibile caricare il Game Design Document.</p>
+                        <p style="font-size: 10px; margin-top: 5px; color: #f43f5e;">Errore di caricamento asincrono locale.</p>
+                    </div>
+                `;
+            });
+
+        overlay.appendChild(scrollContainer);
     }
 
-    // CORRETTO: Appende l'overlay direttamente al body del documento (non al canvas)
-    // per coprire l'intera modale e sfruttare l'altezza totale dello schermo su mobile
+    // Appende l'overlay direttamente al body del documento per coprire l'intera modale
     document.body.appendChild(overlay);
 }
