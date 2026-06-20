@@ -9,18 +9,19 @@
 </head>
 <body>
 
+    <!-- Container della Canvas (Ripristinato a 512x512 puro) -->
     <div id="canvas-container">
         <canvas id="gameCanvas" width="512" height="512"></canvas>
+    </div>
 
-        <!-- Controlli Mobile HTML esterni al canvas -->
-        <div id="mobile-interface">
-            <div id="touch-joystick">
-                <div id="touch-knob"></div>
-            </div>
-            <div id="touch-buttons">
-                <div id="btn-b" class="touch-btn">B</div>
-                <div id="btn-a" class="touch-btn">A</div>
-            </div>
+    <!-- CORRETTO: Spostato fuori dal container per seguire la scala del gioco in modo fluido -->
+    <div id="mobile-interface">
+        <div id="touch-joystick">
+            <div id="touch-knob"></div>
+        </div>
+        <div id="touch-buttons">
+            <div id="btn-b" class="touch-btn">B</div>
+            <div id="btn-a" class="touch-btn">A</div>
         </div>
     </div>
 

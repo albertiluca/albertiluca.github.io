@@ -38,13 +38,13 @@ canvas {
     image-rendering: pixelated;
 }
 
-/* INTERFACCIA MOBILE ESTERNA (Sotto al bordo viola) */
+/* INTERFACCIA MOBILE ESTERNA (Sotto al bordo viola, fluttuante in modo fluido) */
 #mobile-interface {
     display: none; /* Nascosto di default su Desktop */
-    position: absolute;
-    top: 500px; /* Posizionato nel nero sotto al bordo di 512px */
-    left: 0;
-    width: 100%;
+    position: relative; /* Cambiato da absolute per seguire fluidamente il ridimensionamento del gioco */
+    margin-top: 30px; /* Distanza fissa e pulita dal bordo viola del canvas */
+    width: 512px;
+    max-width: 90vw;
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
