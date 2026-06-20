@@ -42,7 +42,7 @@ canvas {
 #mobile-interface {
     display: none; /* Nascosto di default su Desktop */
     position: absolute;
-    top: 530px; /* Posizionato nel nero sotto al bordo di 512px */
+    top: 500px; /* Posizionato nel nero sotto al bordo di 512px */
     left: 0;
     width: 100%;
     justify-content: space-between;
